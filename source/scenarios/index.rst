@@ -19,9 +19,6 @@ To connect SUMO to a scenario, you must add the following block to the YAML file
         client_order: 2
         step_length: ${world.fixed_delta_seconds}
 
-Example:
-https://172.18.130.50:9443/cavise-982/opencda/-/blob/main/opencda/scenario_testing/config_yaml/rsu_check.yaml?ref_type=heads
-
 Assets
 ------
 
@@ -30,9 +27,6 @@ All SUMO-related files are stored in the `sumo/assets/` directory. Create a subd
 <scenario_name>.sumocfg
 """""""""""""""""""""""
 The main SUMO config file, which references the other configuration files such as `.rou.xml`, `.net.xml`, etc.
-
-Example:
-https://172.18.130.50:9443/cavise-982/opencda/-/blob/main/opencda/assets/rsu_check/rsu_check.sumocfg?ref_type=heads
 
 <scenario_name>.rou.xml
 """""""""""""""""""""""
@@ -51,16 +45,12 @@ To prevent early termination, you can add a dummy stationary vehicle like this (
         <stop lane="27_3" startPos="0" endPos="5" duration="100000"/>
     </vehicle>
 
-Example:
-https://172.18.130.50:9443/cavise-982/opencda/-/blob/main/opencda/assets/rsu_check/rsu_check.rou.xml?ref_type=heads
 
 <scenario_name>.net.xml
 """""""""""""""""""""""
 This file describes the road network in SUMO format. It must be generated for each map.
 If the map already exists in another scenario, you can copy it. Otherwise, generate it as described in the section below.
 
-Example:
-https://172.18.130.50:9443/cavise-982/opencda/-/blob/main/opencda/assets/rsu_check/rsu_check.net.xml?ref_type=heads
 
 CAPI Support Files
 """"""""""""""""""
@@ -71,23 +61,18 @@ If the scenario uses Artery, you need to create one required and one optional fi
 """"""""""""""""""""""""""""""
 Similar to the standard `.sumocfg` but with `num-clients = 2`.
 
-Example:
-https://172.18.130.50:9443/cavise-982/opencda/-/blob/main/opencda/assets/rsu_check/rsu_check_artery.sumocfg?ref_type=heads
 
 <scenario_name>.poly.xml
 """"""""""""""""""""""""
 Optional file. It describes various zones like buildings or trees that might affect signal propagation.
 Used by Artery for accurate communication modeling. For Town06, use the existing example; otherwise, create manually using netedit.
 
-Example:
-https://172.18.130.50:9443/cavise-982/opencda/-/blob/main/opencda/assets/rsu_check/rsu_check.poly.xml?ref_type=heads
 
 Artery
 ------
 
 Artery configuration is stored in the `artery/scenarios/` directory. Create a subfolder named `<scenario_name>`.
-Example:
-https://172.18.130.50:9443/cavise-982/artery/-/tree/main/scenarios/rsu_check?ref_type=heads
+
 
 Files in this folder are the same as for SUMO:
 <scenario_name>.net.xml, <scenario_name>.poly.xml, <scenario_name>.rou.xml, <scenario_name>.sumocfg (Artery version)

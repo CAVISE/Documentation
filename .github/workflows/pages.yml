@@ -27,22 +27,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Build documentation site
-        uses: CAVISE/pipelines/actions/documentation-build@ci/docs-build
+        uses: CAVISE/pipelines/actions/documentation-build@main
         with:
           docs-directory: ${{ env.DOCS_DIRECTORY }}
           requirements-file: ${{ env.DOCS_REQUIREMENTS_FILE }}
           source-directory: ${{ env.DOCS_SOURCE_DIRECTORY }}
           build-directory: ${{ env.DOCS_BUILD_DIRECTORY }}
-          site-directory: ${{ env.DOCS_SITE_DIRECTORY }}
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ${{ env.DOCS_DIRECTORY }}/${{ env.DOCS_SITE_DIRECTORY }}
 
@@ -55,4 +54,4 @@ jobs:
     steps:
       - id: deployment
         name: Deploy GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
