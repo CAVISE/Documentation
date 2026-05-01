@@ -1,4 +1,7 @@
 
+CAVISE Documentation
+====================
+
 .. include:: _nav.rstinc
 
 .. raw:: html
