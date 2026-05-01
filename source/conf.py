@@ -7,7 +7,10 @@ copyright = "2024, CAVISE Dev Team"
 author = "CAVISE Dev Team"
 release = "1.0"
 
-html_logo = "_static/images/Logo.svg"
+html_logo = "_static/images/logo.svg"
+html_favicon = "_static/images/favicon.svg"
+html_title = "CAVISE Documentation"
+html_short_title = "CAVISE Docs"
 
 extensions = []
 
