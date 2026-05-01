@@ -1,0 +1,47 @@
+# Russian translations for wiki/index.
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE\n"
+"POT-Creation-Date: 2026-04-29 14:02+0300\n"
+"PO-Revision-Date: 2026-04-29 14:20+0300\n"
+"Last-Translator: Codex\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Wiki"
+msgstr "Вики"
+
+msgid "The wiki section consolidates operational notes that were previously stored in the GitHub Wiki."
+msgstr "Раздел вики объединяет эксплуатационные заметки, которые ранее хранились в GitHub Wiki."
+
+msgid "**Overview**"
+msgstr "**Обзор**"
+
+msgid "This repository contains the tools used in the development of the CAVISE team, as well as our own developments, including **CAPI** and related integrations."
+msgstr "В этом репозитории собраны инструменты, используемые командой CAVISE в разработке, а также наши собственные наработки, включая **CAPI** и связанные интеграции."
+
+msgid "**History**"
+msgstr "**История**"
+
+msgid "The **OpenCDA** and **Artery** are two separate tools that can work and were developed independently. In 2023 and 2024, the CAVISE team implemented a protocol for interaction between these tools within the base scenario *realistic_town06_cosim*. This protocol is called **CAPI**."
+msgstr "**OpenCDA** и **Artery** — это два отдельных инструмента, которые могут работать совместно, но разрабатывались независимо. В 2023 и 2024 годах команда CAVISE реализовала протокол взаимодействия между этими инструментами в базовом сценарии *realistic_town06_cosim*. Этот протокол называется **CAPI**."
+
+msgid "Both simulators use dedicated modules to interact with each other. In **Artery**, this is the **CommunicationManager** class, part of the comms static library, which provides network interaction with Artery in a separate thread, synchronizes requests from several CAVs, and collects data from them. It is used in the *realistic_town06_cosim* scenario."
+msgstr "Оба симулятора используют выделенные модули для взаимодействия друг с другом. В **Artery** это класс **CommunicationManager**, входящий в статическую библиотеку comms. Он обеспечивает сетевое взаимодействие с Artery в отдельном потоке, синхронизирует запросы от нескольких CAV и собирает данные от них. Этот класс используется в сценарии *realistic_town06_cosim*."
+
+msgid "In OpenCDA, **CommunicationManager** is part of CavWorld and is responsible for interaction with **Artery**. Methods for serialization and deserialization of data sent to and received from **Artery** are implemented there as well."
+msgstr "В OpenCDA **CommunicationManager** является частью CavWorld и отвечает за взаимодействие с **Artery**. Там же реализованы методы сериализации и десериализации данных, отправляемых в **Artery** и получаемых от нее."
+
+msgid "Compiling protobuf definitions into source code files is part of the **Artery** compilation routine."
+msgstr "Компиляция protobuf-описаний в исходные файлы является частью процесса сборки **Artery**."
+
+msgid "**Architecture**"
+msgstr "**Архитектура**"
+
+msgid "CAVISE architecture"
+msgstr "Архитектура CAVISE"

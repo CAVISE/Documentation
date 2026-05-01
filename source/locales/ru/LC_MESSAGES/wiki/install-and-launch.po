@@ -1,0 +1,140 @@
+# Russian translations for wiki/install-and-launch.
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE\n"
+"POT-Creation-Date: 2026-04-29 14:02+0300\n"
+"PO-Revision-Date: 2026-04-29 14:20+0300\n"
+"Last-Translator: Codex\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Install And Launch"
+msgstr "Установка и запуск"
+
+msgid "Install CARLA on Windows"
+msgstr "Установка CARLA в Windows"
+
+msgid "Download **CARLA** for Windows from the official releases."
+msgstr "Скачайте **CARLA** для Windows из официальных релизов."
+
+msgid "Optionally move the contents of ``AdditionalMaps_0.9.X`` into ``CARLA_0.9.X/WindowsNoEditor``."
+msgstr "При необходимости переместите содержимое ``AdditionalMaps_0.9.X`` в ``CARLA_0.9.X/WindowsNoEditor``."
+
+msgid "In ``WindowsNoEditor``, create and activate a Python virtual environment. Ensure the Python version matches CARLA requirements."
+msgstr "В каталоге ``WindowsNoEditor`` создайте и активируйте Python virtual environment. Убедитесь, что версия Python соответствует требованиям CARLA."
+
+msgid "Start CARLA from the main directory:"
+msgstr "Запустите CARLA из основного каталога:"
+
+msgid "Verify the Python API:"
+msgstr "Проверьте Python API:"
+
+msgid "CARLA is now ready. When running OpenCDA scenarios from inside the OpenCDA container using ``python opencda.py``, specify:"
+msgstr "CARLA готова к работе. При запуске сценариев OpenCDA из контейнера OpenCDA через ``python opencda.py`` укажите:"
+
+msgid "Install Dependencies"
+msgstr "Установка зависимостей"
+
+msgid "**WSL on Windows**"
+msgstr "**WSL в Windows**"
+
+msgid "Ensure WSL is installed. The setup has been tested on WSL2 with Ubuntu 24.04.1 LTS. Docker must also be available inside WSL."
+msgstr "Убедитесь, что WSL установлен. Конфигурация проверялась на WSL2 с Ubuntu 24.04.1 LTS. Docker также должен быть доступен внутри WSL."
+
+msgid "Ensure Python 3.10 or newer is installed, then clone the project and run:"
+msgstr "Убедитесь, что установлен Python 3.10 или новее, затем клонируйте проект и выполните:"
+
+msgid "**Linux**"
+msgstr "**Linux**"
+
+msgid "Ensure Python 3.10 or newer is installed, then run:"
+msgstr "Убедитесь, что установлен Python 3.10 или новее, затем выполните:"
+
+msgid "Install Required Repositories"
+msgstr "Установка необходимых репозиториев"
+
+msgid "Before running the setup script, ensure the base paths are configured:"
+msgstr "Перед запуском setup-скрипта убедитесь, что базовые пути настроены:"
+
+msgid "**Install all repositories**"
+msgstr "**Установить все репозитории**"
+
+msgid "**Install a specific repository**"
+msgstr "**Установить конкретный репозиторий**"
+
+msgid "Clone only ``opencda``:"
+msgstr "Клонировать только ``opencda``:"
+
+msgid "Clone only ``artery``:"
+msgstr "Клонировать только ``artery``:"
+
+msgid "**Install with an explicit version**"
+msgstr "**Установить с явно указанной версией**"
+
+msgid "You can skip the interactive prompt by specifying a branch or tag directly."
+msgstr "Можно пропустить интерактивный запрос, сразу указав нужную ветку или тег."
+
+msgid "For ``opencda``:"
+msgstr "Для ``opencda``:"
+
+msgid "or"
+msgstr "или"
+
+msgid "For ``artery``:"
+msgstr "Для ``artery``:"
+
+msgid "**Install a specific repository with a specific version**"
+msgstr "**Установить конкретный репозиторий с конкретной версией**"
+
+msgid "**Install both with explicit versions**"
+msgstr "**Установить оба репозитория с явно указанными версиями**"
+
+msgid "Build And Run The Simulator"
+msgstr "Сборка и запуск симулятора"
+
+msgid "**Using ``run.sh`` (Recommended)**"
+msgstr "**Использование ``run.sh`` (рекомендуется)**"
+
+msgid "You do not need to manually build or run the CARLA container on Windows."
+msgstr "Вам не нужно вручную собирать или запускать контейнер CARLA в Windows."
+
+msgid "Build everything:"
+msgstr "Собрать все:"
+
+msgid "Start everything:"
+msgstr "Запустить все:"
+
+msgid "Run specific services:"
+msgstr "Запустить отдельные сервисы:"
+
+msgid "**Using Docker Compose**"
+msgstr "**Использование Docker Compose**"
+
+msgid "Build and start all components:"
+msgstr "Собрать и запустить все компоненты:"
+
+msgid "Other commands:"
+msgstr "Другие команды:"
+
+msgid "Run Individual Components"
+msgstr "Запуск отдельных компонентов"
+
+msgid "**CARLA on Windows**"
+msgstr "**CARLA в Windows**"
+
+msgid "Start CARLA:"
+msgstr "Запустить CARLA:"
+
+msgid "Low-quality rendering:"
+msgstr "Рендеринг в низком качестве:"
+
+msgid "Headless mode:"
+msgstr "Режим без вывода на экран:"
+
+msgid "Change map or weather:"
+msgstr "Сменить карту или погоду:"
