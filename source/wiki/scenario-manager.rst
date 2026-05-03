@@ -11,7 +11,7 @@ then export scenarios to multiple simulators including OpenCDA, CARLA, SUMO, OMN
 Scenarios are stored on a backend and can be saved, loaded, and shared across sessions.
 The editor features a live scene graph panel, per-object property editing, transform controls, and real-time telemetry monitoring.
 
-.. image:: scenario-manager-images/screenshot-editor.png
+.. image:: ../scenarios/images/screenshot-editor.png
    :alt: 3D Editor Viewport — OpenDRIVE road network with a vehicle equipped with LiDAR sensor and route waypoint
 
 .. contents:: On this page
@@ -84,7 +84,7 @@ Common Docker commands:
 Usage
 -----
 
-.. image:: scenario-manager-images/Screen-Scenario-manager.gif
+.. image:: ../scenarios/images/Screen-Scenario-manager.gif
    :alt: Scene Editor — place and move vehicles, RSUs, and buildings on an OpenDRIVE road network
 
 Adding Objects
@@ -107,10 +107,10 @@ Selecting and Editing
 - Press **Escape** to deselect and save current transforms
 - Press **Delete** to remove the selected object
 
-.. image:: scenario-manager-images/Screen-Scenario-manager-panel.gif
+.. image:: ../scenarios/images/Screen-Scenario-manager-panel.gif
    :alt: Scene Graph Panel — hierarchical object tree with live position readout and type badges
 
-.. image:: scenario-manager-images/screenshot-panel.png
+.. image:: ../scenarios/images/screenshot-panel.png
    :alt: Settings Panel — Scene Graph tree with object hierarchy and LiDAR property editor
 
 Saving and Loading
@@ -125,7 +125,7 @@ Saving and Loading
 Exporting Configs
 -----------------
 
-.. image:: scenario-manager-images/Screen-Scenario-manager-config.gif
+.. image:: ../scenarios/images/Screen-Scenario-manager-config.gif
    :alt: Export Configs — generate config files for OMNeT++, Artery, Sionna, CARLA, OpenCDA, SUMO, and more
 
 Once your scenario is set up, click the **download icon** in the toolbar to open the export menu.
@@ -177,7 +177,7 @@ Supported simulators:
 Simulation Settings Dialog
 """"""""""""""""""""""""""
 
-.. image:: scenario-manager-images/screenshot-simulation.png
+.. image:: ../scenarios/images/screenshot-simulation.png
    :alt: Simulation Settings — per-simulator configuration dialog
 
 Before exporting, configure per-simulator parameters via **Settings → Simulation Settings**.
@@ -207,7 +207,7 @@ LiDAR sensors are exported with position, range, channels, and rotation frequenc
 Export Workflow
 """""""""""""""
 
-.. image:: scenario-manager-images/screenshot-export.png
+.. image:: ../scenarios/images/screenshot-export.png
    :alt: Export Menu — generate config files for multiple simulators
 
 .. code-block:: text
