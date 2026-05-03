@@ -45,6 +45,11 @@ CAVISE Documentation
          <h2 class="cavise-card__title">Additional Scripts</h2>
          <p class="cavise-card__text">Use utility scripts and local Artery helper commands collected from the project wiki.</p>
        </a>
+       <a class="cavise-card" href="wiki/scenario-manager.html">
+        <div class="cavise-card__eyebrow">Tooling</div>
+        <h2 class="cavise-card__title">Scenario Manager</h2>
+        <p class="cavise-card__text">Browser-based 3D editor for building V2X scenarios — place vehicles, RSUs, and sensors, then export configs for CARLA, SUMO, Artery, and more.</p>
+      </a>
      </section>
 
      <section class="cavise-section-panel">
