@@ -14,6 +14,11 @@ html_short_title = "CAVISE Docs"
 
 extensions = []
 
+# -- i18n configuration -------------------------------------------------
+locale_dirs = [os.path.abspath("../locales")]
+gettext_compact = False
+gettext_additional_targets = ["raw"]
+
 templates_path = ["_templates"]
 exclude_patterns = []
 
