@@ -215,3 +215,170 @@ Change map or weather:
 
    python .\PythonAPI\util\config.py --map Town06
    python .\PythonAPI\util\config.py --weather ClearNoon
+
+**CARLA on Linux**
+
+Enter the CARLA container:
+
+.. code-block:: bash
+
+   docker exec -it carla bash
+
+Start CARLA:
+
+.. code-block:: bash
+
+   ./CarlaUE4.sh
+
+Low-quality rendering:
+
+.. code-block:: bash
+
+   ./CarlaUE4.sh --quality-level=Low
+
+Headless mode:
+
+.. code-block:: bash
+
+   ./CarlaUE4.sh -RenderOffScreen
+
+Change map or weather:
+
+.. code-block:: bash
+
+   ./PythonAPI/util/config.py --map Town06
+   ./PythonAPI/util/config.py --weather ClearNoon
+
+**SUMO**
+
+Enter the SUMO container:
+
+.. code-block:: bash
+
+   docker exec -it sumo bash
+
+Start SUMO:
+
+.. code-block:: bash
+
+   sumo-gui -c /path/to/scenario.sumocfg --remote-port <port> --num-clients <n>
+
+Start SUMO in non-GUI mode:
+
+.. code-block:: bash
+
+   sumo -c /path/to/scenario.sumocfg --remote-port <port> --num-clients <n>
+
+Example:
+
+.. code-block:: bash
+
+   sumo-gui -c assets/rsu_check/rsu_check.sumocfg --remote-port 3000 --num-clients 2
+
+**OpenCDA**
+
+On Windows, specify ``--carla-host host.docker.internal`` when running
+``python opencda.py`` from the OpenCDA container.
+
+Enter the OpenCDA container:
+
+.. code-block:: bash
+
+   docker exec -it opencda bash
+
+Run a scenario:
+
+.. code-block:: bash
+
+   python opencda.py -t rsu_check
+
+Run SUMO during simulation:
+
+.. code-block:: bash
+
+   python opencda.py -t rsu_check --cosim
+
+Free camera:
+
+.. code-block:: bash
+
+   python opencda.py -t rsu_check --cosim --free-spectator
+
+Run cooperative perception models:
+
+.. code-block:: bash
+
+   python opencda.py -t rsu_check --cosim --with-coperception \
+   --model-dir opencda/coperception_models/pointpillar-where2comm-intermediate-v2xsim-50
+
+Help:
+
+.. code-block:: bash
+
+   python opencda.py -h
+
+**Artery**
+
+Enter the Artery container:
+
+.. code-block:: bash
+
+   docker exec -it artery bash
+
+Ensure the cached build directory exists:
+
+.. code-block:: bash
+
+   ls /cached-build/Debug
+
+Upon container start, the working directory with source code is mounted to
+``/workspaces/artery`` to mimic the devcontainer layout. You can build and run
+Artery from there.
+
+Build template:
+
+.. code-block:: bash
+
+   cd /workspaces/artery
+   ./tools/build.py -cb --build-dir /cached-build <any other build args>
+
+Re-run the build after changing any part of the Artery source code.
+
+Run the simulation with the Qt frontend:
+
+.. code-block:: bash
+
+   ./tools/run_artery.py -l /cached-build/Debug/run-artery.ini -s scenarios/<scenario>
+
+Run the simulation with the command-line frontend:
+
+.. code-block:: bash
+
+   ./tools/run_artery.py -l /cached-build/Debug/run-artery.ini -s scenarios/<scenario> -u Cmdenv
+
+Use a non-default configuration:
+
+.. code-block:: bash
+
+   ./tools/run_artery.py -l /cached-build/Debug/run-artery.ini -s scenarios/<scenario> -u Cmdenv -c <configuration>
+
+Example for the base CAPI scenario:
+
+.. code-block:: bash
+
+   ./tools/run_artery.py -l /cached-build/Debug/run-artery.ini -s scenarios/capi -u Cmdenv
+
+The ``capi`` scenario is a base setup and can be used with any OpenCDA
+scenario.
+
+You may also use CMake. Note that stopping OMNeT++ is harder in this mode:
+
+.. code-block:: bash
+
+   cmake --build /cached-build/Debug --target run_<scenario>
+
+Start SUMO first, then run the OpenCDA scenario:
+
+.. code-block:: bash
+
+   python opencda.py -t <scenario> -c --with-capi
