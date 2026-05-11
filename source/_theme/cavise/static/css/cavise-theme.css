@@ -187,7 +187,7 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
 
 .rst-content p,
 .rst-content li {
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 /* Keep simple documentation lists tighter when they contain inline code chips. */
@@ -195,7 +195,7 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
 .rst-content ol.simple > li,
 .rst-content ul.simple > li > p,
 .rst-content ol.simple > li > p {
-  line-height: 0.5;
+  line-height: 1.5;
 }
 
 .rst-content ul.simple > li + li,

@@ -7,8 +7,15 @@ in YAML, converted into structured specs, and evaluated on every simulation
 tick against a normalized snapshot of vehicle and RSU service state.
 
 The framework is generic at the orchestration layer. See
-:doc:`available-attacks` for the builtin attack catalog and
+`attack-framework-architecture` for the module-level architecture,
+:doc:`available-attacks` for the builtin attack catalog, and
 :doc:`attack-scenario-description` for the YAML reference.
+
+
+.. image:: /_static/images/attack-framework-architecture.png
+   :alt: Attack framework architecture
+   :class: align-center
+
 
 Enabling Attacks
 ----------------
@@ -40,6 +47,13 @@ scenario code:
 2. builds a ``SimulationSnapshot``,
 3. calls ``AttackManager.evaluate(...)``,
 4. resolves live target services through ``CavWorld.resolve_behavior_services``.
+
+The overall per-tick attack evaluation workflow is shown below.
+
+.. image:: /_static/images/attack-framework-workflow.png
+   :alt: Attack framework workflow
+   :class: align-center
+
 
 The snapshot passed to the attack framework has the following structure:
 
