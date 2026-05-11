@@ -8,7 +8,8 @@ state snapshots, and run in a deterministic per-tick execution order.
 This service layer is also the attachment point used by the adversary
 framework. Attack stages do not patch managers directly; they wrap capability
 bindings exported by behavior services. See :doc:`attack-framework` for the
-attack-side architecture.
+attack-side architecture. For the current builtin catalog, see
+:doc:`available-services`.
 
 What a Service Is
 -----------------
@@ -222,6 +223,8 @@ Builtins as Reference Implementations
 
 The current builtin services already follow this template with different
 complexity levels.
+
+The full builtin catalog is documented in :doc:`available-services`.
 
 ``self_informer``
 ^^^^^^^^^^^^^^^^^
