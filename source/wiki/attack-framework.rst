@@ -7,10 +7,12 @@ in YAML, converted into structured specs, and evaluated on every simulation
 tick against a normalized snapshot of vehicle and RSU service state.
 
 The framework is generic at the orchestration layer. See
-`attack-framework-architecture` for the module-level architecture,
-:doc:`available-attacks` for the builtin attack catalog, and
+:ref:`module-level architecture <attack-framework-architecture>`,
+:doc:`behavior-services` for the behavior-service lifecycle and development
+template, :doc:`available-attacks` for the builtin attack catalog, and
 :doc:`attack-scenario-description` for the YAML reference.
 
+.. _attack-framework-architecture:
 
 .. image:: /_static/images/attack-framework-architecture.png
    :alt: Attack framework architecture

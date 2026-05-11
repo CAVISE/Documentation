@@ -23,3 +23,10 @@
    Arhitecture <wiki/attack-framework>
    Attack Scenario Description <wiki/attack-scenario-description>
    Available Attacks <wiki/available-attacks>
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Behavior Services
+
+   Framework and Development <wiki/behavior-services>
