@@ -187,7 +187,20 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
 
 .rst-content p,
 .rst-content li {
-  line-height: 1.75;
+  line-height: 1.5;
+}
+
+/* Keep simple documentation lists tighter when they contain inline code chips. */
+.rst-content ul.simple > li,
+.rst-content ol.simple > li,
+.rst-content ul.simple > li > p,
+.rst-content ol.simple > li > p {
+  line-height: 1.5;
+}
+
+.rst-content ul.simple > li + li,
+.rst-content ol.simple > li + li {
+  margin-top: 0.2rem;
 }
 
 .rst-content h1,
@@ -268,6 +281,12 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
   font-size: 0.9em;
   line-height: 1.35;
   vertical-align: baseline;
+}
+
+.rst-content ul.simple > li code,
+.rst-content ol.simple > li code {
+  padding: 0.08rem 0.4rem;
+  line-height: 1.2;
 }
 
 .rst-content div[class^="highlight-"] {
