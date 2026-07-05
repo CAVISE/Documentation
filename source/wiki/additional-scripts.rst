@@ -1,32 +1,36 @@
-# Additional Scripts
+Additional Scripts
+==================
 
-## Artery Development
+Artery Development
+------------------
 
 You may only need to build **Artery** locally for syntax highlighting to work
 correctly. Run:
 
 .. code-block:: bash
 
-source configure.sh
-cd artery/
-source ./tools/setup/configure.sh
-./tools/setup/build.py -b -c --config Debug --link
+   source configure.sh
+   cd artery/
+   source ./tools/setup/configure.sh
+   ./tools/setup/build.py -b -c --config Debug --link
 
-## CARLA/SUMO Map Conversion Utilities
+
+CARLA/SUMO Map Conversion Utilities
+-----------------------------------
 
 We provide helper scripts for preparing SUMO map assets from CARLA maps.
 
 These scripts are useful when a CARLA map has to be converted into
 SUMO-compatible files:
 
-* `.net.xml`: SUMO road network file
-* `.poly.xml`: SUMO polygon file with static environment objects
+- ``.net.xml``: SUMO road network file
+- ``.poly.xml``: SUMO polygon file with static environment objects
 
-The scripts are located in the top-level `scripts` directory.
+The scripts are located in the top-level ``scripts`` directory.
 
-SUMO Network Generation `netconvert_carla.py`
 
-```
+SUMO Network Generation ``netconvert_carla.py``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This utility generates a SUMO ``.net.xml`` file from CARLA/OpenDRIVE map data.
 
@@ -83,12 +87,12 @@ or, when reading the map directly from CARLA:
 
 
 SUMO Polygon Generation ``polyconvert_carla.py``
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This utility generates a SUMO `.poly.xml` file from static objects in a CARLA
+This utility generates a SUMO ``.poly.xml`` file from static objects in a CARLA
 map.
 
-It uses an existing SUMO `.net.xml` file for coordinate conversion and
+It uses an existing SUMO ``.net.xml`` file for coordinate conversion and
 boundary clipping, then scans the CARLA world and writes selected static
 objects as SUMO polygons.
 
@@ -96,51 +100,53 @@ objects as SUMO polygons.
 
 .. code-block:: bash
 
-python scripts/polyconvert_carla.py 
---net-file NET_FILE 
---output OUTPUT 
---carla-host CARLA_HOST 
---carla-map CARLA_MAP
+   python scripts/polyconvert_carla.py \
+     --net-file NET_FILE \
+     --output OUTPUT \
+     --carla-host CARLA_HOST \
+     --carla-map CARLA_MAP
 
 **Options**
 
-* `--net-file`: existing SUMO `.net.xml` file
-* `--output`, `--poly-output`, `-o`: output SUMO `.poly.xml` file
-* `--carla-host`: CARLA server host
-* `--carla-port`: CARLA server port
-* `--carla-timeout`: CARLA API timeout in seconds
-* `--carla-map`: CARLA map to load if it is not already active
-* `--labels`: comma-separated CARLA semantic labels to export
-* `--bounds`: explicit CARLA scan bounds in `min_x,min_y,max_x,max_y` format
-* `--bounds-margin`: additional margin around scan bounds
-* `--boundary-margin`: additional margin around the SUMO network boundary
-* `--stream-distance`: CARLA tile streaming distance
-* `--scan-step`: distance between scan positions
-* `--settle-ticks`: number of ticks to wait after moving the spectator
-* `--scan-altitude`: spectator altitude during scanning
-* `--min-height`: minimum object height
-* `--max-area`: maximum polygon footprint area
-* `--max-wall-thickness`: maximum wall thickness filter
-* `--verbose`: enable verbose logging
+- ``--net-file``: existing SUMO ``.net.xml`` file
+- ``--output``, ``--poly-output``, ``-o``: output SUMO ``.poly.xml`` file
+- ``--carla-host``: CARLA server host
+- ``--carla-port``: CARLA server port
+- ``--carla-timeout``: CARLA API timeout in seconds
+- ``--carla-map``: CARLA map to load if it is not already active
+- ``--labels``: comma-separated CARLA semantic labels to export
+- ``--bounds``: explicit CARLA scan bounds in ``min_x,min_y,max_x,max_y`` format
+- ``--bounds-margin``: additional margin around scan bounds
+- ``--boundary-margin``: additional margin around the SUMO network boundary
+- ``--stream-distance``: CARLA tile streaming distance
+- ``--scan-step``: distance between scan positions
+- ``--settle-ticks``: number of ticks to wait after moving the spectator
+- ``--scan-altitude``: spectator altitude during scanning
+- ``--min-height``: minimum object height
+- ``--max-area``: maximum polygon footprint area
+- ``--max-wall-thickness``: maximum wall thickness filter
+- ``--verbose``: enable verbose logging
 
 **Example**
 
 .. code-block:: bash
 
-python scripts/polyconvert_carla.py 
---net-file ../sumo/assets/maps/Town10HD/Town10HD.net.xml 
---output ../sumo/assets/maps/Town10HD/Town10HD.poly.xml 
---carla-host host.docker.internal 
---carla-map Town10HD
+   python scripts/polyconvert_carla.py \
+     --net-file ../sumo/assets/maps/Town10HD/Town10HD.net.xml \
+     --output ../sumo/assets/maps/Town10HD/Town10HD.poly.xml \
+     --carla-host host.docker.internal \
+     --carla-map Town10HD
 
-## CARLA Spectator Utilities
+
+CARLA Spectator Utilities
+-------------------------
 
 We also provide small helper scripts for reading and setting the CARLA
 spectator position.
 
-Get Spectator Position
 
-```
+Get Spectator Position
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -152,17 +158,19 @@ This prints the current spectator location and rotation.
 
 
 Set Spectator Position
-```
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-echo "10.0,20.0,50.0" | python scripts/set_spectator_position.py 
---carla-host host.docker.internal 
---carla-port 2000
+   echo "10.0,20.0,50.0" | python scripts/set_spectator_position.py \
+     --carla-host host.docker.internal \
+     --carla-port 2000
 
 This sets the spectator location from standard input.
 
-## Video Generation Utility `make_video.py`
+
+Video Generation Utility ``make_video.py``
+------------------------------------------
 
 This utility converts a sequence of rendered frames into a video file. It is
 typically used to visualize simulation outputs generated by OpenCDA, for
@@ -172,24 +180,24 @@ example 3D or BEV perception results.
 
 .. code-block:: bash
 
-python scripts/make_video.py [-h] [--framerate FRAMERATE] [--rotate ROTATE] [--pattern PATTERN] input_dir output_path
+   python scripts/make_video.py [-h] [--framerate FRAMERATE] [--rotate ROTATE] [--pattern PATTERN] input_dir output_path
 
 **Arguments**
 
-* `input_dir`: directory containing input image frames
-* `output_path`: path to the output video file, for example `video.mp4`
+- ``input_dir``: directory containing input image frames
+- ``output_path``: path to the output video file, for example ``video.mp4``
 
 **Options**
 
-* `--framerate`: frame rate in frames per second
-* `--rotate`: rotate frames counter-clockwise, valid values are `90`,
-  `180`, `270`
-* `--pattern`: filename pattern for the image sequence in glob format
+- ``--framerate``: frame rate in frames per second
+- ``--rotate``: rotate frames counter-clockwise, valid values are ``90``,
+  ``180``, ``270``
+- ``--pattern``: filename pattern for the image sequence in glob format
 
 **Example**
 
 .. code-block:: bash
 
-python scripts/make_video.py 
-simulation_output/coperception/vis_3d/v2xp_datadump_town06_carla_2026_03_24_09_56_21 
-simulation_output/coperception/v2xp_datadump_town06_carla_3d.mp4
+   python scripts/make_video.py \
+     simulation_output/coperception/vis_3d/v2xp_datadump_town06_carla_2026_03_24_09_56_21 \
+     simulation_output/coperception/v2xp_datadump_town06_carla_3d.mp4
