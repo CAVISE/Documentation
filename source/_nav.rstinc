@@ -7,6 +7,9 @@
    Install and Launch <wiki/install-and-launch>
    Problems and Solutions <wiki/troubleshooting>
    Additional Scripts <wiki/additional-scripts>
+   OpenCDA Service Layer <wiki/services>
+   Neural Network Trajectory Prediction <wiki/nn-trajectory-prediction>
+   AIM Trajectory Planning <wiki/aim-trajectory-planning>
 
 .. toctree::
    :hidden:
