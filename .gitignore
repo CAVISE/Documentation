@@ -162,5 +162,9 @@ ready*
 *.tar*
 
 opencda
+!source/opencda/
+!source/opencda/**
+!source/_static/images/opencda/
+!source/_static/images/opencda/**
 artery
 scenario-manager
