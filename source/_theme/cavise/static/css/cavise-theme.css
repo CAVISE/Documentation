@@ -260,6 +260,31 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
   margin-right: auto;
 }
 
+.opencda-demo-gallery {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.rst-content figure.opencda-demo {
+  width: 100%;
+  margin: 0;
+}
+
+.rst-content .opencda-demo img {
+  width: 100%;
+  border: 1px solid var(--cavise-border-soft);
+  border-radius: 6px;
+  background: var(--cavise-ink-800);
+}
+
+.rst-content .opencda-demo figcaption {
+  margin-top: 0.55rem;
+  color: var(--cavise-text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 .rst-content code,
 .rst-content tt,
 .rst-content pre,
@@ -404,6 +429,12 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
   overflow: hidden;
   box-shadow: var(--cavise-shadow-md);
   background: var(--cavise-surface-2);
+}
+
+.rst-content table.docutils th,
+.rst-content table.docutils td {
+  padding: 1rem 1.25rem;
+  vertical-align: middle;
 }
 
 .rst-content table.docutils th {
@@ -1221,6 +1252,11 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand {
 }
 
 @media screen and (max-width: 768px) {
+  .rst-content table.docutils th,
+  .rst-content table.docutils td {
+    padding: 0.8rem 0.9rem;
+  }
+
   .cavise-sidebar {
     display: none;
   }
