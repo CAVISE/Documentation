@@ -161,8 +161,89 @@ Run specific services:
 
    ./run.sh build <service-name>
    ./run.sh up <service-name>
+   ./run.sh start <service-name>
+   ./run.sh stop <service-name>
    ./run.sh restart <service-name>
    ./run.sh down <service-name>
+
+**Select OpenCDA capabilities**
+
+OpenCDA is available as four image targets. Select the smallest target that
+provides the native components required by the scenario.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 22 12 12 54
+
+   * - Target
+     - Protobuf
+     - CUDA extensions
+     - Use when
+   * - ``opencda-minimal``
+     - No
+     - No
+     - The scenario does not communicate with Artery and the selected
+       cooperative perception model does not require the custom OpenCOOD CUDA
+       extensions.
+   * - ``opencda-protobuf``
+     - Yes
+     - No
+     - OpenCDA communicates with Artery through CAPI.
+   * - ``opencda-cuda``
+     - No
+     - Yes
+     - The selected cooperative perception model requires the custom OpenCOOD
+       CUDA extensions, for example FPV-RCNN.
+   * - ``opencda``
+     - Yes
+     - Yes
+     - Both Artery/CAPI and a CUDA-dependent cooperative perception model are
+       required.
+
+Cooperative perception does not require the CUDA target by itself. Models
+that do not use the custom OpenCOOD CUDA extensions can run with
+``opencda-minimal``. Use ``opencda-protobuf`` when the same workload also
+communicates with Artery.
+
+Build and start the selected target through ``run.sh``:
+
+.. code-block:: bash
+
+   ./run.sh build opencda-minimal
+   ./run.sh up opencda-minimal
+
+Replace ``opencda-minimal`` with ``opencda-protobuf``, ``opencda-cuda``, or
+``opencda`` as required. The full ``opencda`` target is the default when no
+explicit OpenCDA target is provided.
+
+The same target aliases are accepted by every lifecycle command:
+
+.. code-block:: bash
+
+   ./run.sh stop opencda-protobuf
+   ./run.sh start opencda-protobuf
+   ./run.sh restart opencda-protobuf
+   ./run.sh down opencda-protobuf
+
+CUDA extensions target compute capability ``8.6`` by default. Override the
+architecture list when building for other GPUs:
+
+.. code-block:: bash
+
+   CUDA_ARCHITECTURES="75;86;89" ./run.sh build opencda-cuda
+
+Rebuild ``opencda-protobuf`` or ``opencda`` after changing a ``.proto`` file.
+Rebuild ``opencda-cuda`` or ``opencda`` after changing a CUDA or C++ extension
+source. Generated native artifacts are synchronized into the bind-mounted
+OpenCDA workspace when the container starts.
+
+All four targets currently use the CUDA runtime base and install the same
+Python dependencies. Selecting a smaller target skips unnecessary native
+compilation; it does not create a CPU-only image.
+
+Use ``run.sh`` as the recommended CAVISE interface. It configures the correct
+Compose service, build target, image tag, and CUDA architecture arguments.
+Docker Compose can also be used directly when lower-level control is needed.
 
 **Using Docker Compose**
 
@@ -173,18 +254,45 @@ Build and start all components:
    docker compose -f dc-configs/docker-compose.yml --env-file paths.conf build
    docker compose -f dc-configs/docker-compose.yml --env-file paths.conf up -d
 
-Run specific services:
+Build and start a specific service:
 
 .. code-block:: bash
 
+   docker compose -f dc-configs/docker-compose.yml --env-file paths.conf build <service-name>
    docker compose -f dc-configs/docker-compose.yml --env-file paths.conf up -d <service-name>
 
-Other commands:
+Start, stop, or restart an existing service:
 
 .. code-block:: bash
 
+   docker compose -f dc-configs/docker-compose.yml --env-file paths.conf start <service-name>
+   docker compose -f dc-configs/docker-compose.yml --env-file paths.conf stop <service-name>
    docker compose -f dc-configs/docker-compose.yml --env-file paths.conf restart <service-name>
-   docker compose -f dc-configs/docker-compose.yml --env-file paths.conf down <service-name>
+
+Stop and remove the complete Compose project:
+
+.. code-block:: bash
+
+   docker compose -f dc-configs/docker-compose.yml --env-file paths.conf down
+
+When using Docker Compose directly, select an OpenCDA target and its image tag
+through environment variables. For example, build and start the Protobuf
+variant:
+
+.. code-block:: bash
+
+   OPENCDA_BUILD_TARGET=opencda-protobuf OPENCDA_IMAGE_TAG=protobuf \
+     docker compose -f dc-configs/docker-compose.yml --env-file paths.conf \
+     build opencda
+
+   OPENCDA_BUILD_TARGET=opencda-protobuf OPENCDA_IMAGE_TAG=protobuf \
+     docker compose -f dc-configs/docker-compose.yml --env-file paths.conf \
+     up -d opencda
+
+Use ``minimal``, ``cuda``, and ``local`` as the corresponding image tags for
+``opencda-minimal``, ``opencda-cuda``, and the full ``opencda`` target.
+Set ``CUDA_ARCHITECTURES`` in the environment before a direct Compose build to
+override the default architecture.
 
 Run Individual Components
 -------------------------
@@ -280,6 +388,24 @@ Example:
 On Windows, specify ``--carla-host host.docker.internal`` when running
 ``python opencda.py`` from the OpenCDA container.
 
+Before starting OpenCDA, build and create a container with the target required
+by the scenario. For a scenario without Artery or CUDA-dependent OpenCOOD
+models:
+
+.. code-block:: bash
+
+   ./run.sh build opencda-minimal
+   ./run.sh up opencda-minimal
+
+OpenCDA communication with Artery requires generated Protobuf modules. Build
+and start either the Protobuf target or the full target before running a CAPI
+scenario:
+
+.. code-block:: bash
+
+   ./run.sh build opencda-protobuf
+   ./run.sh up opencda-protobuf
+
 Enter the OpenCDA container:
 
 .. code-block:: bash
@@ -310,6 +436,11 @@ Run cooperative perception models:
 
    python opencda.py -t rsu_check --cosim --with-coperception \
    --model-dir opencda/coperception_models/pointpillar-where2comm-intermediate-v2xsim-50
+
+This Where2Comm example does not require the custom OpenCOOD CUDA extensions,
+so it can use ``opencda-minimal`` or ``opencda-protobuf``. Build
+``opencda-cuda`` or the full ``opencda`` target only for models that require
+the extensions, such as FPV-RCNN.
 
 Help:
 
