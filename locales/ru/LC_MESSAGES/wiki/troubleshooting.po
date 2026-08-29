@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-04 05:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../source/wiki/troubleshooting.rst:2
+msgid "Problems and Solutions"
+msgstr "Проблемы и решения"
+
+#: ../source/wiki/troubleshooting.rst:4
+msgid "**CARLA Error: \"Town06 is not found\"**"
+msgstr "**Ошибка CARLA: «Town06 is not found»**"
+
+#: ../source/wiki/troubleshooting.rst:6
+msgid "Ensure the city has changed in CARLA, then retry the scenario."
+msgstr "Убедитесь, что город изменён в CARLA, затем повторите запуск сценария."
+
+#: ../source/wiki/troubleshooting.rst:8
+msgid "**OpenCDA Error: \"No module named 'opencood.utils.box_overlaps'\"**"
+msgstr "**Ошибка OpenCDA: «No module named 'opencood.utils.box_overlaps'»**"
+
+#: ../source/wiki/troubleshooting.rst:15
+msgid "**Display Errors in Artery**"
+msgstr "**Ошибки отображения в Artery**"
+
+#: ../source/wiki/troubleshooting.rst:17
+msgid "If you see:"
+msgstr "Если вы видите:"
+
+#: ../source/wiki/troubleshooting.rst:23
+msgid "run on the host:"
+msgstr "выполните на хосте:"

@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-04 05:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../source/wiki/index.rst:2
+msgid "Wiki"
+msgstr "Wiki"
+
+#: ../source/wiki/index.rst:4
+msgid ""
+"The wiki section consolidates operational notes that were previously "
+"stored in the GitHub Wiki."
+msgstr ""
+"Der Wiki-Bereich fasst betriebliche Hinweise zusammen, die zuvor im "
+"GitHub Wiki gespeichert waren."
+
+#: ../source/wiki/index.rst:7
+msgid "**Overview**"
+msgstr "**Übersicht**"
+
+#: ../source/wiki/index.rst:9
+msgid ""
+"This repository contains the tools used in the development of the CAVISE "
+"team, as well as our own developments, including **CAPI** and related "
+"integrations."
+msgstr ""
+"Dieses Repository enthält die Werkzeuge, die in der Entwicklung des "
+"CAVISE-Teams verwendet werden, sowie unsere eigenen Entwicklungen, "
+"einschließlich **CAPI** und verwandter Integrationen."
+
+#: ../source/wiki/index.rst:12
+msgid "**History**"
+msgstr "**Verlauf**"
+
+#: ../source/wiki/index.rst:14
+msgid ""
+"**OpenCDA** and **Artery** are two separate tools that can work and were "
+"developed independently. In 2023 and 2024, the CAVISE team implemented a "
+"protocol for interaction between these tools within the base scenario "
+"*realistic_town06_cosim*. This protocol is called **CAPI**."
+msgstr ""
+"**OpenCDA** und **Artery** sind zwei separate Werkzeuge, die unabhängig "
+"voneinander arbeiten und entwickelt wurden. In den Jahren 2023 und 2024 "
+"hat das CAVISE-Team ein Protokoll für die Interaktion zwischen diesen "
+"Werkzeugen im Basisszenario *realistic_town06_cosim* implementiert. Dieses "
+"Protokoll heißt **CAPI**."
+
+#: ../source/wiki/index.rst:19
+msgid ""
+"Both simulators use dedicated modules to interact with each other. In "
+"**Artery**, this is the **CommunicationManager** class, part of the comms"
+" static library, which provides network interaction with Artery in a "
+"separate thread, synchronizes requests from several CAVs, and collects "
+"data from them. It is used in the *realistic_town06_cosim* scenario."
+msgstr ""
+"Beide Simulatoren verwenden dedizierte Module zur Interaktion miteinander. "
+"In **Artery** ist dies die Klasse **CommunicationManager**, Teil der "
+"statischen Bibliothek comms, die die Netzwerkinteraktion mit Artery in einem "
+"separaten Thread bereitstellt, Anfragen mehrerer CAVs synchronisiert und Daten "
+"von ihnen sammelt. Sie wird im Szenario *realistic_town06_cosim* verwendet."
+
+#: ../source/wiki/index.rst:25
+msgid ""
+"In OpenCDA, **CommunicationManager** is part of CavWorld and is "
+"responsible for interaction with **Artery**. Methods for serialization "
+"and deserialization of data sent to and received from **Artery** are "
+"implemented there as well."
+msgstr ""
+"In OpenCDA ist **CommunicationManager** Teil von CavWorld und für die "
+"Interaktion mit **Artery** verantwortlich. Methoden zur Serialisierung und "
+"Deserialisierung der an **Artery** gesendeten und davon empfangenen Daten "
+"sind dort ebenfalls implementiert."
+
+#: ../source/wiki/index.rst:29
+msgid ""
+"Compiling protobuf definitions into source code files is part of the "
+"**Artery** compilation routine."
+msgstr ""
+"Das Kompilieren von Protobuf-Definitionen in Quelldateien ist Teil der "
+"**Artery**-Kompilierroutine."
+
+#: ../source/wiki/index.rst:32
+msgid "**Architecture**"
+msgstr "**Architektur**"
+
+#: ../source/wiki/index.rst:34
+msgid "CAVISE architecture"
+msgstr "CAVISE-Architektur"
+

@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-04 05:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../source/wiki/install-and-launch.rst:2
+msgid "Install And Launch"
+msgstr "Installation und Start"
+
+#: ../source/wiki/install-and-launch.rst:5
+msgid "Install CARLA on Windows"
+msgstr "CARLA unter Windows installieren"
+
+#: ../source/wiki/install-and-launch.rst:7
+msgid "Download **CARLA** for Windows from the official releases."
+msgstr "Laden Sie **CARLA** für Windows von den offiziellen Releases herunter."
+
+#: ../source/wiki/install-and-launch.rst:8
+msgid ""
+"Optionally move the contents of ``AdditionalMaps_0.9.X`` into "
+"``CARLA_0.9.X/WindowsNoEditor``."
+msgstr "Verschieben Sie optional den Inhalt von ``AdditionalMaps_0.9.X`` nach ``CARLA_0.9.X/WindowsNoEditor``."
+
+#: ../source/wiki/install-and-launch.rst:10
+msgid ""
+"In ``WindowsNoEditor``, create and activate a Python virtual environment."
+" Ensure the Python version matches CARLA requirements."
+msgstr "Erstellen und aktivieren Sie in ``WindowsNoEditor`` eine Python-Virtuelle Umgebung. Stellen Sie sicher, dass die Python-Version den Anforderungen von CARLA entspricht."
+
+#: ../source/wiki/install-and-launch.rst:21
+msgid "Start CARLA from the main directory:"
+msgstr "Starten Sie CARLA aus dem Hauptverzeichnis:"
+
+#: ../source/wiki/install-and-launch.rst:27
+msgid "Verify the Python API:"
+msgstr "Überprüfen Sie die Python-API:"
+
+#: ../source/wiki/install-and-launch.rst:33
+msgid ""
+"CARLA is now ready. When running OpenCDA scenarios from inside the "
+"OpenCDA container using ``python opencda.py``, specify:"
+msgstr "CARLA ist nun bereit. Beim Ausführen von OpenCDA-Szenarien innerhalb des OpenCDA-Containers mit ``python opencda.py`` geben Sie an:"
+
+#: ../source/wiki/install-and-launch.rst:41
+msgid "Install Dependencies"
+msgstr "Abhängigkeiten installieren"
+
+#: ../source/wiki/install-and-launch.rst:43
+msgid "**WSL on Windows**"
+msgstr "**WSL unter Windows**"
+
+#: ../source/wiki/install-and-launch.rst:45
+msgid ""
+"Ensure WSL is installed. The setup has been tested on WSL2 with Ubuntu "
+"24.04.1 LTS. Docker must also be available inside WSL."
+msgstr "Stellen Sie sicher, dass WSL installiert ist. Die Einrichtung wurde unter WSL2 mit Ubuntu 24.04.1 LTS getestet. Docker muss ebenfalls innerhalb von WSL verfügbar sein."
+
+#: ../source/wiki/install-and-launch.rst:48
+msgid "Ensure Python 3.10 or newer is installed, then clone the project and run:"
+msgstr "Stellen Sie sicher, dass Python 3.10 oder neuer installiert ist, klonen Sie dann das Projekt und führen Sie aus:"
+
+#: ../source/wiki/install-and-launch.rst:56
+msgid "**Linux**"
+msgstr "**Linux**"
+
+#: ../source/wiki/install-and-launch.rst:58
+msgid "Ensure Python 3.10 or newer is installed, then run:"
+msgstr "Stellen Sie sicher, dass Python 3.10 oder neuer installiert ist, und führen Sie aus:"
+
+#: ../source/wiki/install-and-launch.rst:67
+msgid "Install Required Repositories"
+msgstr "Erforderliche Repositories installieren"
+
+#: ../source/wiki/install-and-launch.rst:69
+msgid "Before running the setup script, ensure the base paths are configured:"
+msgstr "Stellen Sie vor dem Ausführen des Setup-Skripts sicher, dass die Basispfade konfiguriert sind:"
+
+#: ../source/wiki/install-and-launch.rst:75
+msgid "**Install all repositories**"
+msgstr "**Alle Repositories installieren**"
+
+#: ../source/wiki/install-and-launch.rst:81
+msgid "**Install a specific repository**"
+msgstr "**Ein bestimmtes Repository installieren**"
+
+#: ../source/wiki/install-and-launch.rst:83
+msgid "Clone only ``opencda``:"
+msgstr "Nur ``opencda`` klonen:"
+
+#: ../source/wiki/install-and-launch.rst:89
+msgid "Clone only ``artery``:"
+msgstr "Nur ``artery`` klonen:"
+
+#: ../source/wiki/install-and-launch.rst:95
+msgid "**Install with an explicit version**"
+msgstr "**Mit expliziter Version installieren**"
+
+#: ../source/wiki/install-and-launch.rst:97
+msgid ""
+"You can skip the interactive prompt by specifying a branch or tag "
+"directly."
+msgstr "Sie können die interaktive Eingabeaufforderung überspringen, indem Sie direkt einen Branch oder Tag angeben."
+
+#: ../source/wiki/install-and-launch.rst:99
+msgid "For ``opencda``:"
+msgstr "Für ``opencda``:"
+
+#: ../source/wiki/install-and-launch.rst:105
+#: ../source/wiki/install-and-launch.rst:117
+msgid "or"
+msgstr "oder"
+
+#: ../source/wiki/install-and-launch.rst:111
+msgid "For ``artery``:"
+msgstr "Für ``artery``:"
+
+#: ../source/wiki/install-and-launch.rst:123
+msgid "**Install a specific repository with a specific version**"
+msgstr "**Ein bestimmtes Repository mit einer bestimmten Version installieren**"
+
+#: ../source/wiki/install-and-launch.rst:133
+msgid "**Install both with explicit versions**"
+msgstr "**Beide mit expliziten Versionen installieren**"
+
+#: ../source/wiki/install-and-launch.rst:140
+msgid "Build And Run The Simulator"
+msgstr "Simulator erstellen und ausführen"
+
+#: ../source/wiki/install-and-launch.rst:142
+msgid "**Using ``run.sh`` (Recommended)**"
+msgstr "**Mit ``run.sh`` (empfohlen)**"
+
+#: ../source/wiki/install-and-launch.rst:144
+msgid "You do not need to manually build or run the CARLA container on Windows."
+msgstr "Sie müssen den CARLA-Container unter Windows nicht manuell erstellen oder starten."
+
+#: ../source/wiki/install-and-launch.rst:146
+msgid "Build everything:"
+msgstr "Alles erstellen:"
+
+#: ../source/wiki/install-and-launch.rst:152
+msgid "Start everything:"
+msgstr "Alles starten:"
+
+#: ../source/wiki/install-and-launch.rst:158
+#: ../source/wiki/install-and-launch.rst:176
+msgid "Run specific services:"
+msgstr "Bestimmte Dienste ausführen:"
+
+#: ../source/wiki/install-and-launch.rst:167
+msgid "**Using Docker Compose**"
+msgstr "**Mit Docker Compose**"
+
+#: ../source/wiki/install-and-launch.rst:169
+msgid "Build and start all components:"
+msgstr "Alle Komponenten erstellen und starten:"
+
+#: ../source/wiki/install-and-launch.rst:182
+msgid "Other commands:"
+msgstr "Weitere Befehle:"
+
+#: ../source/wiki/install-and-launch.rst:190
+msgid "Run Individual Components"
+msgstr "Einzelne Komponenten ausführen"
+
+#: ../source/wiki/install-and-launch.rst:192
+msgid "**CARLA on Windows**"
+msgstr "**CARLA unter Windows**"
+
+#: ../source/wiki/install-and-launch.rst:194
+msgid "Start CARLA:"
+msgstr "CARLA starten:"
+
+#: ../source/wiki/install-and-launch.rst:200
+msgid "Low-quality rendering:"
+msgstr "Rendering in niedriger Qualität:"
+
+#: ../source/wiki/install-and-launch.rst:206
+msgid "Headless mode:"
+msgstr "Headless-Modus:"
+
+#: ../source/wiki/install-and-launch.rst:212
+msgid "Change map or weather:"
+msgstr "Karte oder Wetter ändern:"
