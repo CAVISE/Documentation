@@ -35,6 +35,11 @@ CAVISE Documentation
          <h2 class="cavise-card__title">Scenario Creation</h2>
          <p class="cavise-card__text">Prepare YAML, SUMO assets, Artery configs, and coordinate data for new scenarios.</p>
        </a>
+       <a class="cavise-card" href="models.html">
+         <div class="cavise-card__eyebrow">Runtime Assets</div>
+         <h2 class="cavise-card__title">Models</h2>
+         <p class="cavise-card__text">Fetch individual OpenCOOD checkpoints and AdvCP asset bundles when they are needed.</p>
+       </a>
        <a class="cavise-card" href="wiki/.html">
          <div class="cavise-card__eyebrow">Support</div>
          <h2 class="cavise-card__title">Problems and Solutions</h2>

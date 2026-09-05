@@ -183,13 +183,18 @@ launch commands.
 
 **Cooperative perception**
 
-Enable a compatible OpenCOOD model and provide its directory:
+Enable a compatible OpenCOOD model by its bundle ID:
 
 .. code-block:: bash
 
    python opencda.py -t 2cars_2rsu_coperception \
      --with-coperception \
-     --model-dir opencda/coperception_models/<model-directory>
+     --model-id pointpillar-late-opv2v-30
+
+OpenCDA looks for the bundle in the sibling ``models`` repository and fetches
+only that bundle when it is missing. Use ``--model-dir`` only to bypass bundle
+resolution with an explicit custom directory. Repository, ref, offline, and
+AdvCP asset examples are documented in :doc:`/models`.
 
 Add ``--save-vis`` to save rendered predictions, ``--save-npy`` to export
 prediction data, or ``--show-video-vis`` for live visualization when a display
@@ -248,6 +253,8 @@ request to catch the most common failures early.
 Where to Go Next
 ----------------
 
+- :doc:`/models` explains model IDs, on-demand sparse checkout, AdvCP assets,
+  and offline operation.
 - :doc:`scenarios` explains how to create the OpenCDA YAML and matching SUMO
   and Artery assets.
 - :doc:`attack-framework` covers declarative attack execution and available
