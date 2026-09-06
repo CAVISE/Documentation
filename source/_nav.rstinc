@@ -13,6 +13,7 @@
    :caption: OpenCDA
 
    Overview and Launch <opencda/index>
+   Models and Runtime Assets <models>
    Scenarios <opencda/scenarios>
    Attack Framework <opencda/attack-framework>
    Behavior Services <opencda/behavior-services>

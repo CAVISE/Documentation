@@ -74,9 +74,16 @@ Before running the setup script, ensure the base paths are configured:
 
 **Install all repositories**
 
+With no positional arguments, setup processes ``opencda``, ``opencood``,
+``sumo``, ``artery``, and ``scenario-manager``:
+
 .. code-block:: bash
 
    ./setup.py
+
+The ``models`` repository is deliberately not part of setup. OpenCDA creates
+a sparse checkout and downloads only the requested model or AdvCP bundle at
+runtime; see :doc:`/models`.
 
 **Install a specific repository**
 
@@ -85,6 +92,12 @@ Clone only ``opencda``:
 .. code-block:: bash
 
    ./setup.py opencda
+
+Clone only ``opencood``:
+
+.. code-block:: bash
+
+   ./setup.py opencood
 
 Clone only ``artery``:
 
@@ -100,25 +113,37 @@ For ``opencda``:
 
 .. code-block:: bash
 
-   ./setup.py -o main
+   ./setup.py opencda -o main
 
 or
 
 .. code-block:: bash
 
-   ./setup.py --opencda-version v0.1.0
+   ./setup.py opencda --opencda-version v0.1.0
+
+For ``opencood``:
+
+.. code-block:: bash
+
+   ./setup.py opencood -O main
+
+or
+
+.. code-block:: bash
+
+   ./setup.py opencood --opencood-version v0.1.0
 
 For ``artery``:
 
 .. code-block:: bash
 
-   ./setup.py -a develop
+   ./setup.py artery -a develop
 
 or
 
 .. code-block:: bash
 
-   ./setup.py --artery-version v0.1.0
+   ./setup.py artery --artery-version v0.1.0
 
 **Install a specific repository with a specific version**
 
@@ -128,13 +153,17 @@ or
 
 .. code-block:: bash
 
-   ./setup.py artery -a develop
-
-**Install both with explicit versions**
+   ./setup.py opencood -O main
 
 .. code-block:: bash
 
-   ./setup.py -o main -a develop
+   ./setup.py artery -a develop
+
+**Install OpenCDA and OpenCOOD with explicit versions**
+
+.. code-block:: bash
+
+   ./setup.py opencda opencood -o main -O main
 
 Build And Run The Simulator
 ---------------------------
@@ -168,28 +197,35 @@ Run specific services:
 
 **Select OpenCDA capabilities**
 
-OpenCDA is available as four image targets. Select the smallest target that
+OpenCDA is available as five image targets. Select the smallest target that
 provides the native components required by the scenario.
 
 .. list-table::
    :header-rows: 1
-   :widths: 22 12 12 54
+   :widths: 22 12 12 12 42
 
    * - Target
+     - OpenCOOD
      - Protobuf
      - CUDA extensions
      - Use when
    * - ``opencda-minimal``
      - No
      - No
-     - The scenario does not communicate with Artery and the selected
-       cooperative perception model does not require the custom OpenCOOD CUDA
-       extensions.
+     - No
+     - Only core OpenCDA is required.
    * - ``opencda-protobuf``
+     - No
      - Yes
      - No
      - OpenCDA communicates with Artery through CAPI.
+   * - ``opencda-coperception``
+     - Yes
+     - No
+     - No
+     - Cooperative perception does not require custom CUDA extensions.
    * - ``opencda-cuda``
+     - Yes
      - No
      - Yes
      - The selected cooperative perception model requires the custom OpenCOOD
@@ -197,13 +233,14 @@ provides the native components required by the scenario.
    * - ``opencda``
      - Yes
      - Yes
+     - Yes
      - Both Artery/CAPI and a CUDA-dependent cooperative perception model are
        required.
 
 Cooperative perception does not require the CUDA target by itself. Models
 that do not use the custom OpenCOOD CUDA extensions can run with
-``opencda-minimal``. Use ``opencda-protobuf`` when the same workload also
-communicates with Artery.
+``opencda-coperception``. The minimal and Protobuf targets do not require the
+adjacent OpenCOOD checkout.
 
 Build and start the selected target through ``run.sh``:
 
@@ -212,9 +249,10 @@ Build and start the selected target through ``run.sh``:
    ./run.sh build opencda-minimal
    ./run.sh up opencda-minimal
 
-Replace ``opencda-minimal`` with ``opencda-protobuf``, ``opencda-cuda``, or
-``opencda`` as required. The full ``opencda`` target is the default when no
-explicit OpenCDA target is provided.
+Replace ``opencda-minimal`` with ``opencda-protobuf``,
+``opencda-coperception``, ``opencda-cuda``, or ``opencda`` as required. The
+full ``opencda`` target is the default when no explicit OpenCDA target is
+provided.
 
 The same target aliases are accepted by every lifecycle command:
 
@@ -237,9 +275,10 @@ Rebuild ``opencda-cuda`` or ``opencda`` after changing a CUDA or C++ extension
 source. Generated native artifacts are synchronized into the bind-mounted
 OpenCDA workspace when the container starts.
 
-All four targets currently use the CUDA runtime base and install the same
-Python dependencies. Selecting a smaller target skips unnecessary native
-compilation; it does not create a CPU-only image.
+All five targets use the CUDA runtime base. The core-only targets install only
+OpenCDA dependencies, while cooperative-perception targets additionally
+install OpenCOOD and its standalone dependencies. Selecting a smaller target
+does not create a CPU-only image.
 
 Use ``run.sh`` as the recommended CAVISE interface. It configures the correct
 Compose service, build target, image tag, and CUDA architecture arguments.
@@ -289,8 +328,8 @@ variant:
      docker compose -f dc-configs/docker-compose.yml --env-file paths.conf \
      up -d opencda
 
-Use ``minimal``, ``cuda``, and ``local`` as the corresponding image tags for
-``opencda-minimal``, ``opencda-cuda``, and the full ``opencda`` target.
+Use ``minimal``, ``protobuf``, ``coperception``, ``cuda``, and ``local`` as the
+corresponding image tags for the five OpenCDA targets.
 Set ``CUDA_ARCHITECTURES`` in the environment before a direct Compose build to
 override the default architecture.
 
@@ -389,13 +428,19 @@ On Windows, specify ``--carla-host host.docker.internal`` when running
 ``python opencda.py`` from the OpenCDA container.
 
 Before starting OpenCDA, build and create a container with the target required
-by the scenario. For a scenario without Artery or CUDA-dependent OpenCOOD
-models:
+by the scenario. For a scenario without Artery or cooperative perception:
 
 .. code-block:: bash
 
    ./run.sh build opencda-minimal
    ./run.sh up opencda-minimal
+
+For cooperative perception without custom OpenCOOD CUDA extensions:
+
+.. code-block:: bash
+
+   ./run.sh build opencda-coperception
+   ./run.sh up opencda-coperception
 
 OpenCDA communication with Artery requires generated Protobuf modules. Build
 and start either the Protobuf target or the full target before running a CAPI
@@ -435,12 +480,13 @@ Run cooperative perception models:
 .. code-block:: bash
 
    python opencda.py -t rsu_check --cosim --with-coperception \
-   --model-dir opencda/coperception_models/pointpillar-where2comm-intermediate-v2xsim-50
+     --model-id pointpillar-where2comm-intermediate-v2xsim-50
 
 This Where2Comm example does not require the custom OpenCOOD CUDA extensions,
-so it can use ``opencda-minimal`` or ``opencda-protobuf``. Build
-``opencda-cuda`` or the full ``opencda`` target only for models that require
-the extensions, such as FPV-RCNN.
+so it can use ``opencda-coperception``. Build ``opencda-cuda`` or the full
+``opencda`` target only for models that require the extensions, such as
+FPV-RCNN. See :doc:`/models` for download behavior, custom repositories,
+offline runs, and AdvCP assets.
 
 Help:
 
