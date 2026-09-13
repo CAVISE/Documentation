@@ -3,7 +3,7 @@ import os
 # Configuration file for the Sphinx documentation builder.
 
 project = "CAVISE"
-copyright = "2024, CAVISE Dev Team"
+copyright = "2026, CAVISE Dev Team"
 author = "CAVISE Dev Team"
 release = "1.0"
 
@@ -12,13 +12,14 @@ html_favicon = "_static/images/favicon.svg"
 html_title = "CAVISE Documentation"
 html_short_title = "CAVISE Docs"
 
-extensions = []
+extensions = ["sphinx_design"]
+pygments_style = "monokai"
 
 templates_path = ["_templates"]
 exclude_patterns = []
 
 html_theme = "cavise"
-html_theme_path = [os.path.abspath("./_theme")]
+html_theme_path = [os.path.join(os.path.dirname(__file__), "_theme")]
 html_static_path = ["_static"]
 html_js_files = ["js/cavise-theme.js"]
 html_permalinks = False

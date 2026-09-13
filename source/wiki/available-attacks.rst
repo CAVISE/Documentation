@@ -39,7 +39,7 @@ AIM Client Response Sniffer
 
 ``aim_client_response_sniffer`` passively observes
 ``AIMServerResponse`` messages consumed by targeted ``aim_client`` services.
-The sniffer stage does not rewrite traffic; it only installs observers on the
+The sniffer stage does not rewrite traffic. It only installs observers on the
 matched response capability handlers.
 
 The attack starts when an AIM-enabled RSU begins tracking vehicles and stops
@@ -100,3 +100,16 @@ loss or overload on the request path.
 
 The attack starts when an AIM-enabled RSU begins tracking vehicles and stops
 when the RSU no longer tracks any vehicles.
+
+AIM Server Trajectory Spoofing
+------------------------------
+
+``aim_server_trajectory_spoofing`` rewrites outgoing ``AIMServerResponse``
+trajectories from the RSU ``aim_server`` service. Its spoofer stage adds 50.0
+to the x-coordinate of each of the first three trajectory points through the
+``response.submit`` capability.
+
+The current configuration requires both AIM server and client services, uses
+``tracked_vehicle_count >= 0`` as its start predicate, and stops at a count of
+10. Review these experiment-specific thresholds before enabling it in a new
+scenario.

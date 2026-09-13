@@ -1,20 +1,46 @@
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: Wiki
+   :caption: Getting Started
 
    Overview <wiki/index>
-   Install and Launch <wiki/install-and-launch>
-   Problems and Solutions <wiki/troubleshooting>
+   Installation <wiki/install-and-launch>
+   First Simulation <getting-started/first-simulation>
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Running Simulations
+
+   SUMO and Artery <guides/cosimulation>
+   Cooperative Perception <guides/cooperative-perception>
+   AdvCP <guides/advcp>
+   Recording and Results <guides/results>
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Scenarios
+
+   Creating a Scenario <scenarios/index>
+   Maps and SUMO Assets <scenarios/maps>
 
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: OpenCDA
+   :caption: Reference
 
-   Overview and Launch <opencda/index>
+   OpenCDA Overview <opencda/index>
+   Runtime Commands and Targets <reference/runtime>
    Models and Runtime Assets <models>
-   Scenarios <opencda/scenarios>
    Attack Framework <opencda/attack-framework>
    Behavior Services <opencda/behavior-services>
-   Additional Scripts <wiki/additional-scripts>
+   Utility Scripts <wiki/additional-scripts>
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Development and Support
+
+   Development Setup <development/index>
+   Troubleshooting <wiki/troubleshooting>
