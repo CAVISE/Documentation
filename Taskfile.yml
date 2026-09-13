@@ -5,9 +5,6 @@ vars:
   SOURCE_DIR: source
   BUILD_DIR: build
   HTML_DIR: "{{.BUILD_DIR}}/html"
-  DOXYFILE: docs/doxyfile
-  DOXYGEN_SOURCE_DIR: "{{.SOURCE_DIR}}/doxygen/cavise"
-  DOXYGEN_SITE_DIR: "{{.HTML_DIR}}/doxygen/cavise"
 
 tasks:
   default:
@@ -24,7 +21,8 @@ tasks:
     desc: Build the HTML documentation site
     cmds:
       - rm -rf "{{.BUILD_DIR}}/html"
-      - "{{.PYTHON}} -m sphinx -M html {{.SOURCE_DIR}} {{.BUILD_DIR}}"
+      - "{{.PYTHON}} -m sphinx -M html {{.SOURCE_DIR}} {{.BUILD_DIR}} -n -W --keep-going"
+      - "{{.PYTHON}} scripts/check_links.py {{.HTML_DIR}}"
 
   clean:
     desc: Remove generated documentation artifacts
@@ -39,4 +37,9 @@ tasks:
   live:
     desc: Run a local auto-reloading docs server
     cmds:
-      - "{{.PYTHON}} -m sphinx_autobuild {{.SOURCE_DIR}} {{.BUILD_DIR}}/html"
+      - "{{.PYTHON}} -m sphinx_autobuild --host 127.0.0.1 --port 8000 {{.SOURCE_DIR}} {{.BUILD_DIR}}/html"
+
+  serve:
+    desc: Serve the built documentation on localhost:8000
+    cmds:
+      - "{{.PYTHON}} -m http.server 8000 --bind 127.0.0.1 --directory {{.HTML_DIR}}"

@@ -18,6 +18,7 @@
           {% else %}
             <span class="cavise-site-header__logo-fallback">C</span>
           {% endif %}
+          <span class="cavise-site-header__brand-title">CAVISE Docs</span>
         </a>
 
         <span class="cavise-site-header__brand-divider" aria-hidden="true"></span>
@@ -118,8 +119,8 @@
   </p>
 
   <div class="cavise-sidebar-shortcuts">
-    <a href="{{ pathto('quick-start/index') }}">Start Here</a>
-    <a href="{{ pathto('api/index') }}">API</a>
+    <a href="{{ pathto('getting-started/first-simulation') }}">Start Here</a>
+    <a href="{{ pathto('reference/runtime') }}">Commands</a>
   </div>
 
   {% include "searchbox.html" %}

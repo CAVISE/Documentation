@@ -1,3 +1,4 @@
+@import url("theme.css") screen and (max-width: 768px);
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 :root {
@@ -422,6 +423,8 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
 }
 
 .rst-content table.docutils {
+  width: 100%;
+  box-sizing: border-box;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--cavise-border-soft);
@@ -599,9 +602,21 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand {
 .cavise-site-header__brand {
   display: inline-flex;
   align-items: center;
+  gap: 0.75rem;
   justify-content: center;
   margin-right: auto;
   text-decoration: none;
+}
+
+.cavise-site-header__brand-title {
+  color: var(--cavise-text-strong);
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
+  display: none;
 }
 
 .cavise-site-header__logo,
@@ -1115,13 +1130,15 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: 1.15rem;
-  row-gap: 1.45rem;
+  row-gap: 1.75rem;
   margin-top: 0.35rem;
 }
 
 .cavise-card {
   display: block;
-  height: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  height: auto;
   padding: 1.3rem 1.3rem 1.4rem;
   border: 1px solid var(--cavise-border-soft);
   border-radius: var(--cavise-radius-lg);
@@ -1281,12 +1298,37 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand {
 
   .wy-nav-side {
     top: 0;
-    left: 0;
+    left: -300px;
+    width: 300px;
     height: 100%;
     opacity: 1;
     transform: none;
     clip-path: none;
     pointer-events: auto;
+  }
+
+  .wy-nav-side.shift {
+    left: 0;
+  }
+
+  .rst-content code.literal {
+    color: var(--cavise-cyan-400);
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .rst-content h1,
+  .rst-content h2,
+  .rst-content h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .wy-menu-vertical li.current > a,
+  .wy-menu-vertical li.current > a:hover,
+  .wy-menu-vertical li.current,
+  .wy-menu-vertical li.current ul {
+    background: var(--cavise-surface-2);
+    color: var(--cavise-text-strong);
   }
 
   .wy-nav-content-wrap,
@@ -1317,4 +1359,37 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand {
   .cavise-hero__title {
     font-size: 2.5rem;
   }
+}
+
+/* OS selectors share the documentation palette and retain visible focus. */
+.sd-tab-set {
+  --sd-color-tabs-label-active: var(--cavise-green-500);
+  --sd-color-tabs-label-hover: var(--cavise-cyan-400);
+  --sd-color-tabs-label-inactive: var(--cavise-text-secondary);
+  --sd-color-tabs-underline-active: var(--cavise-green-500);
+  --sd-color-tabs-underline-hover: var(--cavise-cyan-400);
+  --sd-color-tabs-underline: var(--cavise-border-soft);
+  --sd-color-tabs-overline: transparent;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.rst-content .sd-tab-set > label {
+  color: var(--cavise-text-secondary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.15rem;
+}
+
+.rst-content .sd-tab-set > input:checked + label {
+  color: var(--cavise-green-500);
+  background: var(--cavise-surface-2);
+}
+
+.rst-content .sd-tab-set > input:focus-visible + label {
+  outline: 2px solid var(--cavise-cyan-400);
+  outline-offset: -2px;
+}
+
+.rst-content .sd-tab-content {
+  padding: 1rem 0.25rem 1.25rem;
 }

@@ -6,7 +6,7 @@ vehicles and RSUs. They exchange typed ``TransportMessage`` envelopes, expose
 state snapshots, and run in a deterministic per-tick execution order.
 
 This service layer is also the attachment point used by the adversary
-framework. Attack stages do not patch managers directly; they wrap capability
+framework. Attack stages do not patch managers directly. They wrap capability
 bindings exported by behavior services. See :doc:`attack-framework` for the
 attack-side architecture. For the current builtin catalog, see
 :doc:`available-services`.
