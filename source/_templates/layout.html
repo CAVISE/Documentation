@@ -58,9 +58,14 @@
 
       <div class="cavise-topbar-controls">
         {% if _docs_languages|length > 1 %}
-          <nav class="cavise-language-switcher" aria-label="{% if docs_language == 'ru' %}Выбор языка{% else %}Language selection{% endif %}">
-            {% if 'en' in _docs_languages %}<a href="{{ _english_page }}" hreflang="en" lang="en"{% if docs_language == 'en' %} aria-current="page"{% endif %}>EN</a>{% endif %}
-            {% if 'ru' in _docs_languages %}<a href="{{ _russian_page }}" hreflang="ru" lang="ru"{% if docs_language == 'ru' %} aria-current="page"{% endif %}>RU</a>{% endif %}
+          <nav aria-label="{% if docs_language == 'ru' %}Выбор языка{% else %}Language selection{% endif %}">
+            <details class="cavise-language-dropdown">
+              <summary>{% if docs_language == 'ru' %}Ru{% else %}En{% endif %}</summary>
+              <div class="cavise-language-dropdown__menu">
+                {% if 'en' in _docs_languages %}<a href="{{ _english_page }}" hreflang="en" lang="en"{% if docs_language == 'en' %} aria-current="page"{% endif %}>En</a>{% endif %}
+                {% if 'ru' in _docs_languages %}<a href="{{ _russian_page }}" hreflang="ru" lang="ru"{% if docs_language == 'ru' %} aria-current="page"{% endif %}>Ru</a>{% endif %}
+              </div>
+            </details>
           </nav>
         {% endif %}
 
@@ -159,10 +164,15 @@
   <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
   <a href="{{ pathto(_root_doc) }}">{% if docs_language == 'ru' %}Документация CAVISE{% else %}CAVISE Docs{% endif %}</a>
   {% if _docs_languages|length > 1 %}
-    <span class="cavise-mobile-language">
-      {% if 'en' in _docs_languages %}<a href="{{ _english_page }}" hreflang="en" lang="en">EN</a>{% endif %}
-      {% if 'ru' in _docs_languages %}<a href="{{ _russian_page }}" hreflang="ru" lang="ru">RU</a>{% endif %}
-    </span>
+    <div class="cavise-mobile-language">
+      <details class="cavise-language-dropdown cavise-language-dropdown--mobile">
+        <summary>{% if docs_language == 'ru' %}Ru{% else %}En{% endif %}</summary>
+        <div class="cavise-language-dropdown__menu">
+          {% if 'en' in _docs_languages %}<a href="{{ _english_page }}" hreflang="en" lang="en"{% if docs_language == 'en' %} aria-current="page"{% endif %}>En</a>{% endif %}
+          {% if 'ru' in _docs_languages %}<a href="{{ _russian_page }}" hreflang="ru" lang="ru"{% if docs_language == 'ru' %} aria-current="page"{% endif %}>Ru</a>{% endif %}
+        </div>
+      </details>
+    </div>
   {% endif %}
 {% endblock %}
 
