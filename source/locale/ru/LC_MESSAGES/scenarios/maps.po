@@ -1,0 +1,157 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/scenarios/maps.rst:82
+msgid ".. image:: images/poly_settings.png"
+msgstr ".. image:: images/poly_settings.png"
+
+#: ../../source/scenarios/maps.rst:79
+msgid ".. image:: images/toolbar.png"
+msgstr ".. image:: images/toolbar.png"
+
+#: ../../source/scenarios/maps.rst:16
+msgid "For a temporary conversion environment in the **OpenCDA container**:"
+msgstr "Для временной среды преобразования в **контейнере OpenCDA**:"
+
+#: ../../source/scenarios/maps.rst:75
+msgid ""
+"For manual corrections, open the scenario in netedit and switch to Polygon Mode. Enable fill and "
+"a closed shape, set its ID/type, draw the vertices, then save. The example toolbar and polygon "
+"settings are shown below."
+msgstr ""
+"Для ручного исправления откройте сценарий в netedit и переключитесь в режим полигонов. Включите "
+"заливку и замкнутую форму, задайте ID и тип, нарисуйте вершины и сохраните. Ниже показаны панель "
+"инструментов и параметры полигона из примера."
+
+#: ../../source/scenarios/maps.rst:58
+msgid "Generate Polygons"
+msgstr "Создание полигонов"
+
+#: ../../source/scenarios/maps.rst:37
+msgid "Generate a Road Network"
+msgstr "Создание дорожной сети"
+
+#: ../../source/scenarios/maps.rst:86
+msgid "Get Scenario Coordinates"
+msgstr "Получение координат сценария"
+
+#: ../../source/scenarios/maps.rst:39
+msgid "In the same **OpenCDA container shell**:"
+msgstr "В той же **оболочке контейнера OpenCDA**:"
+
+#: ../../source/scenarios/maps.rst:52
+msgid ""
+"Inspect lane connectivity and traffic lights in SUMO/netedit before using the network in an "
+"experiment. Generate routes against this network's edge IDs."
+msgstr ""
+"Перед использованием сети в эксперименте проверьте связность полос и светофоры в SUMO/netedit. "
+"Создавайте маршруты с ID рёбер этой сети."
+
+#: ../../source/scenarios/maps.rst:2
+msgid "Maps and SUMO Assets"
+msgstr "Карты и ресурсы SUMO"
+
+#: ../../source/scenarios/maps.rst:82
+msgid "Polygon fill and closed-shape settings in netedit"
+msgstr "Параметры заливки и замкнутой формы полигона в netedit"
+
+#: ../../source/scenarios/maps.rst:9
+msgid "Prepare the Conversion Environment"
+msgstr "Подготовка среды преобразования"
+
+#: ../../source/scenarios/maps.rst:69
+msgid "Reference the chosen polygon file in your scenario's ``.sumocfg``:"
+msgstr "Укажите выбранный файл полигонов в ``.sumocfg`` сценария:"
+
+#: ../../source/scenarios/maps.rst:11
+msgid ""
+"Run the helper scripts from the **OpenCDA repository root** in a Python environment with CARLA "
+"0.9.16, lxml and sumolib. Network generation additionally needs the SUMO distribution (including "
+"``netconvert`` and its tools). The OpenCDA container does not install the SUMO executable by "
+"default."
+msgstr ""
+"Запускайте вспомогательные скрипты из **корня репозитория OpenCDA** в Python-среде с CARLA "
+"0.9.16, lxml и sumolib. Для создания сети дополнительно требуется дистрибутив SUMO, включая "
+"``netconvert`` и его инструменты. По умолчанию исполняемый файл SUMO не устанавливается в "
+"контейнер OpenCDA."
+
+#: ../../source/scenarios/maps.rst:79
+msgid "SUMO netedit toolbar with polygon mode controls"
+msgstr "Панель инструментов SUMO netedit с элементами управления режимом полигонов"
+
+#: ../../source/scenarios/maps.rst:48
+msgid ""
+"The distinct ``.generated`` filename lets you inspect the result before replacing existing "
+"assets. Alternatively pass a local ``.xodr`` file instead of ``--from-carla``. See :doc:`/wiki"
+"/additional-scripts` for script options."
+msgstr ""
+"Отдельный суффикс ``.generated`` позволяет проверить результат до замены существующих ресурсов. "
+"Вместо ``--from-carla`` также можно передать локальный файл ``.xodr``. Параметры скрипта описаны "
+"в :doc:`/wiki/additional-scripts`."
+
+#: ../../source/scenarios/maps.rst:102
+msgid ""
+"The printed transform is the camera position. Adapt it to a valid vehicle spawn point on the "
+"road. Do not copy the camera altitude into a vehicle's spawn height. Check the YAML pose "
+"convention used by your chosen scenario."
+msgstr ""
+"Выведенное преобразование соответствует положению камеры. Адаптируйте его к допустимой точке "
+"появления транспортного средства на дороге. Не копируйте высоту камеры в высоту появления "
+"транспортного средства. Проверьте соглашение о позе YAML для выбранного сценария."
+
+#: ../../source/scenarios/maps.rst:27
+msgid ""
+"The temporary environment is lost when the container is recreated. The commands below save assets"
+" into ``opencda/sumo-assets/``, which Compose mounts from the host's ``sumo/assets/`` directory. "
+"Set ``CARLA_HOST`` as described in :ref:`carla-client-shell`. Keep CARLA running without an "
+"active OpenCDA scenario while converting maps, because the conversion tools can load maps and "
+"tick the world."
+msgstr ""
+"Временная среда удаляется при пересоздании контейнера. Приведённые ниже команды сохраняют ресурсы"
+" в ``opencda/sumo-assets/``, который Compose подключает из каталога хоста ``sumo/assets/``. "
+"Задайте ``CARLA_HOST``, как описано в :ref:`carla-client-shell`. Во время преобразования карт "
+"оставьте CARLA запущенной без активного сценария OpenCDA, поскольку инструменты преобразования "
+"могут загружать карты и продвигать мир по шагам."
+
+#: ../../source/scenarios/maps.rst:95
+msgid "To move the spectator:"
+msgstr "Чтобы переместить наблюдателя:"
+
+#: ../../source/scenarios/maps.rst:4
+msgid ""
+"Use map assets from ``sumo/assets/maps/`` when they already match your CARLA map. This page "
+"covers generating a new road network and polygons, and inspecting coordinates for scenario YAML "
+"files."
+msgstr ""
+"Используйте ресурсы карты из ``sumo/assets/maps/``, если они уже соответствуют карте CARLA. На "
+"этой странице описано создание новой дорожной сети и полигонов, а также проверка координат для "
+"YAML-файлов сценариев."
+
+#: ../../source/scenarios/maps.rst:88
+msgid "Use the CARLA spectator to locate a road position. From the **OpenCDA container shell**:"
+msgstr ""
+"Используйте наблюдателя CARLA, чтобы определить положение на дороге. Из **оболочки контейнера "
+"OpenCDA**:"
+
+#: ../../source/scenarios/maps.rst:60
+msgid "Use the generated network for coordinate conversion and clipping:"
+msgstr "Используйте созданную сеть для преобразования координат и обрезки:"
+

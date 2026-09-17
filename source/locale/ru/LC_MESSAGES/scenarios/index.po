@@ -1,0 +1,216 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/scenarios/index.rst:100
+msgid ":doc:`/guides/advcp` describes attacks against cooperative perception."
+msgstr ":doc:`/guides/advcp` описывает атаки на кооперативное восприятие."
+
+#: ../../source/scenarios/index.rst:99
+msgid ":doc:`/opencda/attack-framework` describes attacks against those services."
+msgstr ":doc:`/opencda/attack-framework` описывает атаки на эти сервисы."
+
+#: ../../source/scenarios/index.rst:97
+msgid ":doc:`/opencda/behavior-services` describes reusable CAV/RSU services and their configuration."
+msgstr ""
+":doc:`/opencda/behavior-services` описывает многократно используемые сервисы CAV/RSU и их "
+"конфигурацию."
+
+#: ../../source/scenarios/index.rst:30
+msgid ""
+"A scenario in a subdirectory is selected with its relative path, for example ``-t advcp-"
+"scenarios/advcp_check``. Validate a CARLA-only run before adding co-simulation. Use :doc:`maps` "
+"to inspect coordinates and prepare map assets."
+msgstr ""
+"Сценарий во вложенном каталоге выбирается по относительному пути, например ``-t advcp-"
+"scenarios/advcp_check``. Перед добавлением совместной симуляции проверьте запуск только с CARLA. "
+"Для проверки координат и подготовки ресурсов карты используйте :doc:`maps`."
+
+#: ../../source/scenarios/index.rst:89
+msgid ""
+"A scenario using ``PosixLauncher`` starts its own SUMO process. One using ``ConnectLauncher`` "
+"connects to a server you started separately. Do not mix the two launch methods for the same "
+"experiment. If adding a CMake run target, follow ``artery/scenarios/CMakeLists.txt`` and rebuild "
+"Artery."
+msgstr ""
+"Сценарий с ``PosixLauncher`` запускает собственный процесс SUMO. Сценарий с ``ConnectLauncher`` "
+"подключается к отдельно запущенному серверу. Не смешивайте эти два способа запуска в одном "
+"эксперименте. При добавлении цели запуска CMake следуйте примеру "
+"``artery/scenarios/CMakeLists.txt`` и пересоберите Artery."
+
+#: ../../source/scenarios/index.rst:78
+msgid "Add Artery"
+msgstr "Добавление Artery"
+
+#: ../../source/scenarios/index.rst:35
+msgid "Add SUMO"
+msgstr "Добавление SUMO"
+
+#: ../../source/scenarios/index.rst:102
+msgid ""
+"Check a baseline without attacks first, then enable one change at a time and compare "
+":doc:`/guides/results`."
+msgstr ""
+"Сначала проверьте базовый вариант без атак, затем включайте по одному изменению и сравнивайте "
+":doc:`/guides/results`."
+
+#: ../../source/scenarios/index.rst:37
+msgid ""
+"Create ``sumo/assets/my_scenario/`` in the **CAVISE workspace**. Reuse a road network from "
+"``sumo/assets/maps/`` that matches the CARLA map, or generate one following :doc:`maps`."
+msgstr ""
+"Создайте ``sumo/assets/my_scenario/`` в **рабочем каталоге CAVISE**. Используйте дорожную сеть из"
+" ``sumo/assets/maps/``, соответствующую карте CARLA, или создайте её по инструкции :doc:`maps`."
+
+#: ../../source/scenarios/index.rst:9
+msgid "Create the OpenCDA YAML"
+msgstr "Создание YAML OpenCDA"
+
+#: ../../source/scenarios/index.rst:2
+msgid "Creating a Scenario"
+msgstr "Создание сценария"
+
+#: ../../source/scenarios/index.rst:18
+msgid ""
+"Edit the map, agent spawn positions, destinations, sensors and behaviors. The runner merges the "
+"file over ``config_yaml/default.yaml``. Vehicle and RSU IDs must be unique within their "
+"corresponding agent type. AdvCP uses runtime IDs such as ``cav-5`` and ``rsu-1``. Behavior-"
+"service attacks are selected independently through the top-level ``attacks`` list."
+msgstr ""
+"Измените карту, точки появления агентов, пункты назначения, датчики и поведение. Средство запуска"
+" объединяет файл с ``config_yaml/default.yaml``. ID транспортных средств и RSU должны быть "
+"уникальны в пределах соответствующего типа агента. AdvCP использует ID времени выполнения, "
+"например ``cav-5`` и ``rsu-1``. Атаки на сервисы поведения выбираются независимо через список "
+"``attacks`` верхнего уровня."
+
+#: ../../source/scenarios/index.rst:44
+msgid "File"
+msgstr "Файл"
+
+#: ../../source/scenarios/index.rst:84
+msgid ""
+"For a custom Artery configuration, use the base ``capi`` scenario as a reference. Preserve "
+"``*.withCAPI = true``, the CAPI endpoint, and the TraCI connection settings. With two clients, "
+"use client order 1 for Artery and 2 for OpenCDA and start SUMO with ``--num-clients 2``."
+msgstr ""
+"Для пользовательской конфигурации Artery используйте базовый сценарий ``capi`` как образец. "
+"Сохраните ``*.withCAPI = true``, конечную точку CAPI и параметры подключения TraCI. При двух "
+"клиентах задайте порядковый номер 1 для Artery и 2 для OpenCDA и запускайте SUMO с ``--num-"
+"clients 2``."
+
+#: ../../source/scenarios/index.rst:80
+msgid ""
+"For a first CAPI run, use the shared ``artery/scenarios/capi`` configuration from "
+":doc:`/guides/cosimulation`. It connects to the separate SUMO container at port 3000. This avoids"
+" duplicating the network and route files in Artery."
+msgstr ""
+"Для первого запуска CAPI используйте общую конфигурацию ``artery/scenarios/capi`` из "
+":doc:`/guides/cosimulation`. Она подключается к отдельному контейнеру SUMO через порт 3000. Это "
+"позволяет не дублировать файлы сети и маршрутов в Artery."
+
+#: ../../source/scenarios/index.rst:11
+msgid "In the **OpenCDA repository**:"
+msgstr "В **репозитории OpenCDA**:"
+
+#: ../../source/scenarios/index.rst:53
+msgid "Optional static geometry for visualization and propagation models."
+msgstr "Необязательная статическая геометрия для визуализации и моделей распространения сигнала."
+
+#: ../../source/scenarios/index.rst:55
+msgid ""
+"Paths within ``.sumocfg`` are relative to that configuration file. For example, "
+"``v2xp_datadump_town06_carla.sumocfg`` references ``../maps/Town06/Town06.net.xml`` rather than "
+"copying the network into its scenario directory."
+msgstr ""
+"Пути внутри ``.sumocfg`` задаются относительно этого файла конфигурации. Например, "
+"``v2xp_datadump_town06_carla.sumocfg`` ссылается на ``../maps/Town06/Town06.net.xml``, а не "
+"копирует сеть в каталог сценария."
+
+#: ../../source/scenarios/index.rst:45
+msgid "Purpose"
+msgstr "Назначение"
+
+#: ../../source/scenarios/index.rst:47
+msgid "References routes, network, optional polygons and simulation settings."
+msgstr "Ссылается на маршруты, сеть, необязательные полигоны и настройки симуляции."
+
+#: ../../source/scenarios/index.rst:51
+msgid "SUMO road network. Can be shared by scenarios on the same map."
+msgstr "Дорожная сеть SUMO. Может использоваться несколькими сценариями на одной карте."
+
+#: ../../source/scenarios/index.rst:95
+msgid "Services and Attacks"
+msgstr "Сервисы и атаки"
+
+#: ../../source/scenarios/index.rst:59
+msgid ""
+"Set the SUMO connection in the OpenCDA YAML (these values can also be inherited from "
+"``default.yaml``):"
+msgstr ""
+"Задайте подключение SUMO в YAML OpenCDA (эти значения также могут наследоваться из "
+"``default.yaml``):"
+
+#: ../../source/scenarios/index.rst:71
+msgid ""
+"Start the server with the required client count and then launch OpenCDA with ``--cosim``. Follow "
+":doc:`/guides/cosimulation` for the commands. Keep the server's step length consistent with "
+"``world.fixed_delta_seconds`` and ensure routes reference existing edges. Provide traffic or a "
+"valid long-lived vehicle so the intended experiment does not end before its clients finish."
+msgstr ""
+"Запустите сервер с необходимым числом клиентов, затем запустите OpenCDA с ``--cosim``. Команды "
+"приведены в :doc:`/guides/cosimulation`. Согласуйте длительность шага сервера с "
+"``world.fixed_delta_seconds`` и убедитесь, что маршруты ссылаются на существующие рёбра. Добавьте"
+" трафик или корректное долгоживущее транспортное средство, чтобы эксперимент не завершился раньше"
+" его клиентов."
+
+#: ../../source/scenarios/index.rst:4
+msgid ""
+"Start with a working scenario close to your experiment. A CARLA-only scenario needs an OpenCDA "
+"YAML file. Add SUMO assets only for co-simulation, and Artery configuration only when the "
+"experiment uses CAPI."
+msgstr ""
+"Начните с работающего сценария, близкого к вашему эксперименту. Для сценария только с CARLA "
+"требуется YAML-файл OpenCDA. Добавляйте ресурсы SUMO только для совместной симуляции, а "
+"конфигурацию Artery - только при использовании CAPI."
+
+#: ../../source/scenarios/index.rst:49
+msgid "Vehicle routes or flows using valid edge IDs from the network."
+msgstr "Маршруты или потоки транспортных средств с допустимыми ID рёбер сети."
+
+#: ../../source/scenarios/index.rst:24
+msgid "With CARLA running and ``CARLA_HOST`` set in the **OpenCDA container**:"
+msgstr "При запущенной CARLA и заданном ``CARLA_HOST`` в **контейнере OpenCDA**:"
+
+#: ../../source/scenarios/index.rst:50
+msgid "``.net.xml``"
+msgstr "``.net.xml``"
+
+#: ../../source/scenarios/index.rst:52
+msgid "``.poly.xml``"
+msgstr "``.poly.xml``"
+
+#: ../../source/scenarios/index.rst:48
+msgid "``my_scenario.rou.xml``"
+msgstr "``my_scenario.rou.xml``"
+
+#: ../../source/scenarios/index.rst:46
+msgid "``my_scenario.sumocfg``"
+msgstr "``my_scenario.sumocfg``"
+

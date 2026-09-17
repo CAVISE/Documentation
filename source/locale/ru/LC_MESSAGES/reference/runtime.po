@@ -1,0 +1,382 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/reference/runtime.rst:116
+msgid ""
+"All targets use the CUDA runtime base. CUDA extensions are a separate build capability, not the "
+"switch that enables GPU computation. ``opencda-minimal`` and ``opencda-protobuf`` do not install "
+"OpenCOOD."
+msgstr ""
+"Все цели используют базовый образ среды выполнения CUDA. Расширения CUDA - отдельная возможность "
+"сборки, а не переключатель, включающий вычисления на GPU. ``opencda-minimal`` и ``opencda-"
+"protobuf`` не устанавливают OpenCOOD."
+
+#: ../../source/reference/runtime.rst:196
+msgid "Artery Frontends"
+msgstr "Интерфейсы Artery"
+
+#: ../../source/reference/runtime.rst:99
+msgid "Artery without cooperative perception."
+msgstr "Artery без кооперативного восприятия."
+
+#: ../../source/reference/runtime.rst:49
+msgid "Behavior"
+msgstr "Поведение"
+
+#: ../../source/reference/runtime.rst:51
+msgid "Build images. Does not start containers or simulator processes."
+msgstr "Собирает образы. Не запускает контейнеры или процессы симулятора."
+
+#: ../../source/reference/runtime.rst:48
+msgid "Command"
+msgstr "Команда"
+
+#: ../../source/reference/runtime.rst:38
+msgid "Container Lifecycle"
+msgstr "Жизненный цикл контейнера"
+
+#: ../../source/reference/runtime.rst:114
+msgid "Cooperative perception together with Artery. Default target."
+msgstr "Кооперативное восприятие совместно с Artery. Цель по умолчанию."
+
+#: ../../source/reference/runtime.rst:94
+msgid "Core CARLA/OpenCDA, optionally SUMO."
+msgstr "Базовые CARLA/OpenCDA, при необходимости SUMO."
+
+#: ../../source/reference/runtime.rst:53
+msgid "Create/start containers in the background, recreating them when needed."
+msgstr "Создаёт или запускает контейнеры в фоновом режиме, пересоздавая их при необходимости."
+
+#: ../../source/reference/runtime.rst:88
+msgid "Custom CUDA"
+msgstr "Пользовательские расширения CUDA"
+
+#: ../../source/reference/runtime.rst:133
+msgid "Direct Compose Access"
+msgstr "Прямой доступ к Compose"
+
+#: ../../source/reference/runtime.rst:31
+msgid "For example, clone OpenCDA and OpenCOOD at explicit refs:"
+msgstr "Например, клонируйте OpenCDA и OpenCOOD с явно заданными ref:"
+
+#: ../../source/reference/runtime.rst:63
+msgid "For example:"
+msgstr "Пример:"
+
+#: ../../source/reference/runtime.rst:198
+msgid "In the **Artery container**, from ``/workspaces/artery``, select a Qt frontend:"
+msgstr "В **контейнере Artery** из ``/workspaces/artery`` выберите интерфейс Qt:"
+
+#: ../../source/reference/runtime.rst:181
+msgid "Inside the **OpenCDA container**, run:"
+msgstr "В **контейнере OpenCDA** выполните:"
+
+#: ../../source/reference/runtime.rst:109
+msgid "Models requiring custom CUDA extensions, such as FPV-RCNN."
+msgstr "Модели, требующие пользовательских расширений CUDA, например FPV-RCNN."
+
+#: ../../source/reference/runtime.rst:104
+msgid "Models that do not require custom CUDA extensions."
+msgstr "Модели, которым не требуются пользовательские расширения CUDA."
+
+#: ../../source/reference/runtime.rst:91 ../../source/reference/runtime.rst:92
+#: ../../source/reference/runtime.rst:93 ../../source/reference/runtime.rst:96
+#: ../../source/reference/runtime.rst:98 ../../source/reference/runtime.rst:102
+#: ../../source/reference/runtime.rst:103 ../../source/reference/runtime.rst:107
+msgid "No"
+msgstr "Нет"
+
+#: ../../source/reference/runtime.rst:72
+msgid ""
+"Only one OpenCDA target can be selected per invocation. All targets use the same service and "
+"container name, ``opencda``. They are not simultaneous independent containers."
+msgstr ""
+"За один вызов можно выбрать только одну цель OpenCDA. Все цели используют одни и те же имя "
+"сервиса и имя контейнера - ``opencda``. Они не являются одновременно работающими независимыми "
+"контейнерами."
+
+#: ../../source/reference/runtime.rst:173
+msgid ""
+"Open ``http://localhost`` if the browser does not open automatically. Stop it with ``./run.sh "
+"stop scenario-manager``. Keep these invocations separate from main simulator services because the"
+" wrapper forwards service arguments to the selected Compose projects."
+msgstr ""
+"Если браузер не открылся автоматически, откройте ``http://localhost``. Остановите сервис командой"
+" ``./run.sh stop scenario-manager``. Выполняйте эти вызовы отдельно от основных сервисов "
+"симулятора, поскольку обёртка передаёт аргументы сервисов выбранным проектам Compose."
+
+#: ../../source/reference/runtime.rst:179
+msgid "OpenCDA CLI"
+msgstr "CLI OpenCDA"
+
+#: ../../source/reference/runtime.rst:79
+msgid "OpenCDA Image Targets"
+msgstr "Цели образов OpenCDA"
+
+#: ../../source/reference/runtime.rst:86
+msgid "OpenCOOD"
+msgstr "OpenCOOD"
+
+#: ../../source/reference/runtime.rst:87
+msgid "Protobuf"
+msgstr "Protobuf"
+
+#: ../../source/reference/runtime.rst:127
+msgid ""
+"Rebuild after changing a Dockerfile or dependencies. Rebuild a Protobuf target after changing a "
+"CAPI ``.proto`` file, and a CUDA target after changing native OpenCOOD sources. Use ``up`` "
+"afterwards: native artifacts are synchronized into the mounted workspace by the container "
+"entrypoint."
+msgstr ""
+"После изменения Dockerfile или зависимостей выполните повторную сборку. После изменения файла "
+"CAPI ``.proto`` пересоберите цель Protobuf, а после изменения нативного исходного кода OpenCOOD -"
+" цель CUDA. Затем используйте ``up``: точка входа контейнера синхронизирует нативные артефакты с "
+"подключённым рабочим каталогом."
+
+#: ../../source/reference/runtime.rst:61
+msgid "Remove containers via Compose. Files outside bind mounts may be lost."
+msgstr "Удаляет контейнеры через Compose. Файлы вне подключённых томов могут быть потеряны."
+
+#: ../../source/reference/runtime.rst:18
+msgid "Repository"
+msgstr "Репозиторий"
+
+#: ../../source/reference/runtime.rst:8
+msgid "Repository Setup"
+msgstr "Настройка репозиториев"
+
+#: ../../source/reference/runtime.rst:59
+msgid "Restart existing containers. Does not rebuild images."
+msgstr "Перезапускает существующие контейнеры. Не пересобирает образы."
+
+#: ../../source/reference/runtime.rst:40
+msgid ""
+"Run ``./run.sh COMMAND [SERVICES...]`` from the **CAVISE root on Linux/WSL**. Main services are "
+"``carla``, ``opencda``, ``artery`` and ``sumo``. Omitting services selects all main services, "
+"including CARLA on Windows. Prefer an explicit service list for the experiment you are running."
+msgstr ""
+"Запускайте ``./run.sh COMMAND [SERVICES...]`` из **корня CAVISE в Linux/WSL**. Основные сервисы: "
+"``carla``, ``opencda``, ``artery`` и ``sumo``. Если сервисы не указаны, выбираются все основные "
+"сервисы, включая CARLA в Windows. Для выполняемого эксперимента предпочтительно явно указывать "
+"список сервисов."
+
+#: ../../source/reference/runtime.rst:10
+msgid ""
+"Run ``python setup.py`` in the **CAVISE root**, with its Python environment active. Omitting "
+"repository names selects all five repositories. Omitting a version opens an interactive "
+"branch/tag selection. It does not silently select ``main``. Existing directories are skipped."
+msgstr ""
+"Запустите ``python setup.py`` в **корне CAVISE** с активированной Python-средой. Если имена "
+"репозиториев не указаны, выбираются все пять репозиториев. Если не указана версия, открывается "
+"интерактивный выбор ветки или тега. ``main`` не выбирается автоматически. Существующие каталоги "
+"пропускаются."
+
+#: ../../source/reference/runtime.rst:2
+msgid "Runtime Commands and Targets"
+msgstr "Команды и цели времени выполнения"
+
+#: ../../source/reference/runtime.rst:163
+msgid "Scenario Manager"
+msgstr "Менеджер сценариев"
+
+#: ../../source/reference/runtime.rst:55
+msgid "Start existing stopped containers. Does not apply image/config changes."
+msgstr "Запускает существующие остановленные контейнеры. Не применяет изменения образа или конфигурации."
+
+#: ../../source/reference/runtime.rst:57
+msgid "Stop containers while retaining them."
+msgstr "Останавливает контейнеры, сохраняя их."
+
+#: ../../source/reference/runtime.rst:85
+msgid "Target"
+msgstr "Цель"
+
+#: ../../source/reference/runtime.rst:148
+msgid ""
+"Target suffixes map to image tags ``minimal``, ``protobuf``, ``coperception`` and ``cuda``. The "
+"full target uses ``local``. Set both variables consistently. To inspect the rendered "
+"configuration without starting anything:"
+msgstr ""
+"Суффиксы целей соответствуют тегам образов ``minimal``, ``protobuf``, ``coperception`` и "
+"``cuda``. Полная цель использует ``local``. Задавайте обе переменные согласованно. Чтобы "
+"проверить сформированную конфигурацию без запуска:"
+
+#: ../../source/reference/runtime.rst:120
+msgid ""
+"The default CUDA architecture is ``86``. Set ``CUDA_ARCHITECTURES`` to the architectures "
+"supported by your GPU and the image's CUDA compiler, for example:"
+msgstr ""
+"Архитектура CUDA по умолчанию - ``86``. Задайте ``CUDA_ARCHITECTURES`` в соответствии с "
+"архитектурами, поддерживаемыми GPU и компилятором CUDA образа, например:"
+
+#: ../../source/reference/runtime.rst:165
+msgid ""
+"The web scenario manager uses a separate Compose project and is not included in an unqualified "
+"``run.sh up``. Run it separately:"
+msgstr ""
+"Веб-менеджер сценариев использует отдельный проект Compose и не включается при вызове ``run.sh "
+"up`` без аргументов. Запустите его отдельно:"
+
+#: ../../source/reference/runtime.rst:156
+msgid "To remove the entire main Compose project:"
+msgstr "Чтобы удалить весь основной проект Compose:"
+
+#: ../../source/reference/runtime.rst:89
+msgid "Use"
+msgstr "Назначение"
+
+#: ../../source/reference/runtime.rst:4
+msgid ""
+"Use :doc:`/getting-started/first-simulation` for a complete first run. This page describes "
+"command choices and advanced runtime operations."
+msgstr ""
+"Полный первый запуск описан в :doc:`/getting-started/first-simulation`. На этой странице "
+"приведены варианты команд и расширенные операции времени выполнения."
+
+#: ../../source/reference/runtime.rst:192
+msgid ""
+"Use :doc:`/guides/cosimulation`, :doc:`/guides/cooperative-perception`, :doc:`/guides/advcp` and "
+":doc:`/guides/results` for complete launch examples."
+msgstr ""
+"Полные примеры запуска приведены в :doc:`/guides/cosimulation`, :doc:`/guides/cooperative-"
+"perception`, :doc:`/guides/advcp` и :doc:`/guides/results`."
+
+#: ../../source/reference/runtime.rst:204
+msgid ""
+"Use ``-u Cmdenv`` for a terminal frontend. Add ``-c CONFIG_NAME`` to select a configuration "
+"declared by the scenario's ``omnetpp.ini``. Build instructions and the full startup order are in "
+":doc:`/guides/cosimulation`."
+msgstr ""
+"Используйте ``-u Cmdenv`` для терминального интерфейса. Добавьте ``-c CONFIG_NAME``, чтобы "
+"выбрать конфигурацию, объявленную в ``omnetpp.ini`` сценария. Инструкции по сборке и полный "
+"порядок запуска приведены в :doc:`/guides/cosimulation`."
+
+#: ../../source/reference/runtime.rst:19
+msgid "Version option"
+msgstr "Параметр версии"
+
+#: ../../source/reference/runtime.rst:97 ../../source/reference/runtime.rst:101
+#: ../../source/reference/runtime.rst:106 ../../source/reference/runtime.rst:108
+#: ../../source/reference/runtime.rst:111 ../../source/reference/runtime.rst:112
+#: ../../source/reference/runtime.rst:113
+msgid "Yes"
+msgstr "Да"
+
+#: ../../source/reference/runtime.rst:23
+msgid "``-O`` / ``--opencood-version``"
+msgstr "``-O`` / ``--opencood-version``"
+
+#: ../../source/reference/runtime.rst:25
+msgid "``-S`` / ``--sumo-version``"
+msgstr "``-S`` / ``--sumo-version``"
+
+#: ../../source/reference/runtime.rst:27
+msgid "``-a`` / ``--artery-version``"
+msgstr "``-a`` / ``--artery-version``"
+
+#: ../../source/reference/runtime.rst:21
+msgid "``-o`` / ``--opencda-version``"
+msgstr "``-o`` / ``--opencda-version``"
+
+#: ../../source/reference/runtime.rst:29
+msgid "``-s`` / ``--scenario-manager-version``"
+msgstr "``-s`` / ``--scenario-manager-version``"
+
+#: ../../source/reference/runtime.rst:187
+msgid ""
+"``-t`` selects a YAML path below ``opencda/scenario_testing/config_yaml`` without its suffix. "
+"Nested paths are accepted. ``--carla-host`` defaults to ``carla``. Docker Desktop on Windows uses"
+" ``host.docker.internal`` in these guides. ``--artery-host`` defaults to ``artery:7777``."
+msgstr ""
+"``-t`` выбирает YAML-путь внутри ``opencda/scenario_testing/config_yaml`` без суффикса. "
+"Допускаются вложенные пути. Значение ``--carla-host`` по умолчанию - ``carla``. В этих "
+"руководствах для Docker Desktop в Windows используется ``host.docker.internal``. Значение "
+"``--artery-host`` по умолчанию - ``artery:7777``."
+
+#: ../../source/reference/runtime.rst:26
+msgid "``artery``"
+msgstr "``artery``"
+
+#: ../../source/reference/runtime.rst:50
+msgid "``build``"
+msgstr "``build``"
+
+#: ../../source/reference/runtime.rst:60
+msgid "``down``"
+msgstr "``down``"
+
+#: ../../source/reference/runtime.rst:100
+msgid "``opencda-coperception``"
+msgstr "``opencda-coperception``"
+
+#: ../../source/reference/runtime.rst:105
+msgid "``opencda-cuda``"
+msgstr "``opencda-cuda``"
+
+#: ../../source/reference/runtime.rst:90
+msgid "``opencda-minimal``"
+msgstr "``opencda-minimal``"
+
+#: ../../source/reference/runtime.rst:95
+msgid "``opencda-protobuf``"
+msgstr "``opencda-protobuf``"
+
+#: ../../source/reference/runtime.rst:20 ../../source/reference/runtime.rst:110
+msgid "``opencda``"
+msgstr "``opencda``"
+
+#: ../../source/reference/runtime.rst:22
+msgid "``opencood``"
+msgstr "``opencood``"
+
+#: ../../source/reference/runtime.rst:58
+msgid "``restart``"
+msgstr "``restart``"
+
+#: ../../source/reference/runtime.rst:135
+msgid ""
+"``run.sh`` normally selects the target, tag, paths and model directory for you. For direct "
+"Compose use, stay in the **CAVISE root** and prepare the model mount before creating a container:"
+msgstr ""
+"Обычно ``run.sh`` автоматически выбирает цель, тег, пути и каталог моделей. Для прямого "
+"использования Compose оставайтесь в **корне CAVISE** и подготовьте подключение каталога моделей "
+"до создания контейнера:"
+
+#: ../../source/reference/runtime.rst:28
+msgid "``scenario-manager``"
+msgstr "``scenario-manager``"
+
+#: ../../source/reference/runtime.rst:54
+msgid "``start``"
+msgstr "``start``"
+
+#: ../../source/reference/runtime.rst:56
+msgid "``stop``"
+msgstr "``stop``"
+
+#: ../../source/reference/runtime.rst:24
+msgid "``sumo``"
+msgstr "``sumo``"
+
+#: ../../source/reference/runtime.rst:52
+msgid "``up``"
+msgstr "``up``"
+

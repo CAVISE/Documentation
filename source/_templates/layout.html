@@ -1,6 +1,28 @@
 {% extends "!layout.html" %}
 {% set _root_doc = root_doc|default(master_doc) %}
 {% set _logo_url = logo_url|default(pathto('_static/' + (logo or ""), 1)) %}
+{% set _page_depth = pagename.count('/') %}
+{% set _docs_languages = docs_languages|default(['en', 'ru']) %}
+{% set _default_language = docs_default_language|default('en') %}
+{% if docs_language == _default_language %}
+  {% set _site_depth = _page_depth %}
+{% else %}
+  {% set _site_depth = _page_depth + 1 %}
+{% endif %}
+{% if docs_language == 'en' %}
+  {% set _english_page = pathto(pagename) %}
+{% elif _default_language == 'en' %}
+  {% set _english_page = ('../' * _site_depth) + pagename + '.html' %}
+{% else %}
+  {% set _english_page = ('../' * _site_depth) + 'en/' + pagename + '.html' %}
+{% endif %}
+{% if docs_language == 'ru' %}
+  {% set _russian_page = pathto(pagename) %}
+{% elif _default_language == 'ru' %}
+  {% set _russian_page = ('../' * _site_depth) + pagename + '.html' %}
+{% else %}
+  {% set _russian_page = ('../' * _site_depth) + 'ru/' + pagename + '.html' %}
+{% endif %}
 
 {% block extrahead %}
   {{ super() }}
@@ -12,13 +34,13 @@
   <header class="cavise-site-header">
     <div class="cavise-site-header__inner">
       <div class="cavise-site-header__brand-shell">
-        <a class="cavise-site-header__brand" href="{{ pathto(_root_doc) }}" aria-label="{{ project }} home">
+        <a class="cavise-site-header__brand" href="{{ pathto(_root_doc) }}" aria-label="{% if docs_language == 'ru' %}Главная страница {{ project }}{% else %}{{ project }} home{% endif %}">
           {% if logo or logo_url %}
-            <img src="{{ _logo_url }}" alt="{{ project }} logo" class="cavise-site-header__logo" />
+            <img src="{{ _logo_url }}" alt="{% if docs_language == 'ru' %}Логотип {{ project }}{% else %}{{ project }} logo{% endif %}" class="cavise-site-header__logo" />
           {% else %}
             <span class="cavise-site-header__logo-fallback">C</span>
           {% endif %}
-          <span class="cavise-site-header__brand-title">CAVISE Docs</span>
+          <span class="cavise-site-header__brand-title">{% if docs_language == 'ru' %}Документация CAVISE{% else %}CAVISE Docs{% endif %}</span>
         </a>
 
         <span class="cavise-site-header__brand-divider" aria-hidden="true"></span>
@@ -27,7 +49,7 @@
           class="cavise-site-header__menu-toggle"
           type="button"
           data-cavise-sidebar-toggle
-          aria-label="Toggle sidebar navigation"
+          aria-label="{% if docs_language == 'ru' %}Переключить боковую навигацию{% else %}Toggle sidebar navigation{% endif %}"
           aria-expanded="true"
         >
           <img src="{{ pathto('_static/images/menu-alt-1-svgrepo-com.svg', 1) }}" alt="" />
@@ -35,16 +57,23 @@
       </div>
 
       <div class="cavise-topbar-controls">
+        {% if _docs_languages|length > 1 %}
+          <nav class="cavise-language-switcher" aria-label="{% if docs_language == 'ru' %}Выбор языка{% else %}Language selection{% endif %}">
+            {% if 'en' in _docs_languages %}<a href="{{ _english_page }}" hreflang="en" lang="en"{% if docs_language == 'en' %} aria-current="page"{% endif %}>EN</a>{% endif %}
+            {% if 'ru' in _docs_languages %}<a href="{{ _russian_page }}" hreflang="ru" lang="ru"{% if docs_language == 'ru' %} aria-current="page"{% endif %}>RU</a>{% endif %}
+          </nav>
+        {% endif %}
+
         <form class="cavise-topbar-search" action="{{ pathto('search') }}" method="get" role="search">
           <span class="cavise-topbar-search__icon" aria-hidden="true">
             <img src="{{ pathto('_static/images/magnifying-glass-backup-svgrepo-com.svg', 1) }}" alt="" />
           </span>
-          <label class="cavise-visually-hidden" for="cavise-topbar-search-input">Search documentation</label>
+          <label class="cavise-visually-hidden" for="cavise-topbar-search-input">{% if docs_language == 'ru' %}Поиск по документации{% else %}Search documentation{% endif %}</label>
           <input
             id="cavise-topbar-search-input"
             type="search"
             name="q"
-            placeholder="Search docs"
+            placeholder="{% if docs_language == 'ru' %}Поиск{% else %}Search docs{% endif %}"
             autocomplete="off"
           />
           <input type="hidden" name="check_keywords" value="yes" />
@@ -57,7 +86,7 @@
           target="_blank"
           rel="noreferrer noopener"
           data-github-api="{{ github_repo_api }}"
-          aria-label="Open GitHub repository"
+          aria-label="{% if docs_language == 'ru' %}Открыть репозиторий GitHub{% else %}Open GitHub repository{% endif %}"
         >
           <span class="cavise-topbar-github__repo">
             <span class="cavise-topbar-github__icon" aria-hidden="true">
@@ -90,9 +119,9 @@
     </div>
   </header>
 
-  <aside class="cavise-sidebar" aria-label="Primary navigation">
+  <aside class="cavise-sidebar" aria-label="{% if docs_language == 'ru' %}Основная навигация{% else %}Primary navigation{% endif %}">
     <div class="cavise-sidebar__inner">
-      <nav class="cavise-sidebar__nav wy-menu wy-menu-vertical" role="navigation" aria-label="Navigation menu">
+      <nav class="cavise-sidebar__nav wy-menu wy-menu-vertical" role="navigation" aria-label="{% if docs_language == 'ru' %}Меню навигации{% else %}Navigation menu{% endif %}">
         {{ _sidebar_tree }}
       </nav>
     </div>
@@ -105,22 +134,22 @@
   <div class="cavise-sidebar-brand">
     <a class="cavise-sidebar-brand__link" href="{{ pathto(_root_doc) }}">
       {% if logo or logo_url %}
-        <img src="{{ _logo_url }}" alt="{{ project }} logo" class="cavise-sidebar-brand__logo" />
+        <img src="{{ _logo_url }}" alt="{% if docs_language == 'ru' %}Логотип {{ project }}{% else %}{{ project }} logo{% endif %}" class="cavise-sidebar-brand__logo" />
       {% endif %}
       <span class="cavise-sidebar-brand__copy">
         <strong>CAVISE</strong>
-        <span>Simulator Docs</span>
+        <span>{% if docs_language == 'ru' %}Документация симулятора{% else %}Simulator Docs{% endif %}</span>
       </span>
     </a>
   </div>
 
   <p class="cavise-sidebar-note">
-    Operational guides, scenario workflows, and API reference for the CAVISE stack.
+    {% if docs_language == 'ru' %}Практические руководства, сценарии работы и справочник API для стека CAVISE.{% else %}Operational guides, scenario workflows, and API reference for the CAVISE stack.{% endif %}
   </p>
 
   <div class="cavise-sidebar-shortcuts">
-    <a href="{{ pathto('getting-started/first-simulation') }}">Start Here</a>
-    <a href="{{ pathto('reference/runtime') }}">Commands</a>
+    <a href="{{ pathto('getting-started/first-simulation') }}">{% if docs_language == 'ru' %}Начало работы{% else %}Start Here{% endif %}</a>
+    <a href="{{ pathto('reference/runtime') }}">{% if docs_language == 'ru' %}Команды{% else %}Commands{% endif %}</a>
   </div>
 
   {% include "searchbox.html" %}
@@ -128,7 +157,13 @@
 
 {% block mobile_nav %}
   <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-  <a href="{{ pathto(_root_doc) }}">CAVISE Docs</a>
+  <a href="{{ pathto(_root_doc) }}">{% if docs_language == 'ru' %}Документация CAVISE{% else %}CAVISE Docs{% endif %}</a>
+  {% if _docs_languages|length > 1 %}
+    <span class="cavise-mobile-language">
+      {% if 'en' in _docs_languages %}<a href="{{ _english_page }}" hreflang="en" lang="en">EN</a>{% endif %}
+      {% if 'ru' in _docs_languages %}<a href="{{ _russian_page }}" hreflang="ru" lang="ru">RU</a>{% endif %}
+    </span>
+  {% endif %}
 {% endblock %}
 
 {% block document %}

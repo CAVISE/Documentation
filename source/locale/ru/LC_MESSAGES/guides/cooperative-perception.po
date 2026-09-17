@@ -1,0 +1,104 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/guides/cooperative-perception.rst:34
+msgid "Choose the Right Target"
+msgstr "Выбор подходящей цели"
+
+#: ../../source/guides/cooperative-perception.rst:2
+msgid "Cooperative Perception"
+msgstr "Кооперативное восприятие"
+
+#: ../../source/guides/cooperative-perception.rst:19
+msgid ""
+"Inside OpenCDA, set ``CARLA_HOST`` as described in :ref:`carla-client-shell`. Run a bounded "
+"baseline:"
+msgstr ""
+"В OpenCDA задайте ``CARLA_HOST``, как описано в :ref:`carla-client-shell`. Выполните ограниченный"
+" базовый запуск:"
+
+#: ../../source/guides/cooperative-perception.rst:43
+msgid "Inspect the Results"
+msgstr "Проверка результатов"
+
+#: ../../source/guides/cooperative-perception.rst:49
+msgid ""
+"Once the baseline works, continue to :doc:`advcp` to compare a run with and without a perception "
+"attack."
+msgstr ""
+"Когда базовый запуск заработает, перейдите к :doc:`advcp`, чтобы сравнить запуски с атакой на "
+"восприятие и без неё."
+
+#: ../../source/guides/cooperative-perception.rst:28
+msgid ""
+"OpenCDA resolves the requested checkpoint before starting the simulation. Missing bundles are "
+"fetched into the sibling ``models`` directory. See :doc:`/models` for model IDs, custom "
+"directories, metadata validation, and offline use. The first run needs network access if the "
+"bundle is not cached."
+msgstr ""
+"OpenCDA разрешает запрошенный чекпойнт до запуска симуляции. Отсутствующие пакеты загружаются в "
+"соседний каталог ``models``. Идентификаторы моделей, пользовательские каталоги, проверка "
+"метаданных и автономное использование описаны в :doc:`/models`. Если пакет отсутствует в кеше, "
+"для первого запуска требуется доступ к сети."
+
+#: ../../source/guides/cooperative-perception.rst:8
+msgid "Prepare the Image and Model"
+msgstr "Подготовка образа и модели"
+
+#: ../../source/guides/cooperative-perception.rst:4
+msgid ""
+"Run an OpenCOOD model over data from CAVs and RSUs. Complete :doc:`/getting-started/first-"
+"simulation` first and keep CARLA running."
+msgstr ""
+"Запустите модель OpenCOOD для данных от CAV и RSU. Сначала выполните :doc:`/getting-started"
+"/first-simulation` и оставьте CARLA запущенной."
+
+#: ../../source/guides/cooperative-perception.rst:10
+msgid ""
+"The following PointPillar example uses ``opencda-coperception``. From the **CAVISE root on "
+"Linux/WSL**:"
+msgstr ""
+"В следующем примере PointPillar используется ``opencda-coperception``. Выполните из **корня "
+"CAVISE в Linux/WSL**:"
+
+#: ../../source/guides/cooperative-perception.rst:45
+msgid ""
+"``--save-vis`` saves rendered predictions. ``--save-npy`` saves prediction arrays. ``--show-"
+"video-vis`` opens live visualization and needs a display. Output locations and interpretation are"
+" covered in :doc:`results`."
+msgstr ""
+"Параметр ``--save-vis`` сохраняет визуализированные прогнозы. ``--save-npy`` сохраняет массивы "
+"прогнозов. ``--show-video-vis`` открывает визуализацию в реальном времени и требует дисплей. "
+"Расположение и интерпретация результатов описаны в :doc:`results`."
+
+#: ../../source/guides/cooperative-perception.rst:36
+msgid ""
+"``opencda-coperception`` includes OpenCOOD without its custom CUDA extensions. Use ``opencda-"
+"cuda`` for models needing those extensions, such as FPV-RCNN. Use the full ``opencda`` target "
+"when also enabling Artery. All these images use a CUDA runtime. A smaller target is not a CPU-"
+"only image. See :doc:`/reference/runtime` for the complete target table."
+msgstr ""
+"``opencda-coperception`` включает OpenCOOD без его пользовательских расширений CUDA. Для моделей,"
+" которым нужны эти расширения, например FPV-RCNN, используйте ``opencda-cuda``. Если также "
+"включается Artery, используйте полную цель ``opencda``. Во всех этих образах используется среда "
+"выполнения CUDA. Образ с меньшим набором компонентов не является образом только для CPU. Полная "
+"таблица целей приведена в :doc:`/reference/runtime`."
+

@@ -1,0 +1,220 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/available-attacks.rst:60
+msgid "AIM Client Identity Spoofing"
+msgstr "Подмена идентификатора клиента AIM"
+
+#: ../../source/wiki/available-attacks.rst:49
+msgid "AIM Client Request Position Spoofing"
+msgstr "Подмена положения в запросе клиента AIM"
+
+#: ../../source/wiki/available-attacks.rst:27
+msgid "AIM Client Request Speed Spoofing"
+msgstr "Подмена скорости в запросе клиента AIM"
+
+#: ../../source/wiki/available-attacks.rst:71
+msgid "AIM Client Reservation Stealing"
+msgstr "Перехват резервирования клиентом AIM"
+
+#: ../../source/wiki/available-attacks.rst:38
+msgid "AIM Client Response Sniffer"
+msgstr "Перехватчик ответов клиента AIM"
+
+#: ../../source/wiki/available-attacks.rst:94
+msgid "AIM Server Request DDoS"
+msgstr "DDoS запросов сервера AIM"
+
+#: ../../source/wiki/available-attacks.rst:82
+msgid "AIM Server Request Replay"
+msgstr "Повторное воспроизведение запросов сервера AIM"
+
+#: ../../source/wiki/available-attacks.rst:5
+msgid "AIM Server Response Jamming"
+msgstr "Глушение ответов сервера AIM"
+
+#: ../../source/wiki/available-attacks.rst:15
+msgid "AIM Server Response Replay"
+msgstr "Повторное воспроизведение ответов сервера AIM"
+
+#: ../../source/wiki/available-attacks.rst:105
+msgid "AIM Server Trajectory Spoofing"
+msgstr "Подмена траекторий сервера AIM"
+
+#: ../../source/wiki/available-attacks.rst:2
+msgid "Available Attacks"
+msgstr "Доступные атаки"
+
+#: ../../source/wiki/available-attacks.rst:11 ../../source/wiki/available-attacks.rst:34
+#: ../../source/wiki/available-attacks.rst:45 ../../source/wiki/available-attacks.rst:101
+msgid ""
+"The attack starts when an AIM-enabled RSU begins tracking vehicles and stops when the RSU no "
+"longer tracks any vehicles."
+msgstr ""
+"Атака начинается, когда RSU с поддержкой AIM начинает отслеживать транспортные средства, и "
+"прекращается, когда RSU больше не отслеживает ни одного транспортного средства."
+
+#: ../../source/wiki/available-attacks.rst:89
+msgid ""
+"The attack starts when an AIM-enabled RSU begins tracking vehicles and stops when the RSU no "
+"longer tracks any vehicles. The first intercepted request batch is stored as-is, and the replay "
+"effect begins from the next batch."
+msgstr ""
+"Атака начинается, когда RSU с поддержкой AIM начинает отслеживать транспортные средства, и "
+"прекращается, когда RSU больше не отслеживает ни одного транспортного средства. Первый "
+"перехваченный пакет запросов сохраняется без изменений, а эффект повторного воспроизведения "
+"начинается со следующего пакета."
+
+#: ../../source/wiki/available-attacks.rst:22
+msgid ""
+"The attack starts when an AIM-enabled RSU begins tracking vehicles and stops when the RSU no "
+"longer tracks any vehicles. The first intercepted response batch is stored as-is, and the replay "
+"effect begins from the next batch."
+msgstr ""
+"Атака начинается, когда RSU с поддержкой AIM начинает отслеживать транспортные средства, и "
+"прекращается, когда RSU больше не отслеживает ни одного транспортного средства. Первый "
+"перехваченный пакет ответов сохраняется без изменений, а эффект повторного воспроизведения "
+"начинается со следующего пакета."
+
+#: ../../source/wiki/available-attacks.rst:57 ../../source/wiki/available-attacks.rst:68
+#: ../../source/wiki/available-attacks.rst:79
+msgid "The attack stops once the RSU no longer tracks any vehicles."
+msgstr "Атака прекращается, когда RSU больше не отслеживает ни одного транспортного средства."
+
+#: ../../source/wiki/available-attacks.rst:112
+msgid ""
+"The current configuration requires both AIM server and client services, uses "
+"``tracked_vehicle_count >= 0`` as its start predicate, and stops at a count of 10. Review these "
+"experiment-specific thresholds before enabling it in a new scenario."
+msgstr ""
+"Текущая конфигурация требует сервисы сервера и клиента AIM, использует ``tracked_vehicle_count >="
+" 0`` как предикат запуска и останавливается при значении 10. Перед включением в новом сценарии "
+"проверьте эти пороговые значения, зависящие от эксперимента."
+
+#: ../../source/wiki/available-attacks.rst:62
+msgid ""
+"``aim_client_identity_spoofing`` forces one tracked ``aim_client`` to emit outgoing "
+"``AIMServerRequest`` messages under a synthetic identity. The configured attack starts only after"
+" at least two vehicles are inside the AIM zone. Both the transport envelope ``src_owner_id`` and "
+"``payload.vehicle_id`` are rewritten to ``cav-spoofed``."
+msgstr ""
+"``aim_client_identity_spoofing`` заставляет один отслеживаемый ``aim_client`` отправлять "
+"исходящие сообщения ``AIMServerRequest`` от имени синтетического идентификатора. Настроенная "
+"атака запускается, только когда в зоне AIM находится не менее двух транспортных средств. И "
+"``src_owner_id`` транспортной оболочки, и ``payload.vehicle_id`` заменяются на ``cav-spoofed``."
+
+#: ../../source/wiki/available-attacks.rst:51
+msgid ""
+"``aim_client_request_position_spoofing`` rewrites the outgoing ``AIMServerRequest.position`` "
+"reported by one tracked ``aim_client``. The configured attack starts only after at least two "
+"vehicles are inside the AIM zone, then selects one tracked client and biases its reported "
+"longitudinal position before the request is sent to the RSU."
+msgstr ""
+"``aim_client_request_position_spoofing`` изменяет исходящее значение "
+"``AIMServerRequest.position``, сообщаемое одним отслеживаемым ``aim_client``. Настроенная атака "
+"запускается, только когда в зоне AIM находится не менее двух транспортных средств, затем выбирает"
+" одного отслеживаемого клиента и смещает сообщаемую им продольную позицию до отправки запроса в "
+"RSU."
+
+#: ../../source/wiki/available-attacks.rst:29
+msgid ""
+"``aim_client_request_speed_spoofing`` rewrites outgoing ``AIMServerRequest`` messages produced by"
+" each targeted ``aim_client``. The configured spoofer biases the reported speed and yaw before "
+"the request is sent to the RSU."
+msgstr ""
+"``aim_client_request_speed_spoofing`` изменяет исходящие сообщения ``AIMServerRequest``, "
+"создаваемые каждым целевым ``aim_client``. Настроенный модуль подмены изменяет сообщаемые "
+"скорость и yaw до отправки запроса в RSU."
+
+#: ../../source/wiki/available-attacks.rst:73
+msgid ""
+"``aim_client_reservation_stealing`` targets one tracked ``aim_client`` and combines request "
+"position spoofing with speed inflation. The configured attack starts only after at least two "
+"vehicles are inside the AIM zone. The result is an outgoing ``AIMServerRequest`` that makes the "
+"attacker appear closer to the conflict zone and moving faster than it really is."
+msgstr ""
+"``aim_client_reservation_stealing`` нацелен на один отслеживаемый ``aim_client`` и сочетает "
+"подмену положения в запросе с завышением скорости. Настроенная атака запускается, только когда в "
+"зоне AIM находится не менее двух транспортных средств. В результате исходящий "
+"``AIMServerRequest`` представляет атакующего как находящегося ближе к конфликтной зоне и "
+"движущегося быстрее, чем на самом деле."
+
+#: ../../source/wiki/available-attacks.rst:40
+msgid ""
+"``aim_client_response_sniffer`` passively observes ``AIMServerResponse`` messages consumed by "
+"targeted ``aim_client`` services. The sniffer stage does not rewrite traffic. It only installs "
+"observers on the matched response capability handlers."
+msgstr ""
+"``aim_client_response_sniffer`` пассивно наблюдает за сообщениями ``AIMServerResponse``, "
+"получаемыми целевыми сервисами ``aim_client``. Этап перехвата не изменяет трафик. Он только "
+"устанавливает наблюдателей на соответствующие обработчики возможности ответа."
+
+#: ../../source/wiki/available-attacks.rst:96
+msgid ""
+"``aim_server_request_ddos`` probabilistically drops incoming ``AIMServerRequest`` messages "
+"observed by the RSU ``aim_server`` service. The builtin config uses a ``drop_rate`` of ``0.3`` to"
+" simulate partial uplink loss or overload on the request path."
+msgstr ""
+"``aim_server_request_ddos`` с заданной вероятностью отбрасывает входящие сообщения "
+"``AIMServerRequest``, наблюдаемые сервисом ``aim_server`` RSU. Встроенная конфигурация использует"
+" ``drop_rate`` со значением ``0.3`` для имитации частичной потери восходящего канала или "
+"перегрузки на пути запросов."
+
+#: ../../source/wiki/available-attacks.rst:84
+msgid ""
+"``aim_server_request_replay`` replays the previous batch of ``AIMServerRequest`` messages "
+"observed by the RSU ``aim_server`` service. This makes the AIM model consume stale client state "
+"instead of the latest uplink batch."
+msgstr ""
+"``aim_server_request_replay`` повторно воспроизводит предыдущий пакет сообщений "
+"``AIMServerRequest``, наблюдаемых сервисом ``aim_server`` RSU. В результате модель AIM использует"
+" устаревшее состояние клиентов вместо последнего пакета восходящего канала."
+
+#: ../../source/wiki/available-attacks.rst:7
+msgid ""
+"``aim_server_response_jamming`` drops the ``AIMServerResponse`` batch emitted by the RSU "
+"``aim_server`` service. This simulates downlink channel jamming or complete delivery loss for AIM"
+" responses."
+msgstr ""
+"``aim_server_response_jamming`` отбрасывает пакет ``AIMServerResponse``, отправляемый сервисом "
+"``aim_server`` RSU. Это имитирует глушение нисходящего канала или полную потерю доставки ответов "
+"AIM."
+
+#: ../../source/wiki/available-attacks.rst:17
+msgid ""
+"``aim_server_response_replay`` replays the previous batch of ``AIMServerResponse`` messages "
+"produced by the RSU ``aim_server`` service. This makes connected vehicles consume stale "
+"trajectory outputs instead of the latest predictions."
+msgstr ""
+"``aim_server_response_replay`` повторно воспроизводит предыдущий пакет сообщений "
+"``AIMServerResponse``, созданных сервисом ``aim_server`` RSU. В результате подключённые "
+"транспортные средства используют устаревшие траектории вместо последних прогнозов."
+
+#: ../../source/wiki/available-attacks.rst:107
+msgid ""
+"``aim_server_trajectory_spoofing`` rewrites outgoing ``AIMServerResponse`` trajectories from the "
+"RSU ``aim_server`` service. Its spoofer stage adds 50.0 to the x-coordinate of each of the first "
+"three trajectory points through the ``response.submit`` capability."
+msgstr ""
+"``aim_server_trajectory_spoofing`` изменяет исходящие траектории ``AIMServerResponse`` сервиса "
+"``aim_server`` RSU. Этап подмены добавляет 50,0 к координате x каждой из первых трёх точек "
+"траектории через возможность ``response.submit``."
+

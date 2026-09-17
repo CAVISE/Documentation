@@ -1,0 +1,194 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/install-and-launch.rst:32
+msgid ""
+"CARLA runs in the ``carla`` container. GUI programs also need a working X11/XWayland display. See"
+" :doc:`troubleshooting` for display diagnostics."
+msgstr ""
+"CARLA работает в контейнере ``carla``. Для программ с GUI также требуется работающий дисплей "
+"X11/XWayland. Диагностика дисплея описана в :doc:`troubleshooting`."
+
+#: ../../source/wiki/install-and-launch.rst:58
+msgid "Check the host environment from **Linux Bash or Ubuntu in WSL2**:"
+msgstr "Проверьте среду хоста из **Linux Bash или Ubuntu в WSL2**:"
+
+#: ../../source/wiki/install-and-launch.rst:73
+msgid "Clone the Workspace"
+msgstr "Клонирование рабочего пространства"
+
+#: ../../source/wiki/install-and-launch.rst:52
+msgid ""
+"Download the **Windows package for CARLA 0.9.16** and the matching additional maps using the "
+"`CARLA package instructions <https://carla.readthedocs.io/en/0.9.16/start_quickstart/>`_. Install"
+" the maps into the extracted CARLA package, including Town06 used by these guides. No Windows "
+"Python environment is needed to run the server. Map queries and scenario control below use the "
+"client in the OpenCDA container."
+msgstr ""
+"Загрузите **пакет CARLA 0.9.16 для Windows** и соответствующие дополнительные карты по "
+"`инструкции для пакетов CARLA <https://carla.readthedocs.io/en/0.9.16/start_quickstart/>`_. "
+"Установите карты в распакованный пакет CARLA, включая Town06, используемую в этих руководствах. "
+"Для запуска сервера среда Python в Windows не требуется. В приведённых ниже запросах карт и "
+"управлении сценариями используется клиент в контейнере OpenCDA."
+
+#: ../../source/wiki/install-and-launch.rst:90
+msgid ""
+"Existing directories are skipped. **Running setup again does not update an existing checkout.** "
+"When upgrading, review local changes and update each component deliberately. See "
+":doc:`/reference/runtime` for selective setup and version flags."
+msgstr ""
+"Существующие каталоги пропускаются. **Повторный запуск setup не обновляет существующий "
+"checkout.** При обновлении проверьте локальные изменения и обновляйте каждый компонент осознанно."
+" Выборочная настройка и параметры версий описаны в :doc:`/reference/runtime`."
+
+#: ../../source/wiki/install-and-launch.rst:42
+msgid "In **Windows PowerShell**, check the WSL version:"
+msgstr "В **Windows PowerShell** проверьте версию WSL:"
+
+#: ../../source/wiki/install-and-launch.rst:49
+msgid ""
+"Install Git and Python with venv support inside Ubuntu. Keep the CAVISE checkout in the WSL "
+"filesystem, for example ``~/CAVISE``."
+msgstr ""
+"Установите Git и Python с поддержкой venv внутри Ubuntu. Храните checkout CAVISE в файловой "
+"системе WSL, например в ``~/CAVISE``."
+
+#: ../../source/wiki/install-and-launch.rst:27
+msgid ""
+"Install Git, Python with venv support, Docker Engine with the Compose v2 plugin, and the NVIDIA "
+"Container Toolkit. Follow the `Docker Engine installation guide "
+"<https://docs.docker.com/engine/install/ubuntu/>`_ and `NVIDIA Container Toolkit guide "
+"<https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html>`_."
+msgstr ""
+"Установите Git, Python с поддержкой venv, Docker Engine с плагином Compose v2 и NVIDIA Container "
+"Toolkit. Следуйте `инструкции по установке Docker Engine "
+"<https://docs.docker.com/engine/install/ubuntu/>`_ и `инструкции NVIDIA Container Toolkit "
+"<https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html>`_."
+
+#: ../../source/wiki/install-and-launch.rst:38
+msgid ""
+"Install WSL2 with Ubuntu and Docker Desktop. Enable Docker Desktop's WSL2 backend and integration"
+" with your Ubuntu distribution. Follow `Docker's GPU setup guide "
+"<https://docs.docker.com/desktop/features/gpu/>`_."
+msgstr ""
+"Установите WSL2 с Ubuntu и Docker Desktop. Включите серверную часть WSL2 в Docker Desktop и "
+"интеграцию с вашим дистрибутивом Ubuntu. Следуйте `инструкции Docker по настройке GPU "
+"<https://docs.docker.com/desktop/features/gpu/>`_."
+
+#: ../../source/wiki/install-and-launch.rst:2
+msgid "Installation"
+msgstr "Установка"
+
+#: ../../source/wiki/install-and-launch.rst
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/wiki/install-and-launch.rst:118
+msgid ""
+"Next: :doc:`/getting-started/first-simulation` builds only the images needed for a CARLA/OpenCDA "
+"scenario."
+msgstr ""
+"Далее: :doc:`/getting-started/first-simulation` собирает только образы, необходимые для сценария "
+"CARLA/OpenCDA."
+
+#: ../../source/wiki/install-and-launch.rst:9
+msgid "Platform Requirements"
+msgstr "Требования к платформе"
+
+#: ../../source/wiki/install-and-launch.rst:4
+msgid ""
+"Prepare the workspace once, then continue to :doc:`/getting-started/first-simulation`. The Docker"
+" workflow uses Linux containers on both platforms. On Windows, CARLA runs on the Windows host and"
+" the CAVISE commands run in Ubuntu under WSL2."
+msgstr ""
+"Подготовьте рабочее пространство один раз, затем перейдите к :doc:`/getting-started/first-"
+"simulation`. Процесс Docker использует контейнеры Linux на обеих платформах. В Windows CARLA "
+"запускается на хосте Windows, а команды CAVISE выполняются в Ubuntu под WSL2."
+
+#: ../../source/wiki/install-and-launch.rst:98
+msgid ""
+"Run ``run.sh`` from the CAVISE root, where ``paths.conf`` resides. It loads paths from that file "
+"and selects the appropriate Compose configuration. The standard layout is:"
+msgstr ""
+"Запускайте ``run.sh`` из корня CAVISE, где находится ``paths.conf``. Скрипт загружает пути из "
+"этого файла и выбирает подходящую конфигурацию Compose. Стандартная структура:"
+
+#: ../../source/wiki/install-and-launch.rst:75
+msgid "Run in **Linux Bash or Ubuntu in WSL2**:"
+msgstr "Запустите в **Linux Bash или Ubuntu в WSL2**:"
+
+#: ../../source/wiki/install-and-launch.rst:86
+msgid ""
+"Setup asks for a branch or tag for ``opencda``, ``opencood``, ``sumo``, ``artery``, and "
+"``scenario-manager``. Choose compatible versions. The current main branches use separate OpenCOOD"
+" and models repositories."
+msgstr ""
+"Setup запрашивает ветку или тег для ``opencda``, ``opencood``, ``sumo``, ``artery`` и ``scenario-"
+"manager``. Выберите совместимые версии. В текущих основных ветках используются отдельные "
+"репозитории OpenCOOD и models."
+
+#: ../../source/wiki/install-and-launch.rst:11
+msgid ""
+"The current CARLA image and OpenCDA client use **CARLA 0.9.16**. Keep the server, Python client, "
+"and additional maps on the same release. The OpenCDA images use Ubuntu 24.04 and CUDA 13.0.3. The"
+" host setup script needs Python 3.10 or newer."
+msgstr ""
+"Текущие образ CARLA и клиент OpenCDA используют **CARLA 0.9.16**. Сервер, Python-клиент и "
+"дополнительные карты должны относиться к одному выпуску. Образы OpenCDA используют Ubuntu 24.04 и"
+" CUDA 13.0.3. Для скрипта настройки хоста требуется Python 3.10 или новее."
+
+#: ../../source/wiki/install-and-launch.rst:16
+msgid ""
+"The supplied Compose configuration requests an NVIDIA GPU. Install a driver compatible with the "
+"image's CUDA runtime. Image builds, CARLA maps, and model checkpoints require substantial disk "
+"space. Download only the components and models needed for your experiment."
+msgstr ""
+"Предоставленная конфигурация Compose запрашивает GPU NVIDIA. Установите драйвер, совместимый со "
+"средой выполнения CUDA образа. Для сборки образов, карт CARLA и чекпойнтов моделей требуется "
+"значительный объём дискового пространства. Загружайте только компоненты и модели, необходимые для"
+" эксперимента."
+
+#: ../../source/wiki/install-and-launch.rst
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../source/wiki/install-and-launch.rst:96
+msgid "Workspace Paths"
+msgstr "Пути рабочего пространства"
+
+#: ../../source/wiki/install-and-launch.rst:68
+msgid ""
+"``docker version`` must report a reachable server. Host ``nvidia-smi`` alone does not prove "
+"container GPU access. The first-run guide checks it inside OpenCDA as well."
+msgstr ""
+"Команда ``docker version`` должна сообщать о доступном сервере. Одного успешного вызова ``nvidia-"
+"smi`` на хосте недостаточно, чтобы подтвердить доступ контейнера к GPU. В руководстве по первому "
+"запуску он также проверяется внутри OpenCDA."
+
+#: ../../source/wiki/install-and-launch.rst:114
+msgid ""
+"``models`` is not cloned by setup. ``run.sh up`` prepares its bind-mount directory. OpenCDA "
+"fetches requested bundles at runtime. See :doc:`/models` for offline use and custom checkpoints."
+msgstr ""
+"Репозиторий ``models`` не клонируется при настройке. Команда ``run.sh up`` подготавливает его "
+"каталог для bind mount. OpenCDA загружает запрошенные пакеты во время выполнения. Автономное "
+"использование и пользовательские чекпойнты описаны в :doc:`/models`."
+

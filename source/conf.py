@@ -7,10 +7,24 @@ copyright = "2026, CAVISE Dev Team"
 author = "CAVISE Dev Team"
 release = "1.0"
 
+# Build the English site at the publication root and the Russian translation
+# under /ru/. Taskfile.yml and the Pages workflow set DOCS_LANGUAGE for the
+# translated build.
+language = os.environ.get("DOCS_LANGUAGE", "en")
+docs_languages = [
+    item.strip()
+    for item in os.environ.get("DOCS_LANGUAGES", "en,ru").split(",")
+    if item.strip()
+]
+docs_default_language = os.environ.get("DOCS_DEFAULT_LANGUAGE", "en")
+locale_dirs = ["locale/"]
+gettext_compact = False
+gettext_additional_targets = ["raw", "image"]
+
 html_logo = "_static/images/logo.svg"
 html_favicon = "_static/images/favicon.svg"
-html_title = "CAVISE Documentation"
-html_short_title = "CAVISE Docs"
+html_title = "Документация CAVISE" if language == "ru" else "CAVISE Documentation"
+html_short_title = "Документация CAVISE" if language == "ru" else "CAVISE Docs"
 
 extensions = ["sphinx_design"]
 pygments_style = "monokai"
@@ -24,6 +38,9 @@ html_static_path = ["_static"]
 html_js_files = ["js/cavise-theme.js"]
 html_permalinks = False
 html_context = {
+    "docs_language": language,
+    "docs_languages": docs_languages,
+    "docs_default_language": docs_default_language,
     "github_repo_name": "CAVISE/CAVISE",
     "github_repo_url": "https://github.com/CAVISE/CAVISE",
     "github_repo_api": "https://api.github.com/repos/CAVISE/CAVISE",

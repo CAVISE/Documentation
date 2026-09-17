@@ -647,7 +647,8 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
 }
 
 .cavise-topbar-search,
-.cavise-topbar-github {
+.cavise-topbar-github,
+.cavise-language-switcher {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -656,6 +657,36 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
   border-radius: var(--cavise-topbar-radius);
   background: rgba(17, 34, 42, 0.94);
   box-shadow: 0 18px 28px -20px rgba(2, 8, 12, 0.46);
+}
+
+.cavise-language-switcher {
+  gap: 0.2rem;
+  min-height: 0;
+  padding: 0.45rem;
+}
+
+.cavise-language-switcher a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  border-radius: 12px;
+  color: var(--cavise-text-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cavise-language-switcher a:hover,
+.cavise-language-switcher a:focus-visible {
+  color: var(--cavise-text-strong);
+  background: rgba(59, 229, 255, 0.08);
+}
+
+.cavise-language-switcher a[aria-current="page"] {
+  color: var(--cavise-ink-950);
+  background: linear-gradient(135deg, var(--cavise-green-500), var(--cavise-cyan-500));
 }
 
 .cavise-topbar-search {
@@ -1224,6 +1255,18 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
 
 .wy-nav-top {
   display: none;
+}
+
+.cavise-mobile-language {
+  float: right;
+  display: inline-flex;
+  gap: 0.75rem;
+  margin-right: 0.8rem;
+}
+
+.cavise-mobile-language a {
+  padding: 0;
+  font-size: 0.78rem;
 }
 
 @media screen and (min-width: 1440px) {

@@ -1,0 +1,196 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/getting-started/first-simulation.rst:113
+msgid ""
+"All subsequent guides use ``--carla-host \"$CARLA_HOST\"``. Repeat this export whenever you open "
+"a new container shell. ``CARLA_HOST`` is a shell variable used by these examples. The runner does"
+" not read it automatically."
+msgstr ""
+"Во всех последующих руководствах используется ``--carla-host \"$CARLA_HOST\"``. Повторяйте этот "
+"экспорт при каждом открытии новой оболочки контейнера. ``CARLA_HOST`` - переменная оболочки, "
+"используемая в этих примерах. Средство запуска не считывает её автоматически."
+
+#: ../../source/getting-started/first-simulation.rst:117
+msgid "Before launching, query both API versions and the available Town06 map:"
+msgstr "Перед запуском запросите версии обоих API и доступность карты Town06:"
+
+#: ../../source/getting-started/first-simulation.rst:131
+msgid ""
+"Both versions should match and Town06 should be listed. Resolve a connection or map error before "
+"continuing."
+msgstr ""
+"Версии должны совпадать, а Town06 должна присутствовать в списке. Прежде чем продолжить, "
+"устраните ошибку подключения или карты."
+
+#: ../../source/getting-started/first-simulation.rst:27
+msgid "CARLA runs on Windows, so build only OpenCDA here:"
+msgstr "CARLA запускается в Windows, поэтому здесь соберите только OpenCDA:"
+
+#: ../../source/getting-started/first-simulation.rst:34
+msgid "Check that the container is running and can access the GPU:"
+msgstr "Убедитесь, что контейнер запущен и имеет доступ к GPU:"
+
+#: ../../source/getting-started/first-simulation.rst:81
+msgid "Connect from OpenCDA"
+msgstr "Подключение из OpenCDA"
+
+#: ../../source/getting-started/first-simulation.rst:9
+msgid "Create the Containers"
+msgstr "Создание контейнеров"
+
+#: ../../source/getting-started/first-simulation.rst:2
+msgid "First Simulation"
+msgstr "Первая симуляция"
+
+#: ../../source/getting-started/first-simulation.rst:64
+msgid "For off-screen rendering, use ``./CarlaUE4.sh -RenderOffScreen`` instead."
+msgstr "Для рендеринга без вывода на экран используйте вместо этого ``./CarlaUE4.sh -RenderOffScreen``."
+
+#: ../../source/getting-started/first-simulation.rst:76
+msgid "For off-screen rendering, use ``.\\CarlaUE4.exe -RenderOffScreen`` instead."
+msgstr "Для рендеринга без вывода на экран используйте вместо этого ``.\\CarlaUE4.exe -RenderOffScreen``."
+
+#: ../../source/getting-started/first-simulation.rst:57
+msgid "In **Linux Bash**:"
+msgstr "В **Linux Bash**:"
+
+#: ../../source/getting-started/first-simulation.rst:69
+msgid ""
+"In **Windows PowerShell**, change to the extracted CARLA directory containing ``CarlaUE4.exe``, "
+"then run:"
+msgstr ""
+"В **Windows PowerShell** перейдите в распакованный каталог CARLA, содержащий ``CarlaUE4.exe``, "
+"затем выполните:"
+
+#: ../../source/getting-started/first-simulation.rst:83
+msgid "In a **new Linux/WSL terminal**, enter the OpenCDA container:"
+msgstr "В **новом терминале Linux/WSL** войдите в контейнер OpenCDA:"
+
+#: ../../source/getting-started/first-simulation.rst:137
+msgid "In the same **OpenCDA container shell**:"
+msgstr "В той же **оболочке контейнера OpenCDA**:"
+
+#: ../../source/getting-started/first-simulation.rst:49
+msgid "Keep this terminal open while the scenario runs."
+msgstr "Не закрывайте этот терминал, пока выполняется сценарий."
+
+#: ../../source/getting-started/first-simulation.rst:156
+msgid ""
+"Let the bounded run finish, or press ``Ctrl+C`` in the OpenCDA terminal. Stop CARLA with "
+"``Ctrl+C`` in its terminal when no longer needed. To stop the containers, run from the **CAVISE "
+"root on Linux/WSL**:"
+msgstr ""
+"Дождитесь завершения ограниченного запуска или нажмите ``Ctrl+C`` в терминале OpenCDA. Когда "
+"CARLA больше не нужна, остановите её с помощью ``Ctrl+C`` в соответствующем терминале. Чтобы "
+"остановить контейнеры, выполните следующую команду из **корня CAVISE в Linux/WSL**:"
+
+#: ../../source/getting-started/first-simulation.rst
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/getting-started/first-simulation.rst:144
+msgid ""
+"OpenCDA loads ``opencda/scenario_testing/config_yaml/v2xp_datadump_town06_carla.yaml`` over "
+"``default.yaml``, initializes Town06, creates the configured agents, and advances the simulation."
+" ``--ticks`` bounds the run. It may end sooner if its scenario completion conditions are met. "
+"Logs and evaluation output are under ``simulation_output/evaluation_outputs/`` in the mounted "
+"OpenCDA repository."
+msgstr ""
+"OpenCDA загружает ``opencda/scenario_testing/config_yaml/v2xp_datadump_town06_carla.yaml`` поверх"
+" ``default.yaml``, инициализирует Town06, создаёт настроенные агенты и запускает симуляцию. "
+"Параметр ``--ticks`` ограничивает длительность запуска. Он может завершиться раньше, если будут "
+"выполнены условия завершения сценария. Журналы и результаты оценки находятся в "
+"``simulation_output/evaluation_outputs/`` в подключённом репозитории OpenCDA."
+
+#: ../../source/getting-started/first-simulation.rst:4
+msgid ""
+"Run ``v2xp_datadump_town06_carla`` in CARLA Town06. Complete :doc:`/wiki/install-and-launch` "
+"first. This example uses CARLA and core OpenCDA. SUMO, Artery, and learned cooperative perception"
+" are optional additions in the later guides."
+msgstr ""
+"Запустите ``v2xp_datadump_town06_carla`` в CARLA Town06. Сначала выполните инструкции из "
+":doc:`/wiki/install-and-launch`. В этом примере используются CARLA и базовая OpenCDA. SUMO, "
+"Artery и обучаемое кооперативное восприятие добавляются при необходимости в последующих "
+"руководствах."
+
+#: ../../source/getting-started/first-simulation.rst:11
+msgid "Run in **Linux Bash or Ubuntu in WSL2**, from the CAVISE root:"
+msgstr "Выполните команду из корня CAVISE в **Linux Bash или Ubuntu в WSL2**:"
+
+#: ../../source/getting-started/first-simulation.rst:135
+msgid "Run the Scenario"
+msgstr "Запуск сценария"
+
+#: ../../source/getting-started/first-simulation.rst:47
+msgid "Start CARLA"
+msgstr "Запуск CARLA"
+
+#: ../../source/getting-started/first-simulation.rst:154
+msgid "Stop and Run Again"
+msgstr "Остановка и повторный запуск"
+
+#: ../../source/getting-started/first-simulation.rst:89
+msgid ""
+"The shell starts in the mounted OpenCDA repository. Set the CARLA address **inside this container"
+" shell**:"
+msgstr ""
+"Оболочка запускается в подключённом репозитории OpenCDA. Задайте адрес CARLA **внутри этой "
+"оболочки контейнера**:"
+
+#: ../../source/getting-started/first-simulation.rst:109
+msgid ""
+"This address is provided by Docker Desktop. A Docker Engine installed independently inside WSL "
+"may require a different Windows host address. See :doc:`/wiki/troubleshooting`."
+msgstr ""
+"Этот адрес предоставляется Docker Desktop. Для Docker Engine, установленного отдельно внутри WSL,"
+" может потребоваться другой адрес хоста Windows. См. :doc:`/wiki/troubleshooting`."
+
+#: ../../source/getting-started/first-simulation.rst:150
+msgid ""
+"Use ``--free-spectator`` to keep manual control of the CARLA camera. See :doc:`/guides/results` "
+"for recording, visualization, and output files."
+msgstr ""
+"Используйте ``--free-spectator``, чтобы сохранить ручное управление камерой CARLA. Запись, "
+"визуализация и выходные файлы описаны в :doc:`/guides/results`."
+
+#: ../../source/getting-started/first-simulation.rst:177
+msgid ""
+"Use ``run.sh start`` with the same services to restart existing containers, then launch the "
+"simulator processes again. Use ``up`` after rebuilding or changing an image target. ``start`` "
+"does not recreate a container."
+msgstr ""
+"Используйте ``run.sh start`` с теми же сервисами, чтобы перезапустить существующие контейнеры, а "
+"затем снова запустите процессы симулятора. После повторной сборки или смены цели образа "
+"используйте ``up``. Команда ``start`` не пересоздаёт контейнер."
+
+#: ../../source/getting-started/first-simulation.rst
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../source/getting-started/first-simulation.rst:41
+msgid ""
+"``up`` creates containers that wait with ``sleep infinity``. Start CARLA and the scenario "
+"explicitly in separate terminals below."
+msgstr ""
+"Команда ``up`` создаёт контейнеры, ожидающие с помощью ``sleep infinity``. Далее явно запустите "
+"CARLA и сценарий в отдельных терминалах."
+

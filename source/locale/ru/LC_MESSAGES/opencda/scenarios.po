@@ -1,0 +1,33 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/opencda/scenarios.rst:4
+msgid "Scenarios"
+msgstr "Сценарии"
+
+#: ../../source/opencda/scenarios.rst:6
+msgid ""
+"See :doc:`/scenarios/index` for creating a scenario and :doc:`/scenarios/maps` for map conversion"
+" and SUMO assets."
+msgstr ""
+"Создание сценария описано в :doc:`/scenarios/index`, а преобразование карт и ресурсы SUMO - в "
+":doc:`/scenarios/maps`."
+

@@ -1,0 +1,264 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/guides/advcp.rst:2
+msgid "AdvCP"
+msgstr "AdvCP"
+
+#: ../../source/guides/advcp.rst:4
+msgid ""
+"AdvCP modifies cooperative-perception inference during a live CAVISE simulation. It is enabled "
+"through OpenCDA's CLI and an attack YAML file. The separate ``AdvCollaborativePerception`` "
+"research repository has its own dataset evaluation workflow. It is not needed for this integrated"
+" example."
+msgstr ""
+"AdvCP изменяет инференс кооперативного восприятия во время симуляции CAVISE. Механизм включается "
+"через CLI OpenCDA и YAML-файл атаки. Отдельный исследовательский репозиторий "
+"``AdvCollaborativePerception`` использует собственный процесс оценки наборов данных. Для этого "
+"интегрированного примера он не требуется."
+
+#: ../../source/guides/advcp.rst:43
+msgid "After the baseline finishes, run:"
+msgstr "После завершения базового запуска выполните:"
+
+#: ../../source/guides/advcp.rst:117
+msgid ""
+"Behavior-service attacks configured with a scenario's ``attacks`` list use :doc:`/opencda/attack-"
+"framework`. That configuration is separate from AdvCP."
+msgstr ""
+"Атаки на сервисы поведения, заданные списком ``attacks`` сценария, используют :doc:`/opencda"
+"/attack-framework`. Эта конфигурация не связана с AdvCP."
+
+#: ../../source/guides/advcp.rst:59
+msgid "Check Activation and Compare Results"
+msgstr "Проверка активации и сравнение результатов"
+
+#: ../../source/guides/advcp.rst:66
+msgid ""
+"Compare the baseline and attack run's saved predictions, visualizations and evaluation metrics "
+"under ``simulation_output``. See :doc:`results`. The example scenario configures a five-step "
+"metric warmup. An attack is not guaranteed to succeed on every frame: outcomes depend on "
+"visibility, the selected model, fusion mode, and attack geometry."
+msgstr ""
+"Сравните сохранённые прогнозы, визуализации и метрики оценки базового запуска и запуска с атакой "
+"в каталоге ``simulation_output``. См. :doc:`results`. В примере сценария для метрики настроен "
+"прогрев длительностью пять шагов. Успех атаки не гарантирован на каждом кадре: результат зависит "
+"от видимости, выбранной модели, режима слияния и геометрии атаки."
+
+#: ../../source/guides/advcp.rst:12
+msgid ""
+"Complete :doc:`cooperative-perception`. Keep CARLA 0.9.16 running with Town06 available, use the "
+"``opencda-coperception`` container, and set ``CARLA_HOST`` inside its shell as shown in :ref"
+":`carla-client-shell`."
+msgstr ""
+"Выполните :doc:`cooperative-perception`. Оставьте CARLA 0.9.16 запущенной и убедитесь, что "
+"доступна Town06, используйте контейнер ``opencda-coperception`` и задайте ``CARLA_HOST`` внутри "
+"его оболочки, как показано в :ref:`carla-client-shell`."
+
+#: ../../source/guides/advcp.rst:73
+msgid "Configure an Experiment"
+msgstr "Настройка эксперимента"
+
+#: ../../source/guides/advcp.rst:98
+msgid ""
+"Enables the shape-based variant where supported. Additional pretrained shape files may be "
+"required. Keep it false for the first example."
+msgstr ""
+"Включает вариант на основе формы там, где он поддерживается. Могут потребоваться дополнительные "
+"предварительно обученные файлы форм. Для первого примера оставьте значение false."
+
+#: ../../source/guides/advcp.rst:90
+msgid ""
+"Existing scenario agent IDs such as ``cav-5`` or ``rsu-1``. Use runtime IDs, not display names or"
+" bare numeric YAML IDs."
+msgstr ""
+"Существующие идентификаторы агентов сценария, например ``cav-5`` или ``rsu-1``. Используйте "
+"идентификаторы времени выполнения, а не отображаемые имена или числовые YAML-идентификаторы без "
+"префикса."
+
+#: ../../source/guides/advcp.rst:84
+msgid "Field"
+msgstr "Поле"
+
+#: ../../source/guides/advcp.rst:107
+msgid ""
+"Fusion mode comes from the model configuration, not from a separate AdvCP CLI flag. Parameters "
+"used in one fusion mode may be ignored in another. Do not assume that changing every YAML field "
+"affects late fusion."
+msgstr ""
+"Режим слияния определяется конфигурацией модели, а не отдельным параметром CLI AdvCP. Параметры, "
+"используемые в одном режиме слияния, могут игнорироваться в другом. Не полагайтесь на то, что "
+"изменение каждого YAML-поля повлияет на позднее слияние."
+
+#: ../../source/guides/advcp.rst:30
+msgid "In the **OpenCDA container shell**, run the same scenario and model without AdvCP first:"
+msgstr "В **оболочке контейнера OpenCDA** сначала запустите тот же сценарий и модель без AdvCP:"
+
+#: ../../source/guides/advcp.rst:61
+msgid ""
+"Look for ``AdvCP mode: removal`` and ``AdvCP attackers: cav-5`` in the log. These confirm "
+"configuration and attacker validation, not attack success. If no configured attacker exists in "
+"the scenario, initialization raises an error. An attacker can also be absent from an individual "
+"model input batch."
+msgstr ""
+"Найдите в журнале строки ``AdvCP mode: removal`` и ``AdvCP attackers: cav-5``. Они подтверждают "
+"конфигурацию и проверку атакующего, но не успешность атаки. Если в сценарии нет ни одного "
+"настроенного атакующего, при инициализации возникает ошибка. Атакующий также может отсутствовать "
+"в отдельном пакете входных данных модели."
+
+#: ../../source/guides/advcp.rst:75
+msgid ""
+"Named configurations resolve under ``opencda/scenario_testing/config_yaml/advcp-configs/``. The "
+"``.yaml`` suffix is optional. An absolute path selects a custom file. Relative names are resolved"
+" against that directory, not against the shell's working directory."
+msgstr ""
+"Именованные конфигурации разрешаются в каталоге ``opencda/scenario_testing/config_yaml/advcp-"
+"configs/``. Суффикс ``.yaml`` необязателен. Абсолютный путь выбирает пользовательский файл. "
+"Относительные имена разрешаются относительно этого каталога, а не рабочего каталога оболочки."
+
+#: ../../source/guides/advcp.rst:103
+msgid "Optimization parameters used by applicable intermediate-fusion paths."
+msgstr "Параметры оптимизации, используемые применимыми путями промежуточного слияния."
+
+#: ../../source/guides/advcp.rst:101
+msgid "Point sampling settings used by applicable LiDAR attack paths."
+msgstr "Настройки выборки точек, используемые применимыми путями атаки на LiDAR."
+
+#: ../../source/guides/advcp.rst:10
+msgid "Prerequisites"
+msgstr "Предварительные требования"
+
+#: ../../source/guides/advcp.rst:85
+msgid "Purpose"
+msgstr "Назначение"
+
+#: ../../source/guides/advcp.rst:28
+msgid "Run a Baseline"
+msgstr "Базовый запуск"
+
+#: ../../source/guides/advcp.rst:41
+msgid "Run with Removal Enabled"
+msgstr "Запуск с включённым удалением"
+
+#: ../../source/guides/advcp.rst:93
+msgid ""
+"Target geometry: each box uses either ``absolute`` (world) or ``relative`` (ego) pose ``[x, y, z,"
+" roll, yaw, pitch]``. Distances are in metres, angles in degrees. Size is ``[length, width, "
+"height]``. Per-box ``size`` overrides ``default_size``."
+msgstr ""
+"Геометрия цели: каждый параллелепипед использует позу ``[x, y, z, roll, yaw, pitch]`` типа "
+"``absolute`` (мировая) или ``relative`` (относительно ego-агента). Расстояния указываются в "
+"метрах, углы - в градусах. Размер задаётся как ``[length, width, height]``. Значение ``size`` "
+"отдельного параллелепипеда переопределяет ``default_size``."
+
+#: ../../source/guides/advcp.rst:105
+msgid "Temporal and initialization settings for applicable attack paths."
+msgstr "Временные параметры и параметры инициализации применимых путей атаки."
+
+#: ../../source/guides/advcp.rst:23
+msgid ""
+"The scenario name includes its directory beneath ``config_yaml``. Do not substitute "
+"``3cars_advcp_removal_check`` without also adapting the attack configuration: that scenario does "
+"not contain ``cav-5``."
+msgstr ""
+"Имя сценария включает его каталог внутри ``config_yaml``. Не подставляйте "
+"``3cars_advcp_removal_check`` без соответствующей адаптации конфигурации атаки: этот сценарий не "
+"содержит ``cav-5``."
+
+#: ../../source/guides/advcp.rst:16
+msgid "This example pairs:"
+msgstr "В этом примере используются совместно:"
+
+#: ../../source/guides/advcp.rst:111
+msgid ""
+"To try spoofing with the same seven-agent scenario, replace ``--advcp-config removal_forward`` "
+"with ``--advcp-config spoofing_forward``. For another model, first select its required "
+":doc:`image target </reference/runtime>` and establish a new baseline. Intermediate-fusion model "
+"support must also be checked against the implementation. Not every OpenCOOD model is supported."
+msgstr ""
+"Чтобы проверить спуфинг в том же сценарии с семью агентами, замените ``--advcp-config "
+"removal_forward`` на ``--advcp-config spoofing_forward``. Для другой модели сначала выберите "
+"требуемую :doc:`цель образа </reference/runtime>` и создайте новый базовый результат. Также "
+"необходимо проверить поддержку модели с промежуточным слиянием в реализации. Поддерживаются не "
+"все модели OpenCOOD."
+
+#: ../../source/guides/advcp.rst:54
+msgid ""
+"``--with-advcp`` requires both ``--with-coperception`` and ``--advcp-config``. OpenCDA resolves "
+"the model and AdvCP assets before starting simulation. See :doc:`/models` to prepare the bundles "
+"for an offline run."
+msgstr ""
+"Для ``--with-advcp`` необходимы как ``--with-coperception``, так и ``--advcp-config``. OpenCDA "
+"разрешает модель и ресурсы AdvCP до запуска симуляции. Подготовка пакетов для автономного запуска"
+" описана в :doc:`/models`."
+
+#: ../../source/guides/advcp.rst:97
+msgid "``advshape``"
+msgstr "``advshape``"
+
+#: ../../source/guides/advcp.rst:89
+msgid "``attacker_ids``"
+msgstr "``attacker_ids``"
+
+#: ../../source/guides/advcp.rst:92
+msgid "``boxes`` / ``default_size``"
+msgstr "``boxes`` / ``default_size``"
+
+#: ../../source/guides/advcp.rst:100
+msgid "``density`` / ``dense_distance``"
+msgstr "``density`` / ``dense_distance``"
+
+#: ../../source/guides/advcp.rst:86
+msgid "``mode``"
+msgstr "``mode``"
+
+#: ../../source/guides/advcp.rst:87
+msgid ""
+"``removal`` suppresses target detections. ``spoofing`` introduces fake targets. The "
+"implementation depends on the model's fusion mode."
+msgstr ""
+"``removal`` подавляет обнаружение целей. ``spoofing`` добавляет ложные цели. Реализация зависит "
+"от режима слияния модели."
+
+#: ../../source/guides/advcp.rst:102
+msgid "``step`` / ``lr`` / ``max_perturb`` / ``feature_size``"
+msgstr "``step`` / ``lr`` / ``max_perturb`` / ``feature_size``"
+
+#: ../../source/guides/advcp.rst:104
+msgid "``sync`` / ``init`` / ``online``"
+msgstr "``sync`` / ``init`` / ``online``"
+
+#: ../../source/guides/advcp.rst:20
+msgid "attack configuration ``removal_forward`` (removal mode)."
+msgstr "конфигурация атаки ``removal_forward`` (режим удаления)."
+
+#: ../../source/guides/advcp.rst:19
+msgid "model ``pointpillar-late-opv2v-30`` (late fusion)."
+msgstr "модель ``pointpillar-late-opv2v-30`` (позднее слияние)."
+
+#: ../../source/guides/advcp.rst:21
+msgid "runtime asset bundle ``base-car``."
+msgstr "пакет ресурсов времени выполнения ``base-car``."
+
+#: ../../source/guides/advcp.rst:18
+msgid "scenario ``advcp-scenarios/advcp_check`` (includes attacker ``cav-5``)."
+msgstr "сценарий ``advcp-scenarios/advcp_check`` (содержит атакующего ``cav-5``)."
+
