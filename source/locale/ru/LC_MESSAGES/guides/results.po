@@ -1,0 +1,194 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/guides/results.rst:71
+msgid "Add these flags to a cooperative-perception or AdvCP command:"
+msgstr "Добавьте следующие параметры к команде кооперативного восприятия или AdvCP:"
+
+#: ../../source/guides/results.rst:50
+msgid ""
+"At the ``pstats`` prompt, enter ``sort cumulative`` followed by ``stats 20`` to see the 20 "
+"functions with the highest cumulative time (including calls to other functions). Enter ``quit`` "
+"to exit."
+msgstr ""
+"В командной строке ``pstats`` введите ``sort cumulative``, затем ``stats 20``, чтобы увидеть 20 "
+"функций с наибольшим суммарным временем выполнения, включая вызовы других функций. Для выхода "
+"введите ``quit``."
+
+#: ../../source/guides/results.rst:9
+msgid "Bounded Runs and Logs"
+msgstr "Ограниченные запуски и журналы"
+
+#: ../../source/guides/results.rst:64
+msgid ""
+"CARLA recorder files are written by the **CARLA server**, so their location belongs to its "
+"container on Linux or its host process on Windows. Copy files out of a container before removing "
+"it if they are not on a bind mount."
+msgstr ""
+"Файлы записи CARLA создаются **сервером CARLA**, поэтому они находятся в его контейнере в Linux "
+"или у хост-процесса в Windows. Если файлы не находятся в подключённом томе, скопируйте их из "
+"контейнера до его удаления."
+
+#: ../../source/guides/results.rst:69
+msgid "Cooperative Perception Output"
+msgstr "Результаты кооперативного восприятия"
+
+#: ../../source/guides/results.rst:77
+msgid "Flag"
+msgstr "Параметр"
+
+#: ../../source/guides/results.rst:35
+msgid "For example, in the **OpenCDA container shell**:"
+msgstr "Например, в **оболочке контейнера OpenCDA**:"
+
+#: ../../source/guides/results.rst:80
+msgid ""
+"Frames under ``simulation_output/coperception/vis_<mode>/<scenario>_<timestamp>/``. Available "
+"views depend on visualization configuration."
+msgstr ""
+"Кадры в ``simulation_output/coperception/vis_<mode>/<scenario>_<timestamp>/``. Доступные "
+"представления зависят от конфигурации визуализации."
+
+#: ../../source/guides/results.rst:11
+msgid "In the **OpenCDA container shell**, with ``CARLA_HOST`` set as in :ref:`carla-client-shell`:"
+msgstr ""
+"В **оболочке контейнера OpenCDA**, где задан ``CARLA_HOST``, как показано в :ref:`carla-client-"
+"shell`:"
+
+#: ../../source/guides/results.rst:86
+msgid "Live visualization. Requires a working display in the container."
+msgstr "Визуализация в реальном времени. Требуется работающий дисплей в контейнере."
+
+#: ../../source/guides/results.rst:93
+msgid "Metrics and Warmup"
+msgstr "Метрики и прогрев"
+
+#: ../../source/guides/results.rst:83
+msgid ""
+"Prediction and ground-truth arrays under "
+"``simulation_output/coperception/npy/<scenario>_<timestamp>/``."
+msgstr ""
+"Массивы прогнозов и эталонных данных в "
+"``simulation_output/coperception/npy/<scenario>_<timestamp>/``."
+
+#: ../../source/guides/results.rst:29
+msgid "Profiling Slow Runs"
+msgstr "Профилирование медленных запусков"
+
+#: ../../source/guides/results.rst:55
+msgid "Recording"
+msgstr "Запись"
+
+#: ../../source/guides/results.rst:2
+msgid "Recording and Results"
+msgstr "Запись и результаты"
+
+#: ../../source/guides/results.rst:78
+msgid "Result"
+msgstr "Результат"
+
+#: ../../source/guides/results.rst:19
+msgid ""
+"The default evaluation directory is "
+"``simulation_output/evaluation_outputs/<scenario>_<timestamp>/``. It contains "
+"``opencda.log.json`` and the reports/plots produced by enabled metrics. Scenario names containing"
+" ``/`` create nested output paths. Use ``--log-file /path/to/run.log.json`` to override the log "
+"location."
+msgstr ""
+"Каталог оценки по умолчанию - ``simulation_output/evaluation_outputs/<scenario>_<timestamp>/``. "
+"Он содержит ``opencda.log.json`` и отчёты или графики, создаваемые включёнными метриками. Имена "
+"сценариев с символом ``/`` создают вложенные пути результатов. Чтобы переопределить расположение "
+"журнала, используйте ``--log-file /path/to/run.log.json``."
+
+#: ../../source/guides/results.rst:42
+msgid ""
+"The runner saves ``profile_output.prof`` in that run's evaluation directory. This is a binary "
+"Python cProfile report, not a video or a perception metric. To inspect it, replace "
+"``RUN_DIRECTORY`` with the directory printed for your run:"
+msgstr ""
+"Средство запуска сохраняет ``profile_output.prof`` в каталоге оценки этого запуска. Это двоичный "
+"отчёт Python cProfile, а не видео или метрика восприятия. Чтобы просмотреть его, замените "
+"``RUN_DIRECTORY`` на каталог, указанный для вашего запуска:"
+
+#: ../../source/guides/results.rst:95
+msgid ""
+"The scenario's ``coperception.metrics`` configuration selects metric behavior. Use its warmup "
+"settings when interpreting short runs. Inspect the logged agent IDs and compare per-run metrics "
+"alongside the rendered output. Missing attackers, empty inputs, or a target outside the sensor "
+"range can make an experiment uninformative even when the simulator continues running."
+msgstr ""
+"Конфигурация ``coperception.metrics`` сценария определяет поведение метрик. При интерпретации "
+"коротких запусков учитывайте настройки прогрева. Проверьте зарегистрированные идентификаторы "
+"агентов и сопоставляйте метрики каждого запуска с визуализированным результатом. Отсутствующие "
+"атакующие, пустые входные данные или цель вне дальности датчика могут сделать эксперимент "
+"неинформативным, даже если симулятор продолжает работать."
+
+#: ../../source/guides/results.rst:88
+msgid ""
+"These directories are inside the mounted OpenCDA checkout and remain on the host when the "
+"container is recreated. :doc:`/wiki/additional-scripts` describes ``make_video.py`` for "
+"converting a saved frame directory to a video."
+msgstr ""
+"Эти каталоги находятся внутри подключённого репозитория OpenCDA и сохраняются на хосте при "
+"пересоздании контейнера. Преобразование каталога сохранённых кадров в видео с помощью "
+"``make_video.py`` описано в :doc:`/wiki/additional-scripts`."
+
+#: ../../source/guides/results.rst:4
+msgid ""
+"Use the same scenario, model, seed/configuration and run length when comparing experiments. A "
+"successful process exit alone does not establish perception accuracy or attack success."
+msgstr ""
+"При сравнении экспериментов используйте одинаковые сценарий, модель, начальное значение "
+"генератора или конфигурацию и длительность запуска. Само по себе успешное завершение процесса не "
+"подтверждает точность восприятия или успешность атаки."
+
+#: ../../source/guides/results.rst:31
+msgid ""
+"``--profile`` measures how much time Python spends in the scenario's functions. Use it to "
+"investigate a slow simulation. It adds profiling overhead, so leave it off when measuring normal "
+"simulation performance."
+msgstr ""
+"Параметр ``--profile`` измеряет время, которое Python затрачивает на функции сценария. "
+"Используйте его для исследования медленной симуляции. Он создаёт накладные расходы на "
+"профилирование, поэтому отключайте его при измерении обычной производительности симуляции."
+
+#: ../../source/guides/results.rst:57
+msgid "``--record`` enables CARLA recording and scenario sensor data dumping:"
+msgstr "Параметр ``--record`` включает запись CARLA и сохранение данных датчиков сценария:"
+
+#: ../../source/guides/results.rst:82
+msgid "``--save-npy``"
+msgstr "``--save-npy``"
+
+#: ../../source/guides/results.rst:79
+msgid "``--save-vis``"
+msgstr "``--save-vis``"
+
+#: ../../source/guides/results.rst:85
+msgid "``--show-video-vis``"
+msgstr "``--show-video-vis``"
+
+#: ../../source/guides/results.rst:25
+msgid "``--verbose 1``, ``2``, and ``3`` select warning, informational and debug logging respectively."
+msgstr ""
+"Значения ``--verbose 1``, ``2`` и ``3`` выбирают соответственно журналирование предупреждений, "
+"информационных и отладочных сообщений."
+

@@ -1,0 +1,485 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/attack-framework.rst:17
+msgid ".. image:: /_static/images/attack-framework-architecture.png"
+msgstr ".. image:: /_static/images/attack-framework-architecture.png"
+
+#: ../../source/wiki/attack-framework.rst:55
+msgid ".. image:: /_static/images/attack-framework-workflow.png"
+msgstr ".. image:: /_static/images/attack-framework-workflow.png"
+
+#: ../../source/wiki/attack-framework.rst:39
+msgid ""
+"At scenario startup, each YAML file is loaded, parsed into an ``AttackSpec``, and converted into "
+"a runtime ``Attack`` object via ``Attack.from_spec(...)``."
+msgstr ""
+"При запуске сценария каждый YAML-файл загружается, преобразуется в ``AttackSpec``, а затем - в "
+"объект времени выполнения ``Attack`` с помощью ``Attack.from_spec(...)``."
+
+#: ../../source/wiki/attack-framework.rst:2
+msgid "Attack Framework"
+msgstr "Фреймворк атак"
+
+#: ../../source/wiki/attack-framework.rst:233
+msgid ""
+"Attack and stage runtime conditions use lifecycle status values such as ``inactive``, ``active``,"
+" ``success``, ``fail``, and ``stopped``. Internally, the runtime also has a ``STARTED`` state, "
+"but condition evaluation normalizes it to ``active``."
+msgstr ""
+"В условиях времени выполнения атак и этапов используются состояния жизненного цикла, например "
+"``inactive``, ``active``, ``success``, ``fail`` и ``stopped``. Внутренне среда выполнения также "
+"содержит состояние ``STARTED``, но при вычислении условий оно нормализуется в ``active``."
+
+#: ../../source/wiki/attack-framework.rst:17
+msgid "Attack framework architecture"
+msgstr "Архитектура фреймворка атак"
+
+#: ../../source/wiki/attack-framework.rst:55
+msgid "Attack framework workflow"
+msgstr "Рабочий процесс фреймворка атак"
+
+#: ../../source/wiki/attack-framework.rst:139
+msgid "Builtin Stages"
+msgstr "Встроенные этапы"
+
+#: ../../source/wiki/attack-framework.rst:141
+msgid ""
+"Builtin stages are auto-registered through ``AttackStageRegistry`` when the framework module is "
+"imported."
+msgstr ""
+"Встроенные этапы автоматически регистрируются через ``AttackStageRegistry`` при импорте модуля "
+"фреймворка."
+
+#: ../../source/wiki/attack-framework.rst:193
+msgid "Capabilities"
+msgstr "Возможности"
+
+#: ../../source/wiki/attack-framework.rst:119
+msgid "Conditions are evaluated against:"
+msgstr "Условия вычисляются на основе:"
+
+#: ../../source/wiki/attack-framework.rst:80
+msgid "Core Components"
+msgstr "Основные компоненты"
+
+#: ../../source/wiki/attack-framework.rst:185
+msgid "Default capability: ``request.submit``"
+msgstr "Возможность по умолчанию: ``request.submit``"
+
+#: ../../source/wiki/attack-framework.rst:149
+msgid "Default capability: ``response.observe``"
+msgstr "Возможность по умолчанию: ``response.observe``"
+
+#: ../../source/wiki/attack-framework.rst:161 ../../source/wiki/attack-framework.rst:174
+msgid "Default capability: ``response.submit``"
+msgstr "Возможность по умолчанию: ``response.submit``"
+
+#: ../../source/wiki/attack-framework.rst:33
+msgid "Each attack name is resolved to:"
+msgstr "Каждое имя атаки разрешается в:"
+
+#: ../../source/wiki/attack-framework.rst:23
+msgid "Enabling Attacks"
+msgstr "Включение атак"
+
+#: ../../source/wiki/attack-framework.rst:94
+msgid ""
+"If an attack start trigger fires but no target services can be resolved for that tick, the "
+"manager reports that attack execution as failed."
+msgstr ""
+"Если срабатывает триггер начала атаки, но в текущем такте не удаётся разрешить целевые сервисы, "
+"менеджер сообщает о неуспешном выполнении атаки."
+
+#: ../../source/wiki/attack-framework.rst:213
+msgid ""
+"In practice, builtin stages install output interceptors on the resolved target service instances "
+"and remove them later through ``deactivate()`` or when the attack is stopped."
+msgstr ""
+"На практике встроенные этапы устанавливают перехватчики выходных данных на разрешённые экземпляры"
+" целевых сервисов, а затем удаляют их через ``deactivate()`` или при остановке атаки."
+
+#: ../../source/wiki/attack-framework.rst:208
+msgid "Interception Model"
+msgstr "Модель перехвата"
+
+#: ../../source/wiki/attack-framework.rst:165
+msgid ""
+"Parameters: ``drop_rate`` (``float`` in ``[0.0, 1.0]``, default ``1.0``), ``seed`` (optional RNG "
+"seed)"
+msgstr ""
+"Параметры: ``drop_rate`` (``float`` в диапазоне ``[0.0, 1.0]``, по умолчанию ``1.0``), ``seed`` "
+"(необязательное начальное значение генератора)"
+
+#: ../../source/wiki/attack-framework.rst:153 ../../source/wiki/attack-framework.rst:178
+msgid "Parameters: none"
+msgstr "Параметры отсутствуют"
+
+#: ../../source/wiki/attack-framework.rst:188
+msgid "Parameters: required ``rewrites`` list with per-rule ``path``, ``operation``, and ``value``"
+msgstr ""
+"Параметры: обязательный список ``rewrites`` с полями ``path``, ``operation`` и ``value`` для "
+"каждого правила"
+
+#: ../../source/wiki/attack-framework.rst:147
+msgid "Passive observer that records outputs returned by matched capability handlers."
+msgstr ""
+"Пассивный наблюдатель, записывающий выходные данные, возвращаемые соответствующими обработчиками "
+"возможностей."
+
+#: ../../source/wiki/attack-framework.rst:158
+msgid ""
+"Replaces selected outputs with an empty batch or probabilistically drops items from iterable "
+"outputs."
+msgstr ""
+"Заменяет выбранные выходные данные пустым пакетом или с заданной вероятностью отбрасывает "
+"элементы итерируемых выходных данных."
+
+#: ../../source/wiki/attack-framework.rst:172
+msgid "Replays the previous output seen on each matched service/capability binding."
+msgstr ""
+"Повторно воспроизводит предыдущие выходные данные, полученные для каждой соответствующей привязки"
+" сервиса и возможности."
+
+#: ../../source/wiki/attack-framework.rst:227
+msgid "Result statuses are:"
+msgstr "Возможные состояния результата:"
+
+#: ../../source/wiki/attack-framework.rst:218
+msgid "Results and Logging"
+msgstr "Результаты и журналирование"
+
+#: ../../source/wiki/attack-framework.rst:183
+msgid "Rewrites selected fields inside ``TransportMessage`` envelopes or payloads."
+msgstr "Изменяет выбранные поля внутри оболочек или полезной нагрузки ``TransportMessage``."
+
+#: ../../source/wiki/attack-framework.rst:43
+msgid "Runtime Integration"
+msgstr "Интеграция со средой выполнения"
+
+#: ../../source/wiki/attack-framework.rst:25
+msgid "Scenario configs enable attacks through the top-level ``attacks`` list:"
+msgstr "Конфигурации сценариев включают атаки с помощью списка ``attacks`` верхнего уровня:"
+
+#: ../../source/wiki/attack-framework.rst:204
+msgid ""
+"Stages declare the capabilities they need, and the framework matches them against each target "
+"service's ``capability_bindings`` map."
+msgstr ""
+"Этапы объявляют необходимые им возможности, а фреймворк сопоставляет их с картой "
+"``capability_bindings`` каждого целевого сервиса."
+
+#: ../../source/wiki/attack-framework.rst:210
+msgid ""
+"Stages do not mutate the framework itself. Instead, they temporarily wrap the bound methods "
+"exposed by behavior-service capability bindings."
+msgstr ""
+"Этапы не изменяют сам фреймворк. Вместо этого они временно оборачивают связанные методы, "
+"предоставляемые привязками возможностей сервисов поведения."
+
+#: ../../source/wiki/attack-framework.rst:162 ../../source/wiki/attack-framework.rst:175
+msgid ""
+"Supported capabilities: ``request.observe``, ``request.submit``, ``response.observe``, "
+"``response.submit``, ``command.submit``"
+msgstr ""
+"Поддерживаемые возможности: ``request.observe``, ``request.submit``, ``response.observe``, "
+"``response.submit``, ``command.submit``"
+
+#: ../../source/wiki/attack-framework.rst:150
+msgid ""
+"Supported capabilities: ``request.observe``, ``request.submit``, ``response.observe``, "
+"``response.submit``, ``command.submit``, ``state.observe``"
+msgstr ""
+"Поддерживаемые возможности: ``request.observe``, ``request.submit``, ``response.observe``, "
+"``response.submit``, ``command.submit``, ``state.observe``"
+
+#: ../../source/wiki/attack-framework.rst:186
+msgid "Supported capabilities: ``request.submit``, ``response.submit``, ``command.submit``"
+msgstr "Поддерживаемые возможности: ``request.submit``, ``response.submit``, ``command.submit``"
+
+#: ../../source/wiki/attack-framework.rst:125
+msgid "Supported source kinds are ``snapshot``, ``attack``, and ``stage``."
+msgstr "Поддерживаемые типы источников: ``snapshot``, ``attack`` и ``stage``."
+
+#: ../../source/wiki/attack-framework.rst:130
+msgid "Target resolution currently supports one strategy: ``service_state_field``. The resolver:"
+msgstr ""
+"Сейчас для разрешения целей поддерживается одна стратегия - ``service_state_field``. Средство "
+"разрешения:"
+
+#: ../../source/wiki/attack-framework.rst:4
+msgid ""
+"The adversary framework executes declarative, event-driven attacks against live behavior services"
+" in the simulation runtime. Attack behavior is described in YAML, converted into structured "
+"specs, and evaluated on every simulation tick against a normalized snapshot of vehicle and RSU "
+"service state."
+msgstr ""
+"Фреймворк атак выполняет декларативные событийно-управляемые атаки на активные сервисы поведения "
+"во время симуляции. Поведение атаки описывается в YAML, преобразуется в структурированные "
+"спецификации и на каждом такте симуляции вычисляется относительно нормализованного снимка "
+"состояния сервисов транспортных средств и RSU."
+
+#: ../../source/wiki/attack-framework.rst:195
+msgid "The current cross-service capability vocabulary is:"
+msgstr "Текущий общий словарь возможностей сервисов:"
+
+#: ../../source/wiki/attack-framework.rst:107
+msgid "The default lifecycle is:"
+msgstr "Жизненный цикл по умолчанию:"
+
+#: ../../source/wiki/attack-framework.rst:220
+msgid "The framework emits ``AttackResult`` objects with:"
+msgstr "Фреймворк создаёт объекты ``AttackResult`` со следующими полями:"
+
+#: ../../source/wiki/attack-framework.rst:45
+msgid "The framework is evaluated from the main scenario loops. On each tick, the scenario code:"
+msgstr "Фреймворк вычисляется из основных циклов сценария. На каждом такте код сценария:"
+
+#: ../../source/wiki/attack-framework.rst:9
+msgid ""
+"The framework is generic at the orchestration layer. See :ref:`module-level architecture <attack-"
+"framework-architecture>`, :doc:`behavior-services` for the behavior-service lifecycle and "
+"development template, :doc:`available-attacks` for the builtin attack catalog, and :doc:`attack-"
+"scenario-description` for the YAML reference."
+msgstr ""
+"На уровне оркестрации фреймворк является универсальным. См. :ref:`архитектуру на уровне модулей "
+"<attack-framework-architecture>`, :doc:`behavior-services` с описанием жизненного цикла сервисов "
+"поведения и шаблоном разработки, :doc:`available-attacks` с каталогом встроенных атак и :doc"
+":`attack-scenario-description` со справочником YAML."
+
+#: ../../source/wiki/attack-framework.rst:53
+msgid "The overall per-tick attack evaluation workflow is shown below."
+msgstr "Ниже показан общий процесс вычисления атаки на каждом такте."
+
+#: ../../source/wiki/attack-framework.rst:238
+msgid "The scenario loop currently relies on framework logging for visibility into attack execution."
+msgstr ""
+"В настоящее время для наблюдения за выполнением атак цикл сценария использует журналирование "
+"фреймворка."
+
+#: ../../source/wiki/attack-framework.rst:60
+msgid "The snapshot passed to the attack framework has the following structure:"
+msgstr "Снимок, передаваемый во фреймворк атак, имеет следующую структуру:"
+
+#: ../../source/wiki/attack-framework.rst:83
+msgid "``AttackManager``"
+msgstr "``AttackManager``"
+
+#: ../../source/wiki/attack-framework.rst:85
+msgid ""
+"``AttackManager`` owns the previous snapshot and advances all configured attacks against the "
+"current snapshot. It is responsible for:"
+msgstr ""
+"``AttackManager`` хранит предыдущий снимок и продвигает все настроенные атаки относительно "
+"текущего снимка. Он отвечает за:"
+
+#: ../../source/wiki/attack-framework.rst:98
+msgid "``Attack``"
+msgstr "``Attack``"
+
+#: ../../source/wiki/attack-framework.rst:100
+msgid "``Attack`` is the runtime object built from ``AttackSpec``. It stores:"
+msgstr "``Attack`` - объект времени выполнения, созданный из ``AttackSpec``. Он хранит:"
+
+#: ../../source/wiki/attack-framework.rst:117
+msgid "``ConditionEvaluator``"
+msgstr "``ConditionEvaluator``"
+
+#: ../../source/wiki/attack-framework.rst:128
+msgid "``TargetResolver``"
+msgstr "``TargetResolver``"
+
+#: ../../source/wiki/attack-framework.rst:222
+msgid "``attack_name``"
+msgstr "``attack_name``"
+
+#: ../../source/wiki/attack-framework.rst:201
+msgid "``command.submit``"
+msgstr "``command.submit``"
+
+#: ../../source/wiki/attack-framework.rst:156
+msgid "``dropper``"
+msgstr "``dropper``"
+
+#: ../../source/wiki/attack-framework.rst:230
+msgid "``fail``"
+msgstr "``fail``"
+
+#: ../../source/wiki/attack-framework.rst:224
+msgid "``reason``"
+msgstr "``reason``"
+
+#: ../../source/wiki/attack-framework.rst:170
+msgid "``replayer``"
+msgstr "``replayer``"
+
+#: ../../source/wiki/attack-framework.rst:197
+msgid "``request.observe``"
+msgstr "``request.observe``"
+
+#: ../../source/wiki/attack-framework.rst:198
+msgid "``request.submit``"
+msgstr "``request.submit``"
+
+#: ../../source/wiki/attack-framework.rst:199
+msgid "``response.observe``"
+msgstr "``response.observe``"
+
+#: ../../source/wiki/attack-framework.rst:200
+msgid "``response.submit``"
+msgstr "``response.submit``"
+
+#: ../../source/wiki/attack-framework.rst:76
+msgid ""
+"``service_states`` contains the latest ``get_state()`` outputs of attached behavior services, "
+"keyed by ``service_type``."
+msgstr ""
+"``service_states`` содержит последние выходные данные ``get_state()`` подключённых сервисов "
+"поведения с ключами по ``service_type``."
+
+#: ../../source/wiki/attack-framework.rst:145
+msgid "``sniffer``"
+msgstr "``sniffer``"
+
+#: ../../source/wiki/attack-framework.rst:181
+msgid "``spoofer``"
+msgstr "``spoofer``"
+
+#: ../../source/wiki/attack-framework.rst:225
+msgid "``stage_history``"
+msgstr "``stage_history``"
+
+#: ../../source/wiki/attack-framework.rst:202
+msgid "``state.observe``"
+msgstr "``state.observe``"
+
+#: ../../source/wiki/attack-framework.rst:223
+msgid "``status``"
+msgstr "``status``"
+
+#: ../../source/wiki/attack-framework.rst:231
+msgid "``stop``"
+msgstr "``stop``"
+
+#: ../../source/wiki/attack-framework.rst:229
+msgid "``success``"
+msgstr "``success``"
+
+#: ../../source/wiki/attack-framework.rst:113
+msgid "an attack stops when its stop trigger fires,"
+msgstr "атака останавливается при срабатывании триггера остановки,"
+
+#: ../../source/wiki/attack-framework.rst:114
+msgid "an attack succeeds when all stages complete successfully."
+msgstr "атака завершается успешно, когда все этапы выполнены успешно."
+
+#: ../../source/wiki/attack-framework.rst:109
+msgid "an inactive attack may start when its requirements and start trigger are satisfied,"
+msgstr "неактивная атака может начаться при выполнении её требований и срабатывании триггера запуска,"
+
+#: ../../source/wiki/attack-framework.rst:49
+msgid "builds a ``SimulationSnapshot``,"
+msgstr "создаёт ``SimulationSnapshot``,"
+
+#: ../../source/wiki/attack-framework.rst:50
+msgid "calls ``AttackManager.evaluate(...)``,"
+msgstr "вызывает ``AttackManager.evaluate(...)``,"
+
+#: ../../source/wiki/attack-framework.rst:88
+msgid "checking attack start and stop triggers,"
+msgstr "проверку триггеров запуска и остановки атаки,"
+
+#: ../../source/wiki/attack-framework.rst:91
+msgid "emitting ``AttackResult`` objects,"
+msgstr "создание объектов ``AttackResult``,"
+
+#: ../../source/wiki/attack-framework.rst:112
+msgid "every later stage starts after the previous stage reaches ``success``,"
+msgstr "каждый следующий этап начинается после того, как предыдущий достигнет состояния ``success``,"
+
+#: ../../source/wiki/attack-framework.rst:90
+msgid "executing active stages,"
+msgstr "выполнение активных этапов,"
+
+#: ../../source/wiki/attack-framework.rst:92
+msgid "logging success, stop, and failure outcomes."
+msgstr "журналирование успешных результатов, остановок и сбоев."
+
+#: ../../source/wiki/attack-framework.rst:134
+msgid "normalizes its value into one or more node ids,"
+msgstr "нормализует его значение в один или несколько ID узлов,"
+
+#: ../../source/wiki/attack-framework.rst:136
+msgid "optionally filters by ``service_type``."
+msgstr "при необходимости фильтрует по ``service_type``."
+
+#: ../../source/wiki/attack-framework.rst:104
+msgid "ordered stage runtimes,"
+msgstr "упорядоченные среды выполнения этапов,"
+
+#: ../../source/wiki/attack-framework.rst:105
+msgid "per-stage last results."
+msgstr "последние результаты каждого этапа."
+
+#: ../../source/wiki/attack-framework.rst:133
+msgid "reads one snapshot field,"
+msgstr "считывает одно поле снимка,"
+
+#: ../../source/wiki/attack-framework.rst:135
+msgid "resolves live behavior services for those node ids,"
+msgstr "разрешает активные сервисы поведения для этих ID узлов,"
+
+#: ../../source/wiki/attack-framework.rst:51
+msgid "resolves live target services through ``CavWorld.resolve_behavior_services``."
+msgstr "разрешает активные целевые сервисы через ``CavWorld.resolve_behavior_services``."
+
+#: ../../source/wiki/attack-framework.rst:89
+msgid "resolving target services for attacks that should run,"
+msgstr "разрешение целевых сервисов для атак, которые должны выполняться,"
+
+#: ../../source/wiki/attack-framework.rst:103
+msgid "runtime lifecycle state,"
+msgstr "состояние жизненного цикла во время выполнения,"
+
+#: ../../source/wiki/attack-framework.rst:121
+msgid "the current and previous ``SimulationSnapshot``,"
+msgstr "текущий и предыдущий ``SimulationSnapshot``,"
+
+#: ../../source/wiki/attack-framework.rst:122
+msgid "the current attack runtime,"
+msgstr "текущую среду выполнения атаки,"
+
+#: ../../source/wiki/attack-framework.rst:123
+msgid "the current stage runtimes."
+msgstr "текущие среды выполнения этапов."
+
+#: ../../source/wiki/attack-framework.rst:111
+msgid "the first stage starts when the attack becomes active,"
+msgstr "первый этап начинается, когда атака становится активной,"
+
+#: ../../source/wiki/attack-framework.rst:102
+msgid "the parsed spec,"
+msgstr "разобранную спецификацию,"
+
+#: ../../source/wiki/attack-framework.rst:48
+msgid "updates vehicle and RSU behavior services,"
+msgstr "обновляет сервисы поведения транспортных средств и RSU,"
+

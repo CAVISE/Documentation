@@ -1,0 +1,294 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/additional-scripts.rst:57 ../../source/wiki/additional-scripts.rst:184
+msgid "**Arguments**"
+msgstr "**Аргументы**"
+
+#: ../../source/wiki/additional-scripts.rst:72 ../../source/wiki/additional-scripts.rst:127
+#: ../../source/wiki/additional-scripts.rst:196
+msgid "**Example**"
+msgstr "**Пример**"
+
+#: ../../source/wiki/additional-scripts.rst:62 ../../source/wiki/additional-scripts.rst:106
+#: ../../source/wiki/additional-scripts.rst:189
+msgid "**Options**"
+msgstr "**Параметры**"
+
+#: ../../source/wiki/additional-scripts.rst:40 ../../source/wiki/additional-scripts.rst:96
+#: ../../source/wiki/additional-scripts.rst:178
+msgid "**Usage**"
+msgstr "**Использование**"
+
+#: ../../source/wiki/additional-scripts.rst:8
+msgid "Artery build and frontend commands are in :doc:`/reference/runtime`."
+msgstr "Команды сборки и запуска интерфейса Artery приведены в :doc:`/reference/runtime`."
+
+#: ../../source/wiki/additional-scripts.rst:139
+msgid "CARLA Spectator Utilities"
+msgstr "Вспомогательные средства наблюдателя CARLA"
+
+#: ../../source/wiki/additional-scripts.rst:11
+msgid "CARLA/SUMO Map Conversion Utilities"
+msgstr "Средства преобразования карт CARLA/SUMO"
+
+#: ../../source/wiki/additional-scripts.rst:74
+msgid "Create the output directory first with ``mkdir -p opencda/sumo-assets/maps/Town12``."
+msgstr "Сначала создайте выходной каталог командой ``mkdir -p opencda/sumo-assets/maps/Town12``."
+
+#: ../../source/wiki/additional-scripts.rst:146
+msgid "Get Spectator Position"
+msgstr "Получение положения наблюдателя"
+
+#: ../../source/wiki/additional-scripts.rst:31
+msgid "It can work in two modes:"
+msgstr "Поддерживаются два режима:"
+
+#: ../../source/wiki/additional-scripts.rst:92
+msgid ""
+"It uses an existing SUMO ``.net.xml`` file for coordinate conversion and boundary clipping, then "
+"scans the CARLA world and writes selected static objects as SUMO polygons."
+msgstr ""
+"Скрипт использует существующий файл SUMO ``.net.xml`` для преобразования координат и обрезки по "
+"границам, затем сканирует мир CARLA и записывает выбранные статические объекты как полигоны SUMO."
+
+#: ../../source/wiki/additional-scripts.rst:4
+msgid ""
+"Run these commands from the **OpenCDA repository root** in the OpenCDA container, unless stated "
+"otherwise. For commands connecting to CARLA, set ``CARLA_HOST`` as in :ref:`carla-client-shell`."
+msgstr ""
+"Если не указано иное, запускайте эти команды из **корня репозитория OpenCDA** в контейнере "
+"OpenCDA. Для команд, подключающихся к CARLA, задайте ``CARLA_HOST``, как показано в :ref:`carla-"
+"client-shell`."
+
+#: ../../source/wiki/additional-scripts.rst:27
+msgid "SUMO Network Generation ``netconvert_carla.py``"
+msgstr "Создание сети SUMO с помощью ``netconvert_carla.py``"
+
+#: ../../source/wiki/additional-scripts.rst:87
+msgid "SUMO Polygon Generation ``polyconvert_carla.py``"
+msgstr "Создание полигонов SUMO с помощью ``polyconvert_carla.py``"
+
+#: ../../source/wiki/additional-scripts.rst:158
+msgid "Set Spectator Position"
+msgstr "Задание положения наблюдателя"
+
+#: ../../source/wiki/additional-scripts.rst:37
+msgid ""
+"The script uses SUMO ``netconvert``, so ``SUMO_HOME`` must be configured and SUMO tools must be "
+"available in the environment."
+msgstr ""
+"Скрипт использует SUMO ``netconvert``, поэтому переменная ``SUMO_HOME`` должна быть настроена, а "
+"инструменты SUMO - доступны в среде."
+
+#: ../../source/wiki/additional-scripts.rst:21
+msgid ""
+"The scripts are located in OpenCDA's ``scripts`` directory. For conversion dependencies and an "
+"ordered workflow, see :doc:`/scenarios/maps`. Paths under ``opencda/sumo-assets`` refer to the "
+"host SUMO assets bind mount."
+msgstr ""
+"Скрипты находятся в каталоге ``scripts`` OpenCDA. Зависимости для преобразования и упорядоченный "
+"рабочий процесс описаны в :doc:`/scenarios/maps`. Пути внутри ``opencda/sumo-assets`` относятся к"
+" подключённому каталогу ресурсов SUMO на хосте."
+
+#: ../../source/wiki/additional-scripts.rst:15
+msgid "These scripts are useful when a CARLA map has to be converted into SUMO-compatible files:"
+msgstr "Эти скрипты полезны для преобразования карты CARLA в совместимые с SUMO файлы:"
+
+#: ../../source/wiki/additional-scripts.rst:154
+msgid "This prints the current spectator location and rotation."
+msgstr "Команда выводит текущее положение и поворот наблюдателя."
+
+#: ../../source/wiki/additional-scripts.rst:166
+msgid "This sets the spectator location from standard input."
+msgstr "Команда задаёт положение наблюдателя из стандартного ввода."
+
+#: ../../source/wiki/additional-scripts.rst:29
+msgid "This utility generates a SUMO ``.net.xml`` file from CARLA/OpenDRIVE map data."
+msgstr "Эта утилита создаёт файл SUMO ``.net.xml`` из данных карты CARLA/OpenDRIVE."
+
+#: ../../source/wiki/additional-scripts.rst:89
+msgid "This utility generates a SUMO ``.poly.xml`` file from static objects in a CARLA map."
+msgstr "Эта утилита создаёт файл SUMO ``.poly.xml`` из статических объектов карты CARLA."
+
+#: ../../source/wiki/additional-scripts.rst:172
+msgid ""
+"This utility requires the ``ffmpeg`` executable on ``PATH`` and converts a sequence of rendered "
+"frames into a video file. Run ``ffmpeg -version`` first. Install FFmpeg in the environment used "
+"for conversion if it is absent. It is typically used to visualize simulation outputs generated by"
+" OpenCDA, for example 3D or BEV perception results."
+msgstr ""
+"Для этой утилиты исполняемый файл ``ffmpeg`` должен находиться в ``PATH``. Она преобразует "
+"последовательность визуализированных кадров в видеофайл. Сначала выполните ``ffmpeg -version``. "
+"Если FFmpeg отсутствует, установите его в среду, используемую для преобразования. Утилита обычно "
+"применяется для визуализации результатов симуляции, созданных OpenCDA, например результатов "
+"восприятия в 3D или BEV."
+
+#: ../../source/wiki/additional-scripts.rst:2
+msgid "Utility Scripts"
+msgstr "Вспомогательные скрипты"
+
+#: ../../source/wiki/additional-scripts.rst:170
+msgid "Video Generation Utility ``make_video.py``"
+msgstr "Создание видео с помощью ``make_video.py``"
+
+#: ../../source/wiki/additional-scripts.rst:141
+msgid "We also provide small helper scripts for reading and setting the CARLA spectator position."
+msgstr ""
+"Также предоставляются небольшие вспомогательные скрипты для чтения и задания положения "
+"наблюдателя CARLA."
+
+#: ../../source/wiki/additional-scripts.rst:13
+msgid "We provide helper scripts for preparing SUMO map assets from CARLA maps."
+msgstr "Предоставляются вспомогательные скрипты для подготовки ресурсов карт SUMO из карт CARLA."
+
+#: ../../source/wiki/additional-scripts.rst:117
+msgid "``--boundary-margin``: additional margin around the SUMO network boundary"
+msgstr "``--boundary-margin``: дополнительный отступ вокруг границы сети SUMO"
+
+#: ../../source/wiki/additional-scripts.rst:116
+msgid "``--bounds-margin``: additional margin around scan bounds"
+msgstr "``--bounds-margin``: дополнительный отступ вокруг границ сканирования"
+
+#: ../../source/wiki/additional-scripts.rst:115
+msgid "``--bounds``: explicit CARLA scan bounds in ``min_x,min_y,max_x,max_y`` format"
+msgstr "``--bounds``: явные границы сканирования CARLA в формате ``min_x,min_y,max_x,max_y``"
+
+#: ../../source/wiki/additional-scripts.rst:66 ../../source/wiki/additional-scripts.rst:110
+msgid "``--carla-host``: CARLA server host"
+msgstr "``--carla-host``: хост сервера CARLA"
+
+#: ../../source/wiki/additional-scripts.rst:69 ../../source/wiki/additional-scripts.rst:113
+msgid "``--carla-map``: CARLA map to load if it is not already active"
+msgstr "``--carla-map``: карта CARLA для загрузки, если она ещё не активна"
+
+#: ../../source/wiki/additional-scripts.rst:67 ../../source/wiki/additional-scripts.rst:111
+msgid "``--carla-port``: CARLA server port"
+msgstr "``--carla-port``: порт сервера CARLA"
+
+#: ../../source/wiki/additional-scripts.rst:68 ../../source/wiki/additional-scripts.rst:112
+msgid "``--carla-timeout``: CARLA API timeout in seconds"
+msgstr "``--carla-timeout``: тайм-аут API CARLA в секундах"
+
+#: ../../source/wiki/additional-scripts.rst:191
+msgid "``--framerate``: frame rate in frames per second"
+msgstr "``--framerate``: частота кадров в кадрах в секунду"
+
+#: ../../source/wiki/additional-scripts.rst:65
+msgid "``--from-carla``: read OpenDRIVE data from the currently loaded CARLA world"
+msgstr "``--from-carla``: чтение данных OpenDRIVE из текущего загруженного мира CARLA"
+
+#: ../../source/wiki/additional-scripts.rst:70
+msgid "``--guess-tls``: infer traffic lights at intersections"
+msgstr "``--guess-tls``: определение светофоров на перекрёстках"
+
+#: ../../source/wiki/additional-scripts.rst:114
+msgid "``--labels``: comma-separated CARLA semantic labels to export"
+msgstr "``--labels``: разделённые запятыми семантические метки CARLA для экспорта"
+
+#: ../../source/wiki/additional-scripts.rst:123
+msgid "``--max-area``: maximum polygon footprint area"
+msgstr "``--max-area``: максимальная площадь основания полигона"
+
+#: ../../source/wiki/additional-scripts.rst:124
+msgid "``--max-wall-thickness``: maximum wall thickness filter"
+msgstr "``--max-wall-thickness``: фильтр максимальной толщины стены"
+
+#: ../../source/wiki/additional-scripts.rst:122
+msgid "``--min-height``: minimum object height"
+msgstr "``--min-height``: минимальная высота объекта"
+
+#: ../../source/wiki/additional-scripts.rst:108
+msgid "``--net-file``: existing SUMO ``.net.xml`` file"
+msgstr "``--net-file``: существующий файл SUMO ``.net.xml``"
+
+#: ../../source/wiki/additional-scripts.rst:109
+msgid "``--output``, ``--poly-output``, ``-o``: output SUMO ``.poly.xml`` file"
+msgstr "``--output``, ``--poly-output``, ``-o``: выходной файл SUMO ``.poly.xml``"
+
+#: ../../source/wiki/additional-scripts.rst:64
+msgid "``--output``, ``-o``: path to the generated SUMO ``.net.xml`` file"
+msgstr "``--output``, ``-o``: путь к созданному файлу SUMO ``.net.xml``"
+
+#: ../../source/wiki/additional-scripts.rst:194
+msgid "``--pattern``: filename pattern for the image sequence in glob format"
+msgstr "``--pattern``: шаблон имён файлов последовательности изображений в формате glob"
+
+#: ../../source/wiki/additional-scripts.rst:192
+msgid "``--rotate``: rotate frames counter-clockwise, valid values are ``90``, ``180``, ``270``"
+msgstr "``--rotate``: поворот кадров против часовой стрелки; допустимые значения: ``90``, ``180``, ``270``"
+
+#: ../../source/wiki/additional-scripts.rst:121
+msgid "``--scan-altitude``: spectator altitude during scanning"
+msgstr "``--scan-altitude``: высота наблюдателя во время сканирования"
+
+#: ../../source/wiki/additional-scripts.rst:119
+msgid "``--scan-step``: distance between scan positions"
+msgstr "``--scan-step``: расстояние между точками сканирования"
+
+#: ../../source/wiki/additional-scripts.rst:120
+msgid "``--settle-ticks``: number of ticks to wait after moving the spectator"
+msgstr "``--settle-ticks``: число тактов ожидания после перемещения наблюдателя"
+
+#: ../../source/wiki/additional-scripts.rst:118
+msgid "``--stream-distance``: CARLA tile streaming distance"
+msgstr "``--stream-distance``: расстояние потоковой загрузки фрагментов CARLA"
+
+#: ../../source/wiki/additional-scripts.rst:125
+msgid "``--verbose``: enable verbose logging"
+msgstr "``--verbose``: включение подробного журналирования"
+
+#: ../../source/wiki/additional-scripts.rst:18
+msgid "``.net.xml``: SUMO road network file"
+msgstr "``.net.xml``: файл дорожной сети SUMO"
+
+#: ../../source/wiki/additional-scripts.rst:19
+msgid "``.poly.xml``: SUMO polygon file with static environment objects"
+msgstr "``.poly.xml``: файл полигонов SUMO со статическими объектами среды"
+
+#: ../../source/wiki/additional-scripts.rst:186
+msgid "``input_dir``: directory containing input image frames"
+msgstr "``input_dir``: каталог с входными кадрами изображений"
+
+#: ../../source/wiki/additional-scripts.rst:187
+msgid "``output_path``: path to the output video file, for example ``video.mp4``"
+msgstr "``output_path``: путь к выходному видеофайлу, например ``video.mp4``"
+
+#: ../../source/wiki/additional-scripts.rst:59
+msgid ""
+"``xodr_file``: optional path to a local OpenDRIVE ``.xodr`` file. It is required unless ``--from-"
+"carla`` is used."
+msgstr ""
+"``xodr_file``: необязательный путь к локальному файлу OpenDRIVE ``.xodr``. Обязателен, если не "
+"используется ``--from-carla``."
+
+#: ../../source/wiki/additional-scripts.rst:33
+msgid "convert a local ``.xodr`` OpenDRIVE file"
+msgstr "преобразовать локальный файл OpenDRIVE ``.xodr``"
+
+#: ../../source/wiki/additional-scripts.rst:46
+msgid "or, when reading the map directly from CARLA:"
+msgstr "или при чтении карты непосредственно из CARLA:"
+
+#: ../../source/wiki/additional-scripts.rst:34
+msgid "read OpenDRIVE data from the currently loaded CARLA world using ``--from-carla``"
+msgstr "считать данные OpenDRIVE из текущего загруженного мира CARLA с помощью ``--from-carla``"
+

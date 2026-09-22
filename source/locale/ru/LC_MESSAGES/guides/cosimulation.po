@@ -1,0 +1,126 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/guides/cosimulation.rst:39
+msgid "Add Artery"
+msgstr "Добавление Artery"
+
+#: ../../source/guides/cosimulation.rst:4
+msgid ""
+"Add SUMO traffic synchronization to the first simulation, then optionally connect Artery for "
+"network communication through CAPI. Keep CARLA running as described in :ref:`start-carla`."
+msgstr ""
+"Добавьте к первой симуляции синхронизацию трафика SUMO, затем при необходимости подключите Artery"
+" для сетевого обмена через CAPI. Оставьте CARLA запущенной, как описано в :ref:`start-carla`."
+
+#: ../../source/guides/cosimulation.rst:85
+msgid ""
+"CAPI plus cooperative perception requires the full ``opencda`` image. Target choices and Artery "
+"frontend options are in :doc:`/reference/runtime`. After stopping OpenCDA, stop remaining "
+"simulator processes with ``Ctrl+C`` in their respective terminals, then stop their containers if "
+"no longer needed."
+msgstr ""
+"Для совместного использования CAPI и кооперативного восприятия требуется полный образ "
+"``opencda``. Варианты целей и параметры интерфейса Artery приведены в :doc:`/reference/runtime`. "
+"После остановки OpenCDA остановите оставшиеся процессы симуляторов с помощью ``Ctrl+C`` в "
+"соответствующих терминалах, а затем остановите их контейнеры, если они больше не нужны."
+
+#: ../../source/guides/cosimulation.rst:9
+msgid "CARLA and SUMO"
+msgstr "CARLA и SUMO"
+
+#: ../../source/guides/cosimulation.rst:11
+msgid "From the **CAVISE root on Linux/WSL**:"
+msgstr "Из **корня CAVISE в Linux/WSL**:"
+
+#: ../../source/guides/cosimulation.rst:18
+msgid "In a separate terminal, start SUMO with one TraCI client (OpenCDA):"
+msgstr "В отдельном терминале запустите SUMO с одним клиентом TraCI (OpenCDA):"
+
+#: ../../source/guides/cosimulation.rst:60
+msgid "In the **Artery container**:"
+msgstr "В **контейнере Artery**:"
+
+#: ../../source/guides/cosimulation.rst:2
+msgid "SUMO and Artery"
+msgstr "SUMO и Artery"
+
+#: ../../source/guides/cosimulation.rst:26
+msgid ""
+"SUMO waits for OpenCDA to connect. Use ``sumo-gui`` instead of ``sumo`` if a display is "
+"configured. In the OpenCDA container, set ``CARLA_HOST`` as in :ref:`carla-client-shell`, then "
+"run:"
+msgstr ""
+"SUMO ожидает подключения OpenCDA. Если настроен дисплей, вместо ``sumo`` используйте ``sumo-"
+"gui``. В контейнере OpenCDA задайте ``CARLA_HOST``, как указано в :ref:`carla-client-shell`, "
+"затем выполните:"
+
+#: ../../source/guides/cosimulation.rst:52
+msgid "Start SUMO with **two clients** (Artery and OpenCDA):"
+msgstr "Запустите SUMO с **двумя клиентами** (Artery и OpenCDA):"
+
+#: ../../source/guides/cosimulation.rst:41
+msgid ""
+"Stop the previous OpenCDA and SUMO processes before this run. Recreate OpenCDA with Protobuf "
+"support. From the **CAVISE root on Linux/WSL**:"
+msgstr ""
+"Перед этим запуском остановите предыдущие процессы OpenCDA и SUMO. Пересоздайте OpenCDA с "
+"поддержкой Protobuf. Из **корня CAVISE в Linux/WSL** выполните:"
+
+#: ../../source/guides/cosimulation.rst:69
+msgid ""
+"The base ``capi`` configuration connects to ``sumo:3000`` with client order 1 and listens for "
+"OpenCDA on port 7777. In the **OpenCDA container**, set ``CARLA_HOST`` again after entering the "
+"recreated container, then run:"
+msgstr ""
+"Базовая конфигурация ``capi`` подключается к ``sumo:3000`` с порядковым номером клиента 1 и "
+"ожидает OpenCDA на порту 7777. В **контейнере OpenCDA** после входа в пересозданный контейнер "
+"снова задайте ``CARLA_HOST``, затем выполните:"
+
+#: ../../source/guides/cosimulation.rst:35
+msgid ""
+"The scenario's ``sumo.host`` and ``sumo.port`` must point to this SUMO server. ``--cosim`` "
+"connects to an existing server. It does not start SUMO for you."
+msgstr ""
+"Поля ``sumo.host`` и ``sumo.port`` сценария должны указывать на этот сервер SUMO. Параметр "
+"``--cosim`` подключается к существующему серверу. Он не запускает SUMO автоматически."
+
+#: ../../source/guides/cosimulation.rst:49
+msgid ""
+"The startup order is **CARLA and SUMO, then Artery, then OpenCDA**. Use separate terminals for "
+"the long-running processes."
+msgstr ""
+"Порядок запуска: **CARLA и SUMO, затем Artery, затем OpenCDA**. Используйте отдельные терминалы "
+"для длительно работающих процессов."
+
+#: ../../source/guides/cosimulation.rst:79
+msgid ""
+"``v2xp_datadump_town06_carla`` inherits OpenCDA SUMO client order 2 and a 0.05-second step from "
+"``default.yaml``. The commands override the SUMO file's 0.1-second step so that both simulators "
+"advance at the same rate. For custom scenarios, use distinct client orders, matching step lengths"
+" and consistent map assets. See :doc:`/scenarios/index`."
+msgstr ""
+"``v2xp_datadump_town06_carla`` наследует из ``default.yaml`` порядковый номер клиента OpenCDA "
+"SUMO 2 и шаг 0,05 секунды. Команды переопределяют шаг 0,1 секунды из файла SUMO, чтобы оба "
+"симулятора выполнялись с одинаковой скоростью. Для пользовательских сценариев задавайте разные "
+"порядковые номера клиентов, одинаковую длительность шага и согласованные ресурсы карты. См. "
+":doc:`/scenarios/index`."
+

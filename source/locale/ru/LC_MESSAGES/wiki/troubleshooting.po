@@ -1,0 +1,284 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/troubleshooting.rst:110
+msgid "AdvCP Does Not Start or Does Not Affect Predictions"
+msgstr "AdvCP не запускается или не влияет на прогнозы"
+
+#: ../../source/wiki/troubleshooting.rst:151
+msgid ""
+"After the session, revoke that access with ``xhost -local:docker``. If no graphical session is "
+"available, use CARLA off-screen rendering, ``sumo`` and Artery's ``Cmdenv`` frontend."
+msgstr ""
+"После сеанса отзовите этот доступ командой ``xhost -local:docker``. Если графический сеанс "
+"недоступен, используйте рендеринг CARLA без вывода на экран, ``sumo`` и интерфейс ``Cmdenv`` "
+"Artery."
+
+#: ../../source/wiki/troubleshooting.rst:9
+msgid "CARLA Cannot Be Reached"
+msgstr "Не удаётся подключиться к CARLA"
+
+#: ../../source/wiki/troubleshooting.rst:158
+msgid ""
+"CARLA renders on the Windows host. GUI applications inside Linux containers additionally need a "
+"working WSL display/socket setup. For a run without container windows, use ``sumo`` and Artery's "
+"``Cmdenv`` frontend and save perception visualizations instead of opening live views."
+msgstr ""
+"CARLA выполняет рендеринг на хосте Windows. Приложения с GUI внутри контейнеров Linux "
+"дополнительно требуют работающей конфигурации дисплея и сокета WSL. Для запуска без окон "
+"контейнеров используйте ``sumo`` и интерфейс ``Cmdenv`` Artery, а визуализации восприятия "
+"сохраняйте вместо открытия в реальном времени."
+
+#: ../../source/wiki/troubleshooting.rst:39
+msgid ""
+"Check Docker Desktop's WSL integration and the Windows firewall rule for CARLA. If using an "
+"independent Docker Engine inside WSL, verify its route to the Windows host instead of assuming "
+"this hostname exists. Pass the reachable host address explicitly through ``--carla-host``."
+msgstr ""
+"Проверьте интеграцию WSL в Docker Desktop и правило брандмауэра Windows для CARLA. Если внутри "
+"WSL используется независимый Docker Engine, проверьте его маршрут к хосту Windows, не предполагая"
+" наличия этого имени хоста. Явно передайте доступный адрес хоста через ``--carla-host``."
+
+#: ../../source/wiki/troubleshooting.rst:124
+msgid ""
+"Check SUMO's client count, port and each client's connection order. The "
+":doc:`/guides/cosimulation` example uses one client for OpenCDA alone, or two for OpenCDA plus "
+"Artery. Start SUMO before its clients. A two-client server waits if only one client connects. "
+"Also check that a previous run did not leave a process occupying the same port."
+msgstr ""
+"Проверьте число клиентов SUMO, порт и порядок подключения каждого клиента. В примере "
+":doc:`/guides/cosimulation` используется один клиент только для OpenCDA или два клиента для "
+"OpenCDA совместно с Artery. Запускайте SUMO до его клиентов. Сервер с двумя клиентами ожидает, "
+"если подключился только один. Также убедитесь, что процесс предыдущего запуска не занимает тот же"
+" порт."
+
+#: ../../source/wiki/troubleshooting.rst:116
+msgid ""
+"Check model/fusion compatibility, sensor visibility and metric warmup. Configuration activation "
+"does not guarantee a successful attack."
+msgstr ""
+"Проверьте совместимость модели и режима слияния, видимость датчиками и прогрев метрик. Активация "
+"конфигурации не гарантирует успешную атаку."
+
+#: ../../source/wiki/troubleshooting.rst:27
+msgid ""
+"Check that both containers belong to the same Compose network and that ``CarlaUE4.sh`` is running"
+" inside the CARLA container."
+msgstr ""
+"Убедитесь, что оба контейнера находятся в одной сети Compose и что ``CarlaUE4.sh`` запущен внутри"
+" контейнера CARLA."
+
+#: ../../source/wiki/troubleshooting.rst:11
+msgid ""
+"Check that the CARLA process is running, then repeat the version/map query in :ref:`carla-client-"
+"shell` from the OpenCDA container. The default RPC port is 2000. Increase ``--carla-timeout`` if "
+"the map takes longer to load."
+msgstr ""
+"Убедитесь, что процесс CARLA запущен, затем повторите запрос версии и карты из :ref:`carla-"
+"client-shell` в контейнере OpenCDA. Порт RPC по умолчанию - 2000. Увеличьте ``--carla-timeout``, "
+"если загрузка карты занимает больше времени."
+
+#: ../../source/wiki/troubleshooting.rst:114
+msgid ""
+"Check that the configured ``attacker_ids`` exist in that scenario. The default "
+"``removal_forward`` selects ``cav-5``."
+msgstr ""
+"Убедитесь, что настроенные ``attacker_ids`` существуют в этом сценарии. Конфигурация "
+"``removal_forward`` по умолчанию выбирает ``cav-5``."
+
+#: ../../source/wiki/troubleshooting.rst:100
+msgid ""
+"Check the bundle ID, network access, repository/ref and permissions on the host's ``models`` "
+"directory. Use ``run.sh up`` so the directory is created by your user before Docker bind-mounts "
+"it. For direct Compose use, create it first as described in :doc:`/reference/runtime`."
+msgstr ""
+"Проверьте ID пакета, доступ к сети, репозиторий или ref и разрешения каталога ``models`` на "
+"хосте. Используйте ``run.sh up``, чтобы каталог был создан вашим пользователем до подключения "
+"Docker через bind mount. Для прямого использования Compose сначала создайте его, как описано в "
+":doc:`/reference/runtime`."
+
+#: ../../source/wiki/troubleshooting.rst:4
+msgid ""
+"First identify which step fails: image build, container startup, simulator startup, connection, "
+"or scenario execution. ``run.sh up`` only creates waiting containers. It does not launch CARLA, "
+"SUMO, Artery or OpenCDA."
+msgstr ""
+"Сначала определите, какой этап завершается ошибкой: сборка образа, запуск контейнера, запуск "
+"симулятора, подключение или выполнение сценария. ``run.sh up`` только создаёт ожидающие "
+"контейнеры. Эта команда не запускает CARLA, SUMO, Artery или OpenCDA."
+
+#: ../../source/wiki/troubleshooting.rst:75
+msgid ""
+"For ``No module named opencood``, check that the sibling OpenCOOD checkout exists and choose "
+"``opencda-coperception``, ``opencda-cuda`` or ``opencda``. The minimal and Protobuf-only images "
+"do not install OpenCOOD."
+msgstr ""
+"При ошибке ``No module named opencood`` убедитесь, что существует соседний checkout OpenCOOD, и "
+"выберите ``opencda-coperception``, ``opencda-cuda`` или ``opencda``. Минимальный образ и образ "
+"только с Protobuf не устанавливают OpenCOOD."
+
+#: ../../source/wiki/troubleshooting.rst:143
+msgid ""
+"For an X11/XWayland display error, check ``DISPLAY`` on the host and the ``/tmp/.X11-unix`` "
+"mount. When the X server rejects container clients, allow local Docker connections from the "
+"host's graphical session:"
+msgstr ""
+"При ошибке дисплея X11/XWayland проверьте ``DISPLAY`` на хосте и подключение ``/tmp/.X11-unix``. "
+"Если X-сервер отклоняет клиентов контейнера, разрешите локальные подключения Docker из "
+"графического сеанса хоста:"
+
+#: ../../source/wiki/troubleshooting.rst:131
+msgid "GPU and Display Problems"
+msgstr "Проблемы с GPU и дисплеем"
+
+#: ../../source/wiki/troubleshooting.rst:79
+msgid "If a model requires an extension such as ``roiaware_pool3d_cuda``, run from the **CAVISE root**:"
+msgstr ""
+"Если для модели требуется расширение, например ``roiaware_pool3d_cuda``, выполните из **корня "
+"CAVISE**:"
+
+#: ../../source/wiki/troubleshooting.rst:94
+msgid ""
+"If an extension reports an unsupported GPU architecture, rebuild with an appropriate "
+"``CUDA_ARCHITECTURES`` value. See :doc:`/reference/runtime`."
+msgstr ""
+"Если расширение сообщает о неподдерживаемой архитектуре GPU, пересоберите образ с подходящим "
+"значением ``CUDA_ARCHITECTURES``. См. :doc:`/reference/runtime`."
+
+#: ../../source/wiki/troubleshooting.rst:113
+msgid "Include the scenario subdirectory: ``-t advcp-scenarios/advcp_check``."
+msgstr "Включите подкаталог сценария: ``-t advcp-scenarios/advcp_check``."
+
+#: ../../source/wiki/troubleshooting.rst:48
+msgid ""
+"Install the additional maps for the same CARLA release as the server. The CAVISE CARLA Dockerfile"
+" imports the matching map archive during its build. On Windows install the maps into the "
+"extracted package. Recheck ``client.get_available_maps()`` before launching the scenario."
+msgstr ""
+"Установите дополнительные карты для того же выпуска CARLA, что и сервер. Dockerfile CARLA в "
+"CAVISE импортирует соответствующий архив карт во время сборки. В Windows установите карты в "
+"распакованный пакет. Перед запуском сценария снова проверьте ``client.get_available_maps()``."
+
+#: ../../source/wiki/troubleshooting.rst
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/wiki/troubleshooting.rst:73
+msgid "Missing OpenCOOD or CUDA Extension"
+msgstr "Отсутствует OpenCOOD или расширение CUDA"
+
+#: ../../source/wiki/troubleshooting.rst:98
+msgid "Models Cannot Be Downloaded"
+msgstr "Не удаётся загрузить модели"
+
+#: ../../source/wiki/troubleshooting.rst:122
+msgid "SUMO or Artery Waits for a Client"
+msgstr "SUMO или Artery ожидает клиента"
+
+#: ../../source/wiki/troubleshooting.rst:68
+msgid ""
+"Setup skips existing repositories. It is not an update command. After updating compatible "
+"checkouts, rebuild the selected target and run ``up`` to recreate its container."
+msgstr ""
+"Setup пропускает существующие репозитории и не является командой обновления. После обновления "
+"совместимых checkout пересоберите выбранную цель и выполните ``up``, чтобы пересоздать её "
+"контейнер."
+
+#: ../../source/wiki/troubleshooting.rst:21
+msgid "The Compose service name is ``carla``. In the OpenCDA shell:"
+msgstr "Имя сервиса Compose - ``carla``. В оболочке OpenCDA:"
+
+#: ../../source/wiki/troubleshooting.rst:53
+msgid ""
+"The current server and Python client should both be 0.9.16. Rebuild an outdated image or install "
+"the matching Windows package when they differ. Changing the scenario name alone does not install "
+"a missing map."
+msgstr ""
+"Текущие сервер и Python-клиент должны иметь версию 0.9.16. Если версии отличаются, пересоберите "
+"устаревший образ или установите соответствующий пакет Windows. Простая смена имени сценария не "
+"устанавливает отсутствующую карту."
+
+#: ../../source/wiki/troubleshooting.rst:46
+msgid "Town06 Is Missing or Versions Differ"
+msgstr "Town06 отсутствует или версии различаются"
+
+#: ../../source/wiki/troubleshooting.rst:2
+msgid "Troubleshooting"
+msgstr "Устранение неполадок"
+
+#: ../../source/wiki/troubleshooting.rst:58
+msgid "Unknown Model Flag or Missing Build Target"
+msgstr "Неизвестный параметр модели или отсутствующая цель сборки"
+
+#: ../../source/wiki/troubleshooting.rst:133
+msgid ""
+"Use ``docker exec opencda nvidia-smi`` after creating the container. If GPU access fails, revisit"
+" the platform-specific requirements in :doc:`install-and-launch` before debugging the scenario "
+"itself."
+msgstr ""
+"После создания контейнера выполните ``docker exec opencda nvidia-smi``. Если доступ к GPU не "
+"работает, вернитесь к требованиям конкретной платформы в :doc:`install-and-launch`, прежде чем "
+"отлаживать сам сценарий."
+
+#: ../../source/wiki/troubleshooting.rst:112
+msgid "Use both ``--with-coperception`` and ``--advcp-config`` with ``--with-advcp``."
+msgstr "Используйте ``--with-coperception`` и ``--advcp-config`` совместно с ``--with-advcp``."
+
+#: ../../source/wiki/troubleshooting.rst:87
+msgid ""
+"Use the full ``opencda`` target if the same experiment requires CAPI. Verify inside the OpenCDA "
+"container:"
+msgstr ""
+"Если в том же эксперименте требуется CAPI, используйте полную цель ``opencda``. Проверьте внутри "
+"контейнера OpenCDA:"
+
+#: ../../source/wiki/troubleshooting.rst:119
+msgid "Use the matched baseline and attack commands in :doc:`/guides/advcp`."
+msgstr "Используйте сопоставимые команды базового запуска и атаки из :doc:`/guides/advcp`."
+
+#: ../../source/wiki/troubleshooting.rst
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../source/wiki/troubleshooting.rst:33
+msgid "With Docker Desktop, use the Windows host address in the OpenCDA shell:"
+msgstr "При использовании Docker Desktop задайте адрес хоста Windows в оболочке OpenCDA:"
+
+#: ../../source/wiki/troubleshooting.rst:60
+msgid ""
+"``--model-id`` and ``opencda-coperception`` require the OpenCDA version that uses separate "
+"OpenCOOD/models repositories. Check the component versions, not just the top-level CAVISE commit."
+" In the OpenCDA container:"
+msgstr ""
+"Для ``--model-id`` и ``opencda-coperception`` требуется версия OpenCDA, использующая отдельные "
+"репозитории OpenCOOD и models. Проверяйте версии компонентов, а не только коммит CAVISE верхнего "
+"уровня. В контейнере OpenCDA:"
+
+#: ../../source/wiki/troubleshooting.rst:105
+msgid ""
+"``--no-auto-fetch-models`` requires a complete valid bundle already on disk. Metadata or checksum"
+" failures require a valid bundle, not a disabled check. See :doc:`/models` for supported "
+"overrides."
+msgstr ""
+"Для ``--no-auto-fetch-models`` необходим полный корректный пакет, уже находящийся на диске. При "
+"ошибке метаданных или контрольной суммы требуется корректный пакет, а не отключение проверки. "
+"Поддерживаемые переопределения описаны в :doc:`/models`."
+

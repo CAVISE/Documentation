@@ -5,6 +5,8 @@ vars:
   SOURCE_DIR: source
   BUILD_DIR: build
   HTML_DIR: "{{.BUILD_DIR}}/html"
+  HTML_RU_DIR: "{{.HTML_DIR}}/ru"
+  GETTEXT_DIR: "{{.BUILD_DIR}}/gettext"
 
 tasks:
   default:
@@ -18,11 +20,33 @@ tasks:
       - "{{.PYTHON}} -m sphinx -M help {{.SOURCE_DIR}} {{.BUILD_DIR}}"
 
   html:
-    desc: Build the HTML documentation site
+    desc: Build the English and Russian HTML documentation sites
     cmds:
       - rm -rf "{{.BUILD_DIR}}/html"
-      - "{{.PYTHON}} -m sphinx -M html {{.SOURCE_DIR}} {{.BUILD_DIR}} -n -W --keep-going"
+      - task: html-en
+      - task: html-ru
       - "{{.PYTHON}} scripts/check_links.py {{.HTML_DIR}}"
+
+  html-en:
+    desc: Build the English HTML documentation site
+    env:
+      DOCS_LANGUAGE: en
+    cmds:
+      - "{{.PYTHON}} -m sphinx -b html -n -W --keep-going {{.SOURCE_DIR}} {{.HTML_DIR}}"
+
+  html-ru:
+    desc: Build the Russian HTML documentation site under /ru
+    env:
+      DOCS_LANGUAGE: ru
+    cmds:
+      - "{{.PYTHON}} -m sphinx -b html -n -W --keep-going {{.SOURCE_DIR}} {{.HTML_RU_DIR}}"
+
+  gettext:
+    desc: Extract translatable messages and update the Russian PO catalogs
+    cmds:
+      - rm -rf "{{.GETTEXT_DIR}}"
+      - "{{.PYTHON}} -m sphinx -b gettext {{.SOURCE_DIR}} {{.GETTEXT_DIR}}"
+      - "{{.PYTHON}} scripts/update_translations.py {{.GETTEXT_DIR}} {{.SOURCE_DIR}}/locale/ru/LC_MESSAGES"
 
   clean:
     desc: Remove generated documentation artifacts
@@ -35,9 +59,16 @@ tasks:
       - "{{.PYTHON}} -m sphinx -M linkcheck {{.SOURCE_DIR}} {{.BUILD_DIR}}"
 
   live:
-    desc: Run a local auto-reloading docs server
+    desc: Run a local auto-reloading English docs server
     cmds:
       - "{{.PYTHON}} -m sphinx_autobuild --host 127.0.0.1 --port 8000 {{.SOURCE_DIR}} {{.BUILD_DIR}}/html"
+
+  live-ru:
+    desc: Run a local auto-reloading Russian docs server
+    env:
+      DOCS_LANGUAGE: ru
+    cmds:
+      - "{{.PYTHON}} -m sphinx_autobuild --host 127.0.0.1 --port 8000 {{.SOURCE_DIR}} {{.HTML_RU_DIR}}"
 
   serve:
     desc: Serve the built documentation on localhost:8000

@@ -4,7 +4,7 @@
   <source media="(prefers-color-scheme: dark)" srcset="./assets/cavise-text-logo-light.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/cavise-text-logo-dark.svg">
   <img
-    alt="CAVISE — Connected & Automated Vehicle Integrated Simulation Environment"
+    alt="CAVISE - Connected & Automated Vehicle Integrated Simulation Environment"
     src="./assets/cavise-text-logo-light.svg"
     width="80%"
   >

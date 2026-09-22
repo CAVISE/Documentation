@@ -1,0 +1,255 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/opencda/index.rst:99
+msgid ":doc:`/guides/advcp`"
+msgstr ":doc:`/guides/advcp`"
+
+#: ../../source/opencda/index.rst:98
+msgid ":doc:`/guides/cooperative-perception`"
+msgstr ":doc:`/guides/cooperative-perception`"
+
+#: ../../source/opencda/index.rst:100
+msgid ":doc:`/scenarios/index`"
+msgstr ":doc:`/scenarios/index`"
+
+#: ../../source/opencda/index.rst:101
+msgid ":doc:`attack-framework`"
+msgstr ":doc:`attack-framework`"
+
+#: ../../source/opencda/index.rst:102
+msgid ":doc:`behavior-services`"
+msgstr ":doc:`behavior-services`"
+
+#: ../../source/opencda/index.rst:50
+msgid ""
+"<div class=\"opencda-demo-gallery\">\n"
+"  <figure class=\"opencda-demo\">\n"
+"    <img\n"
+"      src=\"../_static/images/opencda/platoon_joining_town06.gif\"\n"
+"      alt=\"Connected automated vehicle joining a platoon in CARLA Town06\"\n"
+"      loading=\"lazy\"\n"
+"      decoding=\"async\"\n"
+"    />\n"
+"    <figcaption>Platoon joining scenario in CARLA Town06.</figcaption>\n"
+"  </figure>\n"
+"</div>"
+msgstr ""
+"<div class=\"opencda-demo-gallery\">\n"
+"  <figure class=\"opencda-demo\">\n"
+"    <img\n"
+"      src=\"../_static/images/opencda/platoon_joining_town06.gif\"\n"
+"      alt=\"Подключённое автоматизированное транспортное средство присоединяется к колонне в "
+"CARLA Town06\"\n"
+"      loading=\"lazy\"\n"
+"      decoding=\"async\"\n"
+"    />\n"
+"    <figcaption>Сценарий присоединения к колонне в CARLA Town06.</figcaption>\n"
+"  </figure>\n"
+"</div>"
+
+#: ../../source/opencda/index.rst:72
+msgid ""
+"<div class=\"opencda-demo-gallery\">\n"
+"  <figure class=\"opencda-demo\">\n"
+"    <img\n"
+"      src=\"../_static/images/opencda/v2xp_datadump_town06_carla_3d.gif\"\n"
+"      alt=\"Cooperative perception detections in the CARLA 3D scene\"\n"
+"      loading=\"lazy\"\n"
+"      decoding=\"async\"\n"
+"    />\n"
+"    <figcaption>3D view of cooperative perception detections.</figcaption>\n"
+"  </figure>\n"
+"  <figure class=\"opencda-demo\">\n"
+"    <img\n"
+"      src=\"../_static/images/opencda/v2xp_datadump_town06_carla_bev.gif\"\n"
+"      alt=\"Bird's-eye view of cooperative perception detections\"\n"
+"      loading=\"lazy\"\n"
+"      decoding=\"async\"\n"
+"    />\n"
+"    <figcaption>Bird's-eye view of the same scenario.</figcaption>\n"
+"  </figure>\n"
+"</div>"
+msgstr ""
+"<div class=\"opencda-demo-gallery\">\n"
+"  <figure class=\"opencda-demo\">\n"
+"    <img\n"
+"      src=\"../_static/images/opencda/v2xp_datadump_town06_carla_3d.gif\"\n"
+"      alt=\"Обнаружения кооперативного восприятия в 3D-сцене CARLA\"\n"
+"      loading=\"lazy\"\n"
+"      decoding=\"async\"\n"
+"    />\n"
+"    <figcaption>3D-представление обнаружений кооперативного восприятия.</figcaption>\n"
+"  </figure>\n"
+"  <figure class=\"opencda-demo\">\n"
+"    <img\n"
+"      src=\"../_static/images/opencda/v2xp_datadump_town06_carla_bev.gif\"\n"
+"      alt=\"Обнаружения кооперативного восприятия с высоты птичьего полёта\"\n"
+"      loading=\"lazy\"\n"
+"      decoding=\"async\"\n"
+"    />\n"
+"    <figcaption>Тот же сценарий с высоты птичьего полёта.</figcaption>\n"
+"  </figure>\n"
+"</div>"
+
+#: ../../source/opencda/index.rst:21
+msgid "Area"
+msgstr "Область"
+
+#: ../../source/opencda/index.rst:27
+msgid "Automated driving"
+msgstr "Автоматизированное вождение"
+
+#: ../../source/opencda/index.rst:22
+msgid "Available functionality"
+msgstr "Доступные возможности"
+
+#: ../../source/opencda/index.rst:32
+msgid ""
+"Bidirectional CARLA--SUMO synchronization for traffic and CAPI-based communication with Artery "
+"network simulations."
+msgstr ""
+"Двунаправленная синхронизация трафика CARLA--SUMO и обмен данными с сетевыми симуляциями Artery "
+"через CAPI."
+
+#: ../../source/opencda/index.rst:44
+msgid ""
+"CARLA recording, sensor data dumping, structured logs, and metrics for localization, driving "
+"behavior, platooning, and cooperative perception."
+msgstr ""
+"Запись CARLA, сохранение данных датчиков, структурированные журналы и метрики локализации, "
+"поведения при вождении, движения в колонне и кооперативного восприятия."
+
+#: ../../source/opencda/index.rst:31
+msgid "Co-simulation"
+msgstr "Совместная симуляция"
+
+#: ../../source/opencda/index.rst:65
+msgid "Cooperative Perception Demonstration"
+msgstr "Демонстрация кооперативного восприятия"
+
+#: ../../source/opencda/index.rst:34
+msgid "Cooperative applications"
+msgstr "Кооперативные приложения"
+
+#: ../../source/opencda/index.rst:37
+msgid "Cooperative perception"
+msgstr "Кооперативное восприятие"
+
+#: ../../source/opencda/index.rst:41
+msgid ""
+"Declarative attacks against behavior services and AdvCP attacks against cooperative perception "
+"pipelines."
+msgstr "Декларативные атаки на сервисы поведения и атаки AdvCP на конвейеры кооперативного восприятия."
+
+#: ../../source/opencda/index.rst:24
+msgid ""
+"Deterministic CARLA worlds with configurable maps, weather, simulation steps, vehicles, RSUs, "
+"destinations, background traffic, and random seeds."
+msgstr ""
+"Детерминированные миры CARLA с настраиваемыми картами, погодой, шагами симуляции, транспортными "
+"средствами, RSU, пунктами назначения, фоновым трафиком и начальными значениями генераторов."
+
+#: ../../source/opencda/index.rst:43
+msgid "Evaluation and data collection"
+msgstr "Оценка и сбор данных"
+
+#: ../../source/opencda/index.rst:11
+msgid ""
+"For setup and the first run, follow :doc:`/wiki/install-and-launch` and :doc:`/getting-started"
+"/first-simulation`."
+msgstr ""
+"Для настройки и первого запуска выполните :doc:`/wiki/install-and-launch` и :doc:`/getting-"
+"started/first-simulation`."
+
+#: ../../source/opencda/index.rst:96
+msgid "Learn More"
+msgstr "Дополнительные материалы"
+
+#: ../../source/opencda/index.rst:28
+msgid ""
+"Localization, camera and LiDAR perception, map management, safety monitoring, route and "
+"trajectory planning, PID control, CARLA autopilot, and platooning."
+msgstr ""
+"Локализация, восприятие с помощью камер и LiDAR, управление картами, контроль безопасности, "
+"планирование маршрутов и траекторий, PID-управление, автопилот CARLA и движение в колонне."
+
+#: ../../source/opencda/index.rst:2
+msgid "OpenCDA Overview"
+msgstr "Обзор OpenCDA"
+
+#: ../../source/opencda/index.rst:4
+msgid ""
+"OpenCDA is the scenario orchestration layer of CAVISE. It connects automated driving logic to the"
+" CARLA world and can optionally synchronize the same experiment with SUMO and Artery. A scenario "
+"describes the world, vehicles, roadside units, sensors, driving behavior, communication services,"
+" metrics, and attacks in YAML. ``opencda.py`` loads that configuration and runs the simulation "
+"loop."
+msgstr ""
+"OpenCDA - уровень оркестрации сценариев CAVISE. Он связывает логику автоматизированного вождения "
+"с миром CARLA и при необходимости синхронизирует тот же эксперимент с SUMO и Artery. Сценарий "
+"описывает в YAML мир, транспортные средства, придорожные устройства, датчики, поведение при "
+"вождении, сервисы обмена данными, метрики и атаки. ``opencda.py`` загружает эту конфигурацию и "
+"выполняет цикл симуляции."
+
+#: ../../source/opencda/index.rst:38
+msgid ""
+"OpenCOOD-based multi-agent perception with visualization, prediction export, and configurable "
+"evaluation metrics."
+msgstr ""
+"Многоагентное восприятие на основе OpenCOOD с визуализацией, экспортом прогнозов и настраиваемыми"
+" метриками оценки."
+
+#: ../../source/opencda/index.rst:48
+msgid "Scenario Demonstration"
+msgstr "Демонстрация сценария"
+
+#: ../../source/opencda/index.rst:23
+msgid "Scenario orchestration"
+msgstr "Оркестрация сценариев"
+
+#: ../../source/opencda/index.rst:40
+msgid "Security experiments"
+msgstr "Эксперименты по безопасности"
+
+#: ../../source/opencda/index.rst:67
+msgid ""
+"The ``v2xp_datadump_town06_carla`` scenario demonstrates cooperative perception with a connected "
+"vehicle and roadside infrastructure. The first view shows the fused detections in the CARLA "
+"scene. The second shows the same run from the bird's-eye-view visualizer."
+msgstr ""
+"Сценарий ``v2xp_datadump_town06_carla`` демонстрирует кооперативное восприятие с подключённым "
+"транспортным средством и придорожной инфраструктурой. Первое представление показывает "
+"объединённые обнаружения в сцене CARLA. Второе показывает тот же запуск в визуализаторе с высоты "
+"птичьего полёта."
+
+#: ../../source/opencda/index.rst:35
+msgid ""
+"Vehicle and RSU behavior services, including state publication, movement requests and control, "
+"and AIM client/server workflows."
+msgstr ""
+"Сервисы поведения транспортных средств и RSU, включая публикацию состояния, запросы на движение и"
+" управление, а также клиентские и серверные процессы AIM."
+
+#: ../../source/opencda/index.rst:15
+msgid "What OpenCDA Provides"
+msgstr "Возможности OpenCDA"
+

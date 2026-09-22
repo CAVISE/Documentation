@@ -1,0 +1,854 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/attack-scenario-description.rst:138
+msgid "A condition can be:"
+msgstr "Условие может представлять собой:"
+
+#: ../../source/wiki/attack-scenario-description.rst:183
+msgid "A condition must define either a leaf predicate, ``all``, or ``any``."
+msgstr "Условие должно определять либо конечный предикат, либо ``all``, либо ``any``."
+
+#: ../../source/wiki/attack-scenario-description.rst:441
+msgid "A scalar string becomes one target node id."
+msgstr "Скалярная строка преобразуется в один ID целевого узла."
+
+#: ../../source/wiki/attack-scenario-description.rst:442
+msgid "A tuple, list, set, or frozenset contributes every string item it contains."
+msgstr "Кортеж, список, множество или frozenset добавляет каждый содержащийся в нём строковый элемент."
+
+#: ../../source/wiki/attack-scenario-description.rst:2
+msgid "Attack Configuration Reference"
+msgstr "Справочник по конфигурации атак"
+
+#: ../../source/wiki/attack-scenario-description.rst:251
+msgid "Attack Sources"
+msgstr "Источники атаки"
+
+#: ../../source/wiki/attack-scenario-description.rst:577
+msgid "Attack defaults"
+msgstr "Значения атаки по умолчанию"
+
+#: ../../source/wiki/attack-scenario-description.rst:253
+msgid "Attack sources read runtime fields from the current attack instance."
+msgstr "Источники атаки считывают поля времени выполнения из текущего экземпляра атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:503
+msgid "Builtin stage params:"
+msgstr "Параметры встроенных этапов:"
+
+#: ../../source/wiki/attack-scenario-description.rst:127
+msgid "Condition Specification"
+msgstr "Спецификация условия"
+
+#: ../../source/wiki/attack-scenario-description.rst:129
+msgid "Conditions are used by:"
+msgstr "Условия используются в:"
+
+#: ../../source/wiki/attack-scenario-description.rst:247
+msgid "Current node-level snapshot fields are ``node_id``, ``node_type``, and ``service_states``."
+msgstr "Текущие поля снимка уровня узла: ``node_id``, ``node_type`` и ``service_states``."
+
+#: ../../source/wiki/attack-scenario-description.rst:574
+msgid "Default Runtime Behavior"
+msgstr "Поведение среды выполнения по умолчанию"
+
+#: ../../source/wiki/attack-scenario-description.rst:7
+msgid "Each attack config file must contain one top-level ``attack`` object."
+msgstr "Каждый файл конфигурации атаки должен содержать один объект ``attack`` верхнего уровня."
+
+#: ../../source/wiki/attack-scenario-description.rst:447
+msgid "Each item in ``attack.stages`` describes one stage in the ordered runtime pipeline."
+msgstr "Каждый элемент ``attack.stages`` описывает один этап упорядоченного конвейера времени выполнения."
+
+#: ../../source/wiki/attack-scenario-description.rst:190
+msgid "Every leaf predicate contains a ``source`` object."
+msgstr "Каждый конечный предикат содержит объект ``source``."
+
+#: ../../source/wiki/attack-scenario-description.rst:10
+msgid "Example"
+msgstr "Пример"
+
+#: ../../source/wiki/attack-scenario-description.rst:204
+#: ../../source/wiki/attack-scenario-description.rst:255
+#: ../../source/wiki/attack-scenario-description.rst:283
+#: ../../source/wiki/attack-scenario-description.rst:382
+#: ../../source/wiki/attack-scenario-description.rst:450
+#: ../../source/wiki/attack-scenario-description.rst:543
+msgid "Example:"
+msgstr "Пример:"
+
+#: ../../source/wiki/attack-scenario-description.rst:158
+msgid "Grouped condition example"
+msgstr "Пример группы условий"
+
+#: ../../source/wiki/attack-scenario-description.rst:246
+msgid "If ``field`` is omitted, the whole matched object is used."
+msgstr "Если ``field`` не указано, используется весь соответствующий объект."
+
+#: ../../source/wiki/attack-scenario-description.rst:244
+msgid "If ``service_type`` is omitted, ``field`` is read from the matched ``NodeSnapshot``."
+msgstr "Если ``service_type`` не указан, ``field`` считывается из соответствующего ``NodeSnapshot``."
+
+#: ../../source/wiki/attack-scenario-description.rst:243
+msgid "If ``service_type`` is set, ``field`` is read from that service's state map."
+msgstr "Если ``service_type`` задан, ``field`` считывается из карты состояния этого сервиса."
+
+#: ../../source/wiki/attack-scenario-description.rst:599
+msgid ""
+"If an attack start trigger fires but target resolution returns no services, the framework reports"
+" that attack execution as failed for the current tick."
+msgstr ""
+"Если срабатывает триггер начала атаки, но при разрешении целей не найдено сервисов, фреймворк "
+"сообщает о неуспешном выполнении атаки в текущем такте."
+
+#: ../../source/wiki/attack-scenario-description.rst:145
+msgid "Leaf predicate example"
+msgstr "Пример конечного предиката"
+
+#: ../../source/wiki/attack-scenario-description.rst:185
+msgid "Nested condition groups are supported."
+msgstr "Поддерживаются вложенные группы условий."
+
+#: ../../source/wiki/attack-scenario-description.rst:568
+msgid "Note:"
+msgstr "Примечание:"
+
+#: ../../source/wiki/attack-scenario-description.rst:241
+#: ../../source/wiki/attack-scenario-description.rst:333
+#: ../../source/wiki/attack-scenario-description.rst:356
+#: ../../source/wiki/attack-scenario-description.rst:437
+msgid "Notes:"
+msgstr "Примечания:"
+
+#: ../../source/wiki/attack-scenario-description.rst:587
+msgid "Omitted ``requirements`` means no extra stage-level requirement."
+msgstr "Если ``requirements`` не указано, дополнительные требования уровня этапа отсутствуют."
+
+#: ../../source/wiki/attack-scenario-description.rst:579
+msgid "Omitted ``requirements`` means requirements are treated as satisfied."
+msgstr "Если ``requirements`` не указано, требования считаются выполненными."
+
+#: ../../source/wiki/attack-scenario-description.rst:588
+msgid "Omitted ``stage_start_trigger`` means:"
+msgstr "Если ``stage_start_trigger`` не указан:"
+
+#: ../../source/wiki/attack-scenario-description.rst:593
+msgid ""
+"Omitted ``stage_stop_trigger`` means a successful ``execute()`` immediately marks the stage as "
+"``success``."
+msgstr ""
+"Если ``stage_stop_trigger`` не указан, успешный ``execute()`` немедленно переводит этап в "
+"состояние ``success``."
+
+#: ../../source/wiki/attack-scenario-description.rst:580
+msgid "Omitted ``start_trigger`` means the attack never starts."
+msgstr "Если ``start_trigger`` не указан, атака никогда не начинается."
+
+#: ../../source/wiki/attack-scenario-description.rst:581
+msgid "Omitted ``stop_trigger`` means there is no attack-level stop trigger."
+msgstr "Если ``stop_trigger`` не указан, триггер остановки уровня атаки отсутствует."
+
+#: ../../source/wiki/attack-scenario-description.rst:582
+msgid "Omitted ``targets`` means no target services can be resolved."
+msgstr "Если ``targets`` не указано, целевые сервисы разрешить невозможно."
+
+#: ../../source/wiki/attack-scenario-description.rst:181
+msgid "Rules"
+msgstr "Правила"
+
+#: ../../source/wiki/attack-scenario-description.rst:557
+msgid "Runtime Status Values"
+msgstr "Значения состояния времени выполнения"
+
+#: ../../source/wiki/attack-scenario-description.rst:340
+msgid "Runtime verbs"
+msgstr "Операторы среды выполнения"
+
+#: ../../source/wiki/attack-scenario-description.rst:199
+msgid "Snapshot Sources"
+msgstr "Источники снимка"
+
+#: ../../source/wiki/attack-scenario-description.rst:201
+msgid "Snapshot sources read values from the current or previous ``SimulationSnapshot``."
+msgstr "Источники снимка считывают значения из текущего или предыдущего ``SimulationSnapshot``."
+
+#: ../../source/wiki/attack-scenario-description.rst:316
+msgid "Snapshot verbs"
+msgstr "Операторы снимка"
+
+#: ../../source/wiki/attack-scenario-description.rst:188
+msgid "Source Fields"
+msgstr "Поля источника"
+
+#: ../../source/wiki/attack-scenario-description.rst:535
+msgid "Spoofer Rewrite Rules"
+msgstr "Правила подмены Spoofer"
+
+#: ../../source/wiki/attack-scenario-description.rst:278
+msgid "Stage Sources"
+msgstr "Источники этапа"
+
+#: ../../source/wiki/attack-scenario-description.rst:445
+msgid "Stage Specification"
+msgstr "Спецификация этапа"
+
+#: ../../source/wiki/attack-scenario-description.rst:585
+msgid "Stage defaults"
+msgstr "Значения этапа по умолчанию"
+
+#: ../../source/wiki/attack-scenario-description.rst:280
+msgid "Stage sources read runtime fields from one or more stages of the current attack."
+msgstr "Источники этапа считывают поля времени выполнения из одного или нескольких этапов текущей атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:313
+msgid "Supported Verbs"
+msgstr "Поддерживаемые операторы"
+
+#: ../../source/wiki/attack-scenario-description.rst:378
+msgid "Target Specification"
+msgstr "Спецификация цели"
+
+#: ../../source/wiki/attack-scenario-description.rst:597
+msgid "Target resolution failure"
+msgstr "Ошибка разрешения целей"
+
+#: ../../source/wiki/attack-scenario-description.rst:380
+msgid "Targets describe how the attack resolves live behavior service instances."
+msgstr "Цели описывают способ разрешения активных экземпляров сервисов поведения для атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:362
+msgid "The ``value`` Field"
+msgstr "Поле ``value``"
+
+#: ../../source/wiki/attack-scenario-description.rst:488
+msgid "The current capability vocabulary is:"
+msgstr "Текущий словарь возможностей:"
+
+#: ../../source/wiki/attack-scenario-description.rst:342
+msgid "The following verbs are supported for ``source.kind: attack`` and ``source.kind: stage``:"
+msgstr "Для ``source.kind: attack`` и ``source.kind: stage`` поддерживаются следующие операторы:"
+
+#: ../../source/wiki/attack-scenario-description.rst:318
+msgid "The following verbs are supported for ``source.kind: snapshot``:"
+msgstr "Для ``source.kind: snapshot`` поддерживаются следующие операторы:"
+
+#: ../../source/wiki/attack-scenario-description.rst:570
+msgid ""
+"The runtime also uses an internal ``STARTED`` state, but condition evaluation normalizes it to "
+"``active``."
+msgstr ""
+"Среда выполнения также использует внутреннее состояние ``STARTED``, но при вычислении условий оно"
+" нормализуется в ``active``."
+
+#: ../../source/wiki/attack-scenario-description.rst:4
+msgid ""
+"This document describes the YAML format currently supported by the adversary framework in "
+"``opencda/core/attack/adversary_framework``."
+msgstr ""
+"В этом документе описан формат YAML, поддерживаемый фреймворком атак в "
+"``opencda/core/attack/adversary_framework``."
+
+#: ../../source/wiki/attack-scenario-description.rst:83
+msgid "Top-Level Attack Fields"
+msgstr "Поля атаки верхнего уровня"
+
+#: ../../source/wiki/attack-scenario-description.rst:370
+msgid "Typical usage:"
+msgstr "Типовое использование:"
+
+#: ../../source/wiki/attack-scenario-description.rst:559
+msgid "Use the following values when checking ``field: status`` in ``attack`` or ``stage`` conditions:"
+msgstr "При проверке ``field: status`` в условиях ``attack`` или ``stage`` используйте следующие значения:"
+
+#: ../../source/wiki/attack-scenario-description.rst:479
+msgid "``Currently built-in``: ``sniffer``, ``dropper``, ``replayer``, ``spoofer``"
+msgstr "``Текущие встроенные значения``: ``sniffer``, ``dropper``, ``replayer``, ``spoofer``"
+
+#: ../../source/wiki/attack-scenario-description.rst:402
+msgid "``Currently supported value``: ``service_state_field``"
+msgstr "``Текущее поддерживаемое значение``: ``service_state_field``"
+
+#: ../../source/wiki/attack-scenario-description.rst:532
+msgid "``Default``: A successful ``execute()`` immediately marks the stage as ``success``."
+msgstr "``По умолчанию``: успешный ``execute()`` немедленно переводит этап в состояние ``success``."
+
+#: ../../source/wiki/attack-scenario-description.rst:124
+msgid "``Default``: Empty list."
+msgstr "``По умолчанию``: пустой список."
+
+#: ../../source/wiki/attack-scenario-description.rst:428
+msgid "``Default``: If omitted, all behavior services of each resolved node are returned."
+msgstr ""
+"``По умолчанию``: если поле не указано, возвращаются все сервисы поведения каждого разрешённого "
+"узла."
+
+#: ../../source/wiki/attack-scenario-description.rst:304
+msgid "``Default``: If omitted, all stages of the current attack are considered."
+msgstr "``По умолчанию``: если поле не указано, учитываются все этапы текущей атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:221
+msgid "``Default``: If omitted, both vehicle and RSU nodes are searched."
+msgstr "``По умолчанию``: если поле не указано, поиск выполняется по узлам транспортных средств и RSU."
+
+#: ../../source/wiki/attack-scenario-description.rst:117
+msgid "``Default``: If omitted, no target services are resolved."
+msgstr "``По умолчанию``: если поле не указано, целевые сервисы не разрешаются."
+
+#: ../../source/wiki/attack-scenario-description.rst:96
+msgid "``Default``: If omitted, requirements are treated as satisfied."
+msgstr "``По умолчанию``: если поле не указано, требования считаются выполненными."
+
+#: ../../source/wiki/attack-scenario-description.rst:103
+msgid "``Default``: If omitted, the attack never starts."
+msgstr "``По умолчанию``: если поле не указано, атака никогда не начинается."
+
+#: ../../source/wiki/attack-scenario-description.rst:269
+msgid "``Default``: If omitted, the current attack is used."
+msgstr "``По умолчанию``: если поле не указано, используется текущая атака."
+
+#: ../../source/wiki/attack-scenario-description.rst:486
+msgid "``Default``: If omitted, the stage's built-in default capabilities are used."
+msgstr "``По умолчанию``: если поле не указано, используются встроенные возможности этапа по умолчанию."
+
+#: ../../source/wiki/attack-scenario-description.rst:110
+msgid "``Default``: If omitted, there is no attack-level stop trigger."
+msgstr "``По умолчанию``: если поле не указано, триггер остановки уровня атаки отсутствует."
+
+#: ../../source/wiki/attack-scenario-description.rst:518
+msgid "``Default``: No extra stage-level requirement."
+msgstr "``По умолчанию``: дополнительные требования уровня этапа отсутствуют."
+
+#: ../../source/wiki/attack-scenario-description.rst:525
+msgid ""
+"``Default``: The first stage starts when the attack becomes active. Every later stage starts when"
+" the previous stage reaches ``success``."
+msgstr ""
+"``По умолчанию``: первый этап начинается, когда атака становится активной. Каждый следующий этап "
+"начинается, когда предыдущий достигает состояния ``success``."
+
+#: ../../source/wiki/attack-scenario-description.rst:435
+msgid "``Default``: ``all``"
+msgstr "``По умолчанию``: ``all``"
+
+#: ../../source/wiki/attack-scenario-description.rst:420
+msgid "``Expected values``: ``vehicle``, ``rsu``"
+msgstr "``Ожидаемые значения``: ``vehicle``, ``rsu``"
+
+#: ../../source/wiki/attack-scenario-description.rst:517
+msgid "``Meaning``: Additional preconditions for this stage only."
+msgstr "``Назначение``: дополнительные предварительные условия только для этого этапа."
+
+#: ../../source/wiki/attack-scenario-description.rst:368
+msgid "``Meaning``: Comparison target or delta parameter."
+msgstr "``Назначение``: целевое значение сравнения или параметр дельты."
+
+#: ../../source/wiki/attack-scenario-description.rst:102
+msgid "``Meaning``: Condition that starts the attack."
+msgstr "``Назначение``: условие запуска атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:109
+msgid "``Meaning``: Condition that stops an active attack before stage execution on that tick."
+msgstr "``Назначение``: условие, останавливающее активную атаку до выполнения этапа в текущем такте."
+
+#: ../../source/wiki/attack-scenario-description.rst:116
+msgid "``Meaning``: Describes how live target services are resolved from the current snapshot."
+msgstr "``Назначение``: описывает способ разрешения активных целевых сервисов из текущего снимка."
+
+#: ../../source/wiki/attack-scenario-description.rst:414
+msgid "``Meaning``: Describes which live services are resolved for every target node id."
+msgstr "``Назначение``: описывает активные сервисы, разрешаемые для каждого ID целевого узла."
+
+#: ../../source/wiki/attack-scenario-description.rst:485
+msgid "``Meaning``: Explicit capability set used to match target services."
+msgstr "``Назначение``: явно заданный набор возможностей для сопоставления целевых сервисов."
+
+#: ../../source/wiki/attack-scenario-description.rst:524
+msgid "``Meaning``: Explicit condition for starting this stage."
+msgstr "``Назначение``: явное условие запуска этого этапа."
+
+#: ../../source/wiki/attack-scenario-description.rst:531
+msgid "``Meaning``: Explicit condition for stopping an active stage."
+msgstr "``Назначение``: явное условие остановки активного этапа."
+
+#: ../../source/wiki/attack-scenario-description.rst:239
+msgid "``Meaning``: Field to read from the matched object."
+msgstr "``Назначение``: поле для чтения из соответствующего объекта."
+
+#: ../../source/wiki/attack-scenario-description.rst:421
+msgid "``Meaning``: Informational type hint used by diagnostics and availability logging."
+msgstr ""
+"``Назначение``: информационная подсказка типа, используемая диагностикой и журналированием "
+"доступности."
+
+#: ../../source/wiki/attack-scenario-description.rst:427
+msgid "``Meaning``: Optional service filter passed to the runtime service resolver."
+msgstr ""
+"``Назначение``: необязательный фильтр сервисов, передаваемый средству разрешения сервисов времени"
+" выполнения."
+
+#: ../../source/wiki/attack-scenario-description.rst:123
+msgid "``Meaning``: Ordered list of attack stages."
+msgstr "``Назначение``: упорядоченный список этапов атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:95
+msgid "``Meaning``: Preconditions that must be satisfied before the attack may start."
+msgstr "``Назначение``: предварительные условия, которые должны быть выполнены до запуска атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:233
+msgid "``Meaning``: Reads data from the state of one behavior service."
+msgstr "``Назначение``: считывает данные из состояния одного сервиса поведения."
+
+#: ../../source/wiki/attack-scenario-description.rst:227
+msgid "``Meaning``: Restricts matching nodes by exact node id."
+msgstr "``Назначение``: ограничивает соответствующие узлы точным ID узла."
+
+#: ../../source/wiki/attack-scenario-description.rst:220
+msgid "``Meaning``: Restricts matching nodes by type."
+msgstr "``Назначение``: ограничивает соответствующие узлы по типу."
+
+#: ../../source/wiki/attack-scenario-description.rst:268
+#: ../../source/wiki/attack-scenario-description.rst:297
+msgid "``Meaning``: Restricts the condition to a specific attack name."
+msgstr "``Назначение``: ограничивает условие указанным именем атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:303
+msgid "``Meaning``: Restricts the condition to one configured stage id."
+msgstr "``Назначение``: ограничивает условие одним настроенным ID этапа."
+
+#: ../../source/wiki/attack-scenario-description.rst:408
+msgid "``Meaning``: Snapshot source whose value must resolve to one node id or a collection of node ids."
+msgstr ""
+"``Назначение``: источник снимка, значение которого должно разрешаться в один ID узла или "
+"коллекцию ID узлов."
+
+#: ../../source/wiki/attack-scenario-description.rst:501
+msgid "``Meaning``: Stage-specific configuration payload."
+msgstr "``Назначение``: конфигурационная полезная нагрузка конкретного этапа."
+
+#: ../../source/wiki/attack-scenario-description.rst:89
+msgid "``Meaning``: Unique runtime attack name."
+msgstr "``Назначение``: уникальное имя атаки во время выполнения."
+
+#: ../../source/wiki/attack-scenario-description.rst:472
+msgid "``Meaning``: Unique stage id inside the attack."
+msgstr "``Назначение``: уникальный ID этапа внутри атаки."
+
+#: ../../source/wiki/attack-scenario-description.rst:473
+msgid "``Notes``: Duplicate ids are rejected."
+msgstr "``Примечания``: повторяющиеся ID отклоняются."
+
+#: ../../source/wiki/attack-scenario-description.rst:275
+#: ../../source/wiki/attack-scenario-description.rst:310
+msgid "``Stable supported value``: ``status``"
+msgstr "``Стабильное поддерживаемое значение``: ``status``"
+
+#: ../../source/wiki/attack-scenario-description.rst:434
+msgid "``Supported values``: ``all``, ``first``"
+msgstr "``Поддерживаемые значения``: ``all``, ``first``"
+
+#: ../../source/wiki/attack-scenario-description.rst:196
+msgid "``Supported values``: ``snapshot``, ``attack``, ``stage``"
+msgstr "``Поддерживаемые значения``: ``snapshot``, ``attack``, ``stage``"
+
+#: ../../source/wiki/attack-scenario-description.rst:219
+msgid "``Supported values``: ``vehicle``, ``rsu``"
+msgstr "``Поддерживаемые значения``: ``vehicle``, ``rsu``"
+
+#: ../../source/wiki/attack-scenario-description.rst:101
+msgid "``Type``: ``ConditionSpec`` | ``Required``: effectively yes"
+msgstr "``Тип``: ``ConditionSpec`` | ``Обязательно``: фактически да"
+
+#: ../../source/wiki/attack-scenario-description.rst:94
+#: ../../source/wiki/attack-scenario-description.rst:108
+#: ../../source/wiki/attack-scenario-description.rst:516
+#: ../../source/wiki/attack-scenario-description.rst:523
+#: ../../source/wiki/attack-scenario-description.rst:530
+msgid "``Type``: ``ConditionSpec`` | ``Required``: no"
+msgstr "``Тип``: ``ConditionSpec`` | ``Обязательно``: нет"
+
+#: ../../source/wiki/attack-scenario-description.rst:115
+msgid "``Type``: ``TargetSpec`` | ``Required``: usually yes"
+msgstr "``Тип``: ``TargetSpec`` | ``Обязательно``: обычно да"
+
+#: ../../source/wiki/attack-scenario-description.rst:407
+msgid "``Type``: ``TriggerSourceSpec`` | ``Required``: yes"
+msgstr "``Тип``: ``TriggerSourceSpec`` | ``Обязательно``: да"
+
+#: ../../source/wiki/attack-scenario-description.rst:367
+msgid "``Type``: ``any`` | ``Required``: depends on the verb"
+msgstr "``Тип``: ``any`` | ``Обязательно``: зависит от оператора"
+
+#: ../../source/wiki/attack-scenario-description.rst:122
+msgid "``Type``: ``list[StageSpec]`` | ``Required``: no"
+msgstr "``Тип``: ``list[StageSpec]`` | ``Обязательно``: нет"
+
+#: ../../source/wiki/attack-scenario-description.rst:484
+msgid "``Type``: ``list[string]`` | ``Required``: no"
+msgstr "``Тип``: ``list[string]`` | ``Обязательно``: нет"
+
+#: ../../source/wiki/attack-scenario-description.rst:500
+msgid "``Type``: ``mapping`` | ``Required``: no"
+msgstr "``Тип``: ``mapping`` | ``Обязательно``: нет"
+
+#: ../../source/wiki/attack-scenario-description.rst:413
+msgid "``Type``: ``object`` | ``Required``: yes"
+msgstr "``Тип``: ``object`` | ``Обязательно``: да"
+
+#: ../../source/wiki/attack-scenario-description.rst:218
+#: ../../source/wiki/attack-scenario-description.rst:226
+#: ../../source/wiki/attack-scenario-description.rst:232
+#: ../../source/wiki/attack-scenario-description.rst:238
+#: ../../source/wiki/attack-scenario-description.rst:267
+#: ../../source/wiki/attack-scenario-description.rst:296
+#: ../../source/wiki/attack-scenario-description.rst:302
+#: ../../source/wiki/attack-scenario-description.rst:426
+#: ../../source/wiki/attack-scenario-description.rst:433
+msgid "``Type``: ``string`` | ``Required``: no"
+msgstr "``Тип``: ``string`` | ``Обязательно``: нет"
+
+#: ../../source/wiki/attack-scenario-description.rst:274
+#: ../../source/wiki/attack-scenario-description.rst:309
+msgid "``Type``: ``string`` | ``Required``: usually yes"
+msgstr "``Тип``: ``string`` | ``Обязательно``: обычно да"
+
+#: ../../source/wiki/attack-scenario-description.rst:88
+#: ../../source/wiki/attack-scenario-description.rst:195
+#: ../../source/wiki/attack-scenario-description.rst:401
+#: ../../source/wiki/attack-scenario-description.rst:419
+#: ../../source/wiki/attack-scenario-description.rst:471
+#: ../../source/wiki/attack-scenario-description.rst:478
+msgid "``Type``: ``string`` | ``Required``: yes"
+msgstr "``Тип``: ``string`` | ``Обязательно``: да"
+
+#: ../../source/wiki/attack-scenario-description.rst:563
+msgid "``active``"
+msgstr "``active``"
+
+#: ../../source/wiki/attack-scenario-description.rst:330
+msgid "``added``"
+msgstr "``added``"
+
+#: ../../source/wiki/attack-scenario-description.rst:337
+msgid "``added`` and ``removed`` are intended for collection-like values."
+msgstr "``added`` и ``removed`` предназначены для значений, подобных коллекциям."
+
+#: ../../source/wiki/attack-scenario-description.rst:358
+msgid "``added`` and ``removed`` are not supported for runtime sources."
+msgstr "``added`` и ``removed`` не поддерживаются для источников времени выполнения."
+
+#: ../../source/wiki/attack-scenario-description.rst:375
+msgid "``added``, ``removed``: ``value`` is the specific collection item."
+msgstr "``added``, ``removed``: ``value`` - конкретный элемент коллекции."
+
+#: ../../source/wiki/attack-scenario-description.rst:184
+msgid "``all`` and ``any`` cannot appear at the same level together."
+msgstr "``all`` и ``any`` не могут одновременно находиться на одном уровне."
+
+#: ../../source/wiki/attack-scenario-description.rst:86
+msgid "``attack.name``"
+msgstr "``attack.name``"
+
+#: ../../source/wiki/attack-scenario-description.rst:92
+#: ../../source/wiki/attack-scenario-description.rst:131
+msgid "``attack.requirements``"
+msgstr "``attack.requirements``"
+
+#: ../../source/wiki/attack-scenario-description.rst:120
+msgid "``attack.stages``"
+msgstr "``attack.stages``"
+
+#: ../../source/wiki/attack-scenario-description.rst:99
+#: ../../source/wiki/attack-scenario-description.rst:132
+msgid "``attack.start_trigger``"
+msgstr "``attack.start_trigger``"
+
+#: ../../source/wiki/attack-scenario-description.rst:106
+#: ../../source/wiki/attack-scenario-description.rst:133
+msgid "``attack.stop_trigger``"
+msgstr "``attack.stop_trigger``"
+
+#: ../../source/wiki/attack-scenario-description.rst:113
+msgid "``attack.targets``"
+msgstr "``attack.targets``"
+
+#: ../../source/wiki/attack-scenario-description.rst:329
+#: ../../source/wiki/attack-scenario-description.rst:352
+msgid "``became``"
+msgstr "``became``"
+
+#: ../../source/wiki/attack-scenario-description.rst:374
+msgid "``became``: ``value`` is the new value that must appear this tick."
+msgstr "``became``: ``value`` - новое значение, которое должно появиться в текущем такте."
+
+#: ../../source/wiki/attack-scenario-description.rst:326
+#: ../../source/wiki/attack-scenario-description.rst:351
+msgid "``changed``"
+msgstr "``changed``"
+
+#: ../../source/wiki/attack-scenario-description.rst:494
+msgid "``command.submit``"
+msgstr "``command.submit``"
+
+#: ../../source/wiki/attack-scenario-description.rst:328
+#: ../../source/wiki/attack-scenario-description.rst:354
+msgid "``decreased``"
+msgstr "``decreased``"
+
+#: ../../source/wiki/attack-scenario-description.rst:507
+msgid "``dropper``: ``drop_rate`` (float in ``[0.0, 1.0]``, default ``1.0``), optional ``seed``"
+msgstr ""
+"``dropper``: ``drop_rate`` (float в диапазоне ``[0.0, 1.0]``, по умолчанию ``1.0``), "
+"необязательный ``seed``"
+
+#: ../../source/wiki/attack-scenario-description.rst:321
+#: ../../source/wiki/attack-scenario-description.rst:346
+msgid "``eq``"
+msgstr "``eq``"
+
+#: ../../source/wiki/attack-scenario-description.rst:372
+msgid "``eq``, ``gt``, ``gte``, ``lt``, ``lte``: ``value`` should be provided."
+msgstr "``eq``, ``gt``, ``gte``, ``lt``, ``lte``: необходимо указать ``value``."
+
+#: ../../source/wiki/attack-scenario-description.rst:320
+#: ../../source/wiki/attack-scenario-description.rst:345
+msgid "``exists``"
+msgstr "``exists``"
+
+#: ../../source/wiki/attack-scenario-description.rst:565
+msgid "``fail``"
+msgstr "``fail``"
+
+#: ../../source/wiki/attack-scenario-description.rst:322
+#: ../../source/wiki/attack-scenario-description.rst:347
+msgid "``gt``"
+msgstr "``gt``"
+
+#: ../../source/wiki/attack-scenario-description.rst:323
+#: ../../source/wiki/attack-scenario-description.rst:348
+msgid "``gte``"
+msgstr "``gte``"
+
+#: ../../source/wiki/attack-scenario-description.rst:562
+msgid "``inactive``"
+msgstr "``inactive``"
+
+#: ../../source/wiki/attack-scenario-description.rst:327
+#: ../../source/wiki/attack-scenario-description.rst:353
+msgid "``increased``"
+msgstr "``increased``"
+
+#: ../../source/wiki/attack-scenario-description.rst:335
+msgid "``increased`` and ``decreased`` compare the current snapshot with the previous tick."
+msgstr "``increased`` и ``decreased`` сравнивают текущий снимок с предыдущим тактом."
+
+#: ../../source/wiki/attack-scenario-description.rst:359
+msgid "``increased`` and ``decreased`` use delta ``1`` if ``value`` is omitted."
+msgstr "Если ``value`` не указано, ``increased`` и ``decreased`` используют дельту ``1``."
+
+#: ../../source/wiki/attack-scenario-description.rst:373
+msgid "``increased``, ``decreased``: ``value`` is the minimum delta."
+msgstr "``increased``, ``decreased``: ``value`` - минимальная дельта."
+
+#: ../../source/wiki/attack-scenario-description.rst:324
+#: ../../source/wiki/attack-scenario-description.rst:349
+msgid "``lt``"
+msgstr "``lt``"
+
+#: ../../source/wiki/attack-scenario-description.rst:325
+#: ../../source/wiki/attack-scenario-description.rst:350
+msgid "``lte``"
+msgstr "``lte``"
+
+#: ../../source/wiki/attack-scenario-description.rst:540
+msgid "``operation``: ``set``, ``add``, or ``multiply``"
+msgstr "``operation``: ``set``, ``add`` или ``multiply``"
+
+#: ../../source/wiki/attack-scenario-description.rst:539
+msgid "``path``: dot-separated field path such as ``payload.position.x``"
+msgstr "``path``: разделённый точками путь к полю, например ``payload.position.x``"
+
+#: ../../source/wiki/attack-scenario-description.rst:331
+msgid "``removed``"
+msgstr "``removed``"
+
+#: ../../source/wiki/attack-scenario-description.rst:506
+msgid "``replayer``: no params"
+msgstr "``replayer``: без параметров"
+
+#: ../../source/wiki/attack-scenario-description.rst:490
+msgid "``request.observe``"
+msgstr "``request.observe``"
+
+#: ../../source/wiki/attack-scenario-description.rst:491
+msgid "``request.submit``"
+msgstr "``request.submit``"
+
+#: ../../source/wiki/attack-scenario-description.rst:492
+msgid "``response.observe``"
+msgstr "``response.observe``"
+
+#: ../../source/wiki/attack-scenario-description.rst:493
+msgid "``response.submit``"
+msgstr "``response.submit``"
+
+#: ../../source/wiki/attack-scenario-description.rst:439
+msgid "``service_state_field`` target resolution normalizes the source value into a set of node ids."
+msgstr "Разрешение целей ``service_state_field`` нормализует значение источника в множество ID узлов."
+
+#: ../../source/wiki/attack-scenario-description.rst:505
+msgid "``sniffer``: no params"
+msgstr "``sniffer``: без параметров"
+
+#: ../../source/wiki/attack-scenario-description.rst:265
+#: ../../source/wiki/attack-scenario-description.rst:294
+msgid "``source.attack_name``"
+msgstr "``source.attack_name``"
+
+#: ../../source/wiki/attack-scenario-description.rst:236
+#: ../../source/wiki/attack-scenario-description.rst:272
+#: ../../source/wiki/attack-scenario-description.rst:307
+msgid "``source.field``"
+msgstr "``source.field``"
+
+#: ../../source/wiki/attack-scenario-description.rst:193
+msgid "``source.kind``"
+msgstr "``source.kind``"
+
+#: ../../source/wiki/attack-scenario-description.rst:224
+msgid "``source.node_id``"
+msgstr "``source.node_id``"
+
+#: ../../source/wiki/attack-scenario-description.rst:216
+msgid "``source.node_type``"
+msgstr "``source.node_type``"
+
+#: ../../source/wiki/attack-scenario-description.rst:230
+msgid "``source.service_type``"
+msgstr "``source.service_type``"
+
+#: ../../source/wiki/attack-scenario-description.rst:300
+msgid "``source.stage_id``"
+msgstr "``source.stage_id``"
+
+#: ../../source/wiki/attack-scenario-description.rst:537
+msgid "``spoofer`` stages use ``params.rewrites``. Each rewrite rule must contain:"
+msgstr "Этапы ``spoofer`` используют ``params.rewrites``. Каждое правило изменения должно содержать:"
+
+#: ../../source/wiki/attack-scenario-description.rst:510
+msgid "``spoofer``: required ``rewrites`` sequence"
+msgstr "``spoofer``: обязательная последовательность ``rewrites``"
+
+#: ../../source/wiki/attack-scenario-description.rst:482
+msgid "``stage.capabilities``"
+msgstr "``stage.capabilities``"
+
+#: ../../source/wiki/attack-scenario-description.rst:469
+msgid "``stage.id``"
+msgstr "``stage.id``"
+
+#: ../../source/wiki/attack-scenario-description.rst:498
+msgid "``stage.params``"
+msgstr "``stage.params``"
+
+#: ../../source/wiki/attack-scenario-description.rst:134
+#: ../../source/wiki/attack-scenario-description.rst:514
+msgid "``stage.requirements``"
+msgstr "``stage.requirements``"
+
+#: ../../source/wiki/attack-scenario-description.rst:135
+#: ../../source/wiki/attack-scenario-description.rst:521
+msgid "``stage.stage_start_trigger``"
+msgstr "``stage.stage_start_trigger``"
+
+#: ../../source/wiki/attack-scenario-description.rst:136
+#: ../../source/wiki/attack-scenario-description.rst:528
+msgid "``stage.stage_stop_trigger``"
+msgstr "``stage.stage_stop_trigger``"
+
+#: ../../source/wiki/attack-scenario-description.rst:476
+msgid "``stage.type``"
+msgstr "``stage.type``"
+
+#: ../../source/wiki/attack-scenario-description.rst:495
+msgid "``state.observe``"
+msgstr "``state.observe``"
+
+#: ../../source/wiki/attack-scenario-description.rst:566
+msgid "``stopped``"
+msgstr "``stopped``"
+
+#: ../../source/wiki/attack-scenario-description.rst:564
+msgid "``success``"
+msgstr "``success``"
+
+#: ../../source/wiki/attack-scenario-description.rst:399
+msgid "``targets.kind``"
+msgstr "``targets.kind``"
+
+#: ../../source/wiki/attack-scenario-description.rst:417
+msgid "``targets.resolve_to.node_type``"
+msgstr "``targets.resolve_to.node_type``"
+
+#: ../../source/wiki/attack-scenario-description.rst:424
+msgid "``targets.resolve_to.service_type``"
+msgstr "``targets.resolve_to.service_type``"
+
+#: ../../source/wiki/attack-scenario-description.rst:411
+msgid "``targets.resolve_to``"
+msgstr "``targets.resolve_to``"
+
+#: ../../source/wiki/attack-scenario-description.rst:431
+msgid "``targets.selection``"
+msgstr "``targets.selection``"
+
+#: ../../source/wiki/attack-scenario-description.rst:405
+msgid "``targets.source``"
+msgstr "``targets.source``"
+
+#: ../../source/wiki/attack-scenario-description.rst:365
+msgid "``value``"
+msgstr "``value``"
+
+#: ../../source/wiki/attack-scenario-description.rst:541
+msgid "``value``: operand for the selected operation"
+msgstr "``value``: операнд выбранной операции"
+
+#: ../../source/wiki/attack-scenario-description.rst:140
+msgid "a leaf predicate,"
+msgstr "конечный предикат,"
+
+#: ../../source/wiki/attack-scenario-description.rst:141
+msgid "an ``all`` group,"
+msgstr "группа ``all``,"
+
+#: ../../source/wiki/attack-scenario-description.rst:142
+msgid "an ``any`` group."
+msgstr "группа ``any``."
+
+#: ../../source/wiki/attack-scenario-description.rst:591
+msgid "later stages start after the previous stage succeeds."
+msgstr "последующие этапы начинаются после успешного завершения предыдущего."
+
+#: ../../source/wiki/attack-scenario-description.rst:590
+msgid "the first stage starts when the attack is active,"
+msgstr "первый этап начинается, когда атака активна,"
+

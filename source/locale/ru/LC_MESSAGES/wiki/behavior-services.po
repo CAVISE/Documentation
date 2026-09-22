@@ -1,0 +1,553 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/behavior-services.rst:17
+msgid ""
+"A behavior service is any object implementing the ``BehaviorService`` protocol from "
+"``opencda/core/application/behavior/behavior_service_protocol.py``."
+msgstr ""
+"Сервис поведения - любой объект, реализующий протокол ``BehaviorService`` из "
+"``opencda/core/application/behavior/behavior_service_protocol.py``."
+
+#: ../../source/wiki/behavior-services.rst:275
+msgid "AIM-style setup with both vehicle and RSU services:"
+msgstr "Настройка в стиле AIM с сервисами транспортных средств и RSU:"
+
+#: ../../source/wiki/behavior-services.rst:31
+msgid "At runtime, the owner is either a ``VehicleManager`` or an ``RSUManager``."
+msgstr "Во время выполнения владельцем является ``VehicleManager`` или ``RSUManager``."
+
+#: ../../source/wiki/behavior-services.rst:2
+msgid "Behavior Services"
+msgstr "Сервисы поведения"
+
+#: ../../source/wiki/behavior-services.rst:4
+msgid ""
+"Behavior services are modular application-layer components attached to vehicles and RSUs. They "
+"exchange typed ``TransportMessage`` envelopes, expose state snapshots, and run in a deterministic"
+" per-tick execution order."
+msgstr ""
+"Сервисы поведения - модульные компоненты прикладного уровня, подключаемые к транспортным "
+"средствам и RSU. Они обмениваются типизированными оболочками ``TransportMessage``, предоставляют "
+"снимки состояния и выполняются в детерминированном порядке на каждом такте."
+
+#: ../../source/wiki/behavior-services.rst:36
+msgid "Builtin service packages live under:"
+msgstr "Пакеты встроенных сервисов находятся в:"
+
+#: ../../source/wiki/behavior-services.rst:222
+msgid "Builtins as Reference Implementations"
+msgstr "Встроенные сервисы как эталонные реализации"
+
+#: ../../source/wiki/behavior-services.rst:115
+msgid "Capabilities"
+msgstr "Возможности"
+
+#: ../../source/wiki/behavior-services.rst:89
+msgid "Common Message Model"
+msgstr "Общая модель сообщений"
+
+#: ../../source/wiki/behavior-services.rst:264
+msgid "Configuration Examples"
+msgstr "Примеры конфигурации"
+
+#: ../../source/wiki/behavior-services.rst:266
+msgid "Default vehicle pipeline:"
+msgstr "Конвейер транспортного средства по умолчанию:"
+
+#: ../../source/wiki/behavior-services.rst:117
+msgid "Each service exposes a ``capability_bindings`` map keyed by the shared capability vocabulary:"
+msgstr ""
+"Каждый сервис предоставляет карту ``capability_bindings`` с ключами из общего словаря "
+"возможностей:"
+
+#: ../../source/wiki/behavior-services.rst:21
+msgid "Each service must define:"
+msgstr "Каждый сервис должен определять:"
+
+#: ../../source/wiki/behavior-services.rst:133
+msgid ""
+"If a service has no meaningful externally hooked operations, it may expose an empty binding map, "
+"as ``movement_controller`` currently does."
+msgstr ""
+"Если у сервиса нет значимых операций для внешнего подключения, он может предоставлять пустую "
+"карту привязок, как сейчас делает ``movement_controller``."
+
+#: ../../source/wiki/behavior-services.rst:295
+msgid "Implementation Rules"
+msgstr "Правила реализации"
+
+#: ../../source/wiki/behavior-services.rst:103
+msgid "Important routing constants:"
+msgstr "Важные константы маршрутизации:"
+
+#: ../../source/wiki/behavior-services.rst:206
+msgid "In practice this usually means:"
+msgstr "На практике обычно это означает:"
+
+#: ../../source/wiki/behavior-services.rst:309
+msgid ""
+"In short, services are expected to differ in logic, not in lifecycle shape. That consistency is "
+"what makes the service framework composable and what keeps the attack framework, metrics, and "
+"scenario runtime aligned."
+msgstr ""
+"Иными словами, сервисы должны различаться логикой, а не структурой жизненного цикла. Эта "
+"согласованность обеспечивает компонуемость фреймворка сервисов и синхронизирует фреймворк атак, "
+"метрики и среду выполнения сценария."
+
+#: ../../source/wiki/behavior-services.rst:61
+msgid "Manager-Side Lifecycle"
+msgstr "Жизненный цикл на стороне менеджера"
+
+#: ../../source/wiki/behavior-services.rst:47
+msgid "Managers create services from scenario YAML:"
+msgstr "Менеджеры создают сервисы из YAML сценария:"
+
+#: ../../source/wiki/behavior-services.rst:139
+msgid ""
+"New services should be implemented with approximately the same internal template, even when the "
+"business logic differs. The goal is not identical code style for its own sake, but predictable "
+"execution semantics across the whole service layer."
+msgstr ""
+"Новые сервисы следует реализовывать примерно по одному внутреннему шаблону, даже если их "
+"прикладная логика различается. Цель заключается не в одинаковом стиле кода как таковом, а в "
+"предсказуемой семантике выполнения на всём уровне сервисов."
+
+#: ../../source/wiki/behavior-services.rst:197
+msgid ""
+"New services should follow the same conceptual processing stages on every tick, even if some "
+"stages are trivial for a particular implementation:"
+msgstr ""
+"Новые сервисы должны проходить одинаковые концептуальные этапы обработки на каждом такте, даже "
+"если некоторые этапы тривиальны для конкретной реализации:"
+
+#: ../../source/wiki/behavior-services.rst:137
+msgid "Recommended Development Template"
+msgstr "Рекомендуемый шаблон разработки"
+
+#: ../../source/wiki/behavior-services.rst:155
+msgid "Recommended class skeleton:"
+msgstr "Рекомендуемый каркас класса:"
+
+#: ../../source/wiki/behavior-services.rst:144
+msgid "Recommended package layout:"
+msgstr "Рекомендуемая структура пакета:"
+
+#: ../../source/wiki/behavior-services.rst:34
+msgid "Registration and Discovery"
+msgstr "Регистрация и обнаружение"
+
+#: ../../source/wiki/behavior-services.rst:91
+msgid "Services communicate through typed transport envelopes:"
+msgstr "Сервисы обмениваются данными через типизированные транспортные оболочки:"
+
+#: ../../source/wiki/behavior-services.rst:195
+msgid "Stages Every Service Should Follow"
+msgstr "Этапы, общие для всех сервисов"
+
+#: ../../source/wiki/behavior-services.rst:83
+msgid ""
+"That shared pipeline is the main reason new services should follow a common implementation shape."
+" If every service uses ad hoc control flow, it becomes harder to reason about priority, message "
+"routing, state collection, and attack interception."
+msgstr ""
+"Этот общий конвейер - основная причина, по которой новые сервисы должны следовать общей структуре"
+" реализации. Если каждый сервис использует произвольный поток управления, становится сложнее "
+"анализировать приоритеты, маршрутизацию сообщений, сбор состояния и перехват атак."
+
+#: ../../source/wiki/behavior-services.rst:57
+msgid ""
+"The ``type`` field is resolved through ``BehaviorServiceRegistry`` and instantiated via "
+"``create_service(...)``."
+msgstr ""
+"Поле ``type`` разрешается через ``BehaviorServiceRegistry``, а экземпляр создаётся с помощью "
+"``create_service(...)``."
+
+#: ../../source/wiki/behavior-services.rst:224
+msgid "The current builtin services already follow this template with different complexity levels."
+msgstr "Текущие встроенные сервисы уже следуют этому шаблону с разным уровнем сложности."
+
+#: ../../source/wiki/behavior-services.rst:227
+msgid "The full builtin catalog is documented in :doc:`available-services`."
+msgstr "Полный каталог встроенных сервисов приведён в :doc:`available-services`."
+
+#: ../../source/wiki/behavior-services.rst:42
+msgid ""
+"The package-level loader imports all builtin service modules on startup, and concrete services "
+"self-register through ``@BehaviorServiceRegistry.register``. A service becomes instantiable by "
+"declaring a unique ``service_type`` and importing its module."
+msgstr ""
+"Загрузчик уровня пакета импортирует все модули встроенных сервисов при запуске, а конкретные "
+"сервисы самостоятельно регистрируются через ``@BehaviorServiceRegistry.register``. Чтобы сервис "
+"можно было создать, объявите уникальный ``service_type`` и импортируйте его модуль."
+
+#: ../../source/wiki/behavior-services.rst:73
+msgid "The per-tick execution flow is shared by both managers:"
+msgstr "Оба менеджера используют одинаковый поток выполнения на каждом такте:"
+
+#: ../../source/wiki/behavior-services.rst:127
+msgid "These bindings serve two purposes:"
+msgstr "Эти привязки служат двум целям:"
+
+#: ../../source/wiki/behavior-services.rst:213
+msgid "This common stage model is important for three reasons:"
+msgstr "Общая модель этапов важна по трём причинам:"
+
+#: ../../source/wiki/behavior-services.rst:108
+msgid "This gives services a uniform way to:"
+msgstr "Она предоставляет сервисам единообразный способ:"
+
+#: ../../source/wiki/behavior-services.rst:8
+msgid ""
+"This service layer is also the attachment point used by the adversary framework. Attack stages do"
+" not patch managers directly. They wrap capability bindings exported by behavior services. See "
+":doc:`attack-framework` for the attack-side architecture. For the current builtin catalog, see "
+":doc:`available-services`."
+msgstr ""
+"Этот уровень сервисов также служит точкой подключения фреймворка атак. Этапы атак не изменяют "
+"менеджеры напрямую. Они оборачивают привязки возможностей, предоставляемые сервисами поведения. "
+"Архитектура со стороны атак описана в :doc:`attack-framework`. Текущий каталог встроенных "
+"сервисов приведён в :doc:`available-services`."
+
+#: ../../source/wiki/behavior-services.rst:15
+msgid "What a Service Is"
+msgstr "Что представляет собой сервис"
+
+#: ../../source/wiki/behavior-services.rst:297
+msgid ""
+"When adding a new service, keep these rules fixed unless there is a strong architectural reason "
+"not to:"
+msgstr ""
+"При добавлении нового сервиса сохраняйте следующие правила, если нет веской архитектурной причины"
+" отступить от них:"
+
+#: ../../source/wiki/behavior-services.rst:105
+msgid "``BROADCAST_OWNER_ID``: broadcast recipient at the node level"
+msgstr "``BROADCAST_OWNER_ID``: получатель широковещательной рассылки на уровне узла"
+
+#: ../../source/wiki/behavior-services.rst:106
+msgid "``BROADCAST_SERVICE_TYPE``: broadcast recipient at the service level"
+msgstr "``BROADCAST_SERVICE_TYPE``: получатель широковещательной рассылки на уровне сервиса"
+
+#: ../../source/wiki/behavior-services.rst:63
+msgid "``VehicleManager`` and ``RSUManager`` use the same lifecycle:"
+msgstr "``VehicleManager`` и ``RSUManager`` используют одинаковый жизненный цикл:"
+
+#: ../../source/wiki/behavior-services.rst:247
+msgid "``aim_client``"
+msgstr "``aim_client``"
+
+#: ../../source/wiki/behavior-services.rst:256
+msgid "``aim_server``"
+msgstr "``aim_server``"
+
+#: ../../source/wiki/behavior-services.rst:25
+msgid "``capability_bindings``: exported capability-to-callable map"
+msgstr "``capability_bindings``: предоставляемая карта соответствий возможностей и вызываемых объектов"
+
+#: ../../source/wiki/behavior-services.rst:124
+msgid "``command.submit``"
+msgstr "``command.submit``"
+
+#: ../../source/wiki/behavior-services.rst:28
+msgid "``get_state()``: immutable state snapshot for runtime inspection"
+msgstr "``get_state()``: неизменяемый снимок состояния для проверки во время выполнения"
+
+#: ../../source/wiki/behavior-services.rst:238
+msgid "``movement_controller``"
+msgstr "``movement_controller``"
+
+#: ../../source/wiki/behavior-services.rst:26
+msgid "``on_attach(owner)``: owner-specific initialization hook"
+msgstr "``on_attach(owner)``: хук инициализации для конкретного владельца"
+
+#: ../../source/wiki/behavior-services.rst:29
+msgid "``on_detach()``: cleanup hook"
+msgstr "``on_detach()``: хук очистки"
+
+#: ../../source/wiki/behavior-services.rst:24
+msgid "``priority``: integer execution order, where smaller values run earlier"
+msgstr "``priority``: целочисленный порядок выполнения; меньшие значения выполняются раньше"
+
+#: ../../source/wiki/behavior-services.rst:27
+msgid "``process(messages)``: per-tick message processing entrypoint"
+msgstr "``process(messages)``: точка входа обработки сообщений на каждом такте"
+
+#: ../../source/wiki/behavior-services.rst:120
+msgid "``request.observe``"
+msgstr "``request.observe``"
+
+#: ../../source/wiki/behavior-services.rst:121
+msgid "``request.submit``"
+msgstr "``request.submit``"
+
+#: ../../source/wiki/behavior-services.rst:122
+msgid "``response.observe``"
+msgstr "``response.observe``"
+
+#: ../../source/wiki/behavior-services.rst:123
+msgid "``response.submit``"
+msgstr "``response.submit``"
+
+#: ../../source/wiki/behavior-services.rst:230
+msgid "``self_informer``"
+msgstr "``self_informer``"
+
+#: ../../source/wiki/behavior-services.rst:23
+msgid "``service_type``: stable string identifier used in config and message routing"
+msgstr ""
+"``service_type``: стабильный строковый идентификатор, используемый в конфигурации и маршрутизации"
+" сообщений"
+
+#: ../../source/wiki/behavior-services.rst:125
+msgid "``state.observe``"
+msgstr "``state.observe``"
+
+#: ../../source/wiki/behavior-services.rst:69
+msgid "call ``on_attach(...)`` for each service"
+msgstr "вызвать ``on_attach(...)`` для каждого сервиса"
+
+#: ../../source/wiki/behavior-services.rst:78
+msgid "call ``process(...)`` for each attached service in priority order"
+msgstr "вызвать ``process(...)`` для каждого подключённого сервиса в порядке приоритета"
+
+#: ../../source/wiki/behavior-services.rst:307
+msgid "clean up all owner-dependent state in ``on_detach()``"
+msgstr "очистить всё состояние, зависящее от владельца, в ``on_detach()``"
+
+#: ../../source/wiki/behavior-services.rst:260
+msgid "emits AIM response messages"
+msgstr "отправляет сообщения ответов AIM"
+
+#: ../../source/wiki/behavior-services.rst:234
+msgid "emits a broadcast ``SelfInformerResponse``"
+msgstr "отправляет широковещательный ``SelfInformerResponse``"
+
+#: ../../source/wiki/behavior-services.rst:251
+msgid "emits movement-controller commands"
+msgstr "отправляет команды контроллера движения"
+
+#: ../../source/wiki/behavior-services.rst:244
+msgid "emits no outbound messages"
+msgstr "не отправляет исходящие сообщения"
+
+#: ../../source/wiki/behavior-services.rst:252
+msgid "emits the next request to ``aim_server``"
+msgstr "отправляет следующий запрос в ``aim_server``"
+
+#: ../../source/wiki/behavior-services.rst:302
+msgid "export stable ``capability_bindings`` for the stages you want observable"
+msgstr "предоставлять стабильные ``capability_bindings`` для этапов, которые должны быть наблюдаемыми"
+
+#: ../../source/wiki/behavior-services.rst:235
+msgid "exposes a compact owner-state snapshot"
+msgstr "предоставляет компактный снимок состояния владельца"
+
+#: ../../source/wiki/behavior-services.rst:253
+msgid "exposes its active trajectory as service state"
+msgstr "предоставляет активную траекторию как состояние сервиса"
+
+#: ../../source/wiki/behavior-services.rst:261
+msgid "exposes tracked-vehicle state through ``get_state()``"
+msgstr "предоставляет состояние отслеживаемых транспортных средств через ``get_state()``"
+
+#: ../../source/wiki/behavior-services.rst:240
+msgid "filters local control requests"
+msgstr "фильтрует локальные запросы управления"
+
+#: ../../source/wiki/behavior-services.rst:259
+msgid "forwards them to ``AIMModelManager``"
+msgstr "перенаправляет их в ``AIMModelManager``"
+
+#: ../../source/wiki/behavior-services.rst:77
+msgid "group messages by ``dst_service_type``"
+msgstr "группировать сообщения по ``dst_service_type``"
+
+#: ../../source/wiki/behavior-services.rst:79
+msgid "immediately feed self-addressed outputs back into the same tick"
+msgstr "немедленно возвращать адресованные себе выходные данные в тот же такт"
+
+#: ../../source/wiki/behavior-services.rst:200
+msgid "input filtering"
+msgstr "фильтрация входных данных"
+
+#: ../../source/wiki/behavior-services.rst:66
+msgid "instantiate services through the registry"
+msgstr "создать экземпляры сервисов через реестр"
+
+#: ../../source/wiki/behavior-services.rst:202
+msgid "internal state update or decision making"
+msgstr "обновление внутреннего состояния или принятие решения"
+
+#: ../../source/wiki/behavior-services.rst:243
+msgid "invokes ``owner.control(...)``"
+msgstr "вызывает ``owner.control(...)``"
+
+#: ../../source/wiki/behavior-services.rst:215
+msgid "it keeps multi-service execution predictable when priorities differ"
+msgstr "она сохраняет предсказуемость выполнения нескольких сервисов при разных приоритетах"
+
+#: ../../source/wiki/behavior-services.rst:216
+msgid "it makes attack interception consistent because bindings always wrap known stages"
+msgstr ""
+"она обеспечивает единообразный перехват атак, поскольку привязки всегда оборачивают известные "
+"этапы"
+
+#: ../../source/wiki/behavior-services.rst:218
+msgid "it reduces friction when implementing metrics, debugging, or adding new services"
+msgstr "она упрощает реализацию метрик, отладку и добавление новых сервисов"
+
+#: ../../source/wiki/behavior-services.rst:304
+msgid "keep ``get_state()`` immutable and cheap to consume"
+msgstr "сохранять ``get_state()`` неизменяемым и нетребовательным к ресурсам при чтении"
+
+#: ../../source/wiki/behavior-services.rst:301
+msgid "keep ``priority`` explicit and meaningful"
+msgstr "задавать ``priority`` явно и осмысленно"
+
+#: ../../source/wiki/behavior-services.rst:303
+msgid "keep ``process(...)`` deterministic for the same inputs"
+msgstr "обеспечивать детерминированность ``process(...)`` для одинаковых входных данных"
+
+#: ../../source/wiki/behavior-services.rst:208
+msgid "keep message selection separate from business logic"
+msgstr "отделять выбор сообщений от прикладной логики"
+
+#: ../../source/wiki/behavior-services.rst:76
+msgid "keep only messages addressed to the current node or valid broadcasts"
+msgstr "оставлять только сообщения, адресованные текущему узлу, и допустимые широковещательные сообщения"
+
+#: ../../source/wiki/behavior-services.rst:211
+msgid "make ``get_state()`` reflect the latest meaningful service snapshot"
+msgstr "обеспечивать, чтобы ``get_state()`` отражал последний значимый снимок сервиса"
+
+#: ../../source/wiki/behavior-services.rst:201
+msgid "observation or decoding of relevant messages"
+msgstr "наблюдение или декодирование соответствующих сообщений"
+
+#: ../../source/wiki/behavior-services.rst:249
+msgid "observes AIM server responses and local self-informer data"
+msgstr "наблюдает ответы сервера AIM и локальные данные self-informer"
+
+#: ../../source/wiki/behavior-services.rst:258
+msgid "observes incoming AIM requests"
+msgstr "наблюдает входящие запросы AIM"
+
+#: ../../source/wiki/behavior-services.rst:232
+msgid "observes the owner's current pose and speed"
+msgstr "наблюдает текущие позу и скорость владельца"
+
+#: ../../source/wiki/behavior-services.rst:70
+msgid "on every simulation tick, execute ``update_behavior_services(...)``"
+msgstr "на каждом такте симуляции выполнять ``update_behavior_services(...)``"
+
+#: ../../source/wiki/behavior-services.rst:71
+msgid "on shutdown, call ``on_detach()`` in reverse order"
+msgstr "при завершении вызывать ``on_detach()`` в обратном порядке"
+
+#: ../../source/wiki/behavior-services.rst:203
+msgid "output construction or command emission"
+msgstr "формирование выходных данных или отправка команды"
+
+#: ../../source/wiki/behavior-services.rst:81
+msgid "persist the latest ``get_state()`` result into ``behavior_service_states``"
+msgstr "сохранять последний результат ``get_state()`` в ``behavior_service_states``"
+
+#: ../../source/wiki/behavior-services.rst:241
+msgid "picks the latest valid movement command"
+msgstr "выбирает последнюю допустимую команду движения"
+
+#: ../../source/wiki/behavior-services.rst:305
+msgid "prefer helper methods for each processing stage over one monolithic ``process(...)``"
+msgstr ""
+"предпочитать вспомогательные методы для каждого этапа обработки одному монолитному "
+"``process(...)``"
+
+#: ../../source/wiki/behavior-services.rst:110
+msgid "publish state-like responses to sibling services"
+msgstr "публиковать ответы с состоянием для соседних сервисов"
+
+#: ../../source/wiki/behavior-services.rst:65
+msgid "read ``behavior_services`` from config"
+msgstr "считать ``behavior_services`` из конфигурации"
+
+#: ../../source/wiki/behavior-services.rst:210
+msgid "return typed ``TransportMessage`` objects instead of mutating shared state"
+msgstr "возвращать типизированные объекты ``TransportMessage`` вместо изменения общего состояния"
+
+#: ../../source/wiki/behavior-services.rst:111
+msgid "send commands to another local service on the same node"
+msgstr "отправлять команды другому локальному сервису на том же узле"
+
+#: ../../source/wiki/behavior-services.rst:112
+msgid "send requests or responses to services on other nodes"
+msgstr "отправлять запросы или ответы сервисам на других узлах"
+
+#: ../../source/wiki/behavior-services.rst:68
+msgid "sort services by ``priority``"
+msgstr "сортировать сервисы по ``priority``"
+
+#: ../../source/wiki/behavior-services.rst:204
+msgid "state snapshot exposure"
+msgstr "предоставление снимка состояния"
+
+#: ../../source/wiki/behavior-services.rst:80
+msgid "store non-local outputs in ``behavior_service_results``"
+msgstr "сохранять нелокальные выходные данные в ``behavior_service_results``"
+
+#: ../../source/wiki/behavior-services.rst:129
+msgid "they document the service's externally visible interaction points"
+msgstr "они документируют видимые извне точки взаимодействия сервиса"
+
+#: ../../source/wiki/behavior-services.rst:130
+msgid "they provide stable hooks for the attack framework to observe or alter service behavior"
+msgstr ""
+"они предоставляют стабильные хуки, через которые фреймворк атак может наблюдать или изменять "
+"поведение сервиса"
+
+#: ../../source/wiki/behavior-services.rst:209
+msgid "update local runtime fields before building outbound messages"
+msgstr "обновлять локальные поля времени выполнения до создания исходящих сообщений"
+
+#: ../../source/wiki/behavior-services.rst:233
+msgid "updates cached local fields"
+msgstr "обновляет кешированные локальные поля"
+
+#: ../../source/wiki/behavior-services.rst:250
+msgid "updates its current control trajectory"
+msgstr "обновляет текущую траекторию управления"
+
+#: ../../source/wiki/behavior-services.rst:242
+msgid "updates local target state"
+msgstr "обновляет локальное целевое состояние"
+
+#: ../../source/wiki/behavior-services.rst:300
+msgid "use one unique ``service_type`` per service"
+msgstr "использовать один уникальный ``service_type`` для каждого сервиса"
+
+#: ../../source/wiki/behavior-services.rst:75
+msgid "validate incoming ``TransportMessage`` objects"
+msgstr "проверять входящие объекты ``TransportMessage``"
+
+#: ../../source/wiki/behavior-services.rst:67
+msgid "validate that every service implements the protocol"
+msgstr "проверить, что каждый сервис реализует протокол"
+

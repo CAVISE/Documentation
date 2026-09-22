@@ -21,6 +21,8 @@ env:
   DOCS_SOURCE_DIRECTORY: source
   DOCS_BUILD_DIRECTORY: build
   DOCS_SITE_DIRECTORY: build/html
+  DOCS_LANGUAGES: en,ru
+  DOCS_DEFAULT_LANGUAGE: en
 
 jobs:
   build:
@@ -39,6 +41,8 @@ jobs:
           requirements-file: ${{ env.DOCS_REQUIREMENTS_FILE }}
           source-directory: ${{ env.DOCS_SOURCE_DIRECTORY }}
           build-directory: ${{ env.DOCS_BUILD_DIRECTORY }}
+          languages: ${{ env.DOCS_LANGUAGES }}
+          default-language: ${{ env.DOCS_DEFAULT_LANGUAGE }}
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5

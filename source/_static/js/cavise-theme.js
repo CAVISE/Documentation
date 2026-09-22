@@ -1,4 +1,9 @@
 (function () {
+  const isRussian = (document.documentElement.lang || "").toLowerCase().startsWith("ru");
+  const interfaceText = isRussian
+    ? { code: "Код", text: "Текст", console: "Консоль", copy: "Копировать", copied: "Скопировано", failed: "Ошибка" }
+    : { code: "Code", text: "Text", console: "Console", copy: "Copy", copied: "Copied", failed: "Failed" };
+
   function syncScrollState() {
     if (!document.body) {
       return;
@@ -171,8 +176,8 @@
       cxx: "C++",
       c: "C",
       cmake: "CMake",
-      text: "Text",
-      console: "Console",
+      text: interfaceText.text,
+      console: interfaceText.console,
     };
 
     if (map[normalized]) {
@@ -180,7 +185,7 @@
     }
 
     if (!normalized) {
-      return "Code";
+      return interfaceText.code;
     }
 
     return normalized.charAt(0).toUpperCase() + normalized.slice(1);
@@ -235,21 +240,21 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "cavise-code-copy";
-      button.textContent = "Copy";
+      button.textContent = interfaceText.copy;
 
       button.addEventListener("click", async () => {
         try {
           await copyText(pre.innerText);
-          button.textContent = "Copied";
+          button.textContent = interfaceText.copied;
           button.classList.add("is-copied");
           window.setTimeout(() => {
-            button.textContent = "Copy";
+            button.textContent = interfaceText.copy;
             button.classList.remove("is-copied");
           }, 1600);
         } catch (_error) {
-          button.textContent = "Failed";
+          button.textContent = interfaceText.failed;
           window.setTimeout(() => {
-            button.textContent = "Copy";
+            button.textContent = interfaceText.copy;
           }, 1600);
         }
       });

@@ -1,0 +1,225 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/models.rst:130
+msgid "Adding a Bundle"
+msgstr "Добавление пакета"
+
+#: ../../source/models.rst:117
+msgid "AdvCP Assets"
+msgstr "Ресурсы AdvCP"
+
+#: ../../source/models.rst:143
+msgid ""
+"All three source arguments are required. The generator adds only the new bundle and checks every "
+"artifact SHA-256 against the existing catalog. If the same file is already registered under "
+"another bundle ID, it aborts without changing metadata."
+msgstr ""
+"Необходимо указать все три аргумента источника. Генератор добавляет только новый пакет и сверяет "
+"SHA-256 каждого артефакта с существующим каталогом. Если тот же файл уже зарегистрирован под "
+"другим ID пакета, выполнение прерывается без изменения метаданных."
+
+#: ../../source/models.rst:47
+msgid ""
+"An automatic fetch creates ``.models.lock`` next to the models directory in the process "
+"filesystem. In the standard container this is ``/home/opencda/cavise/.models.lock``. Only the "
+"``models`` directory is bind-mounted, so the lock file is not automatically shared with host "
+"processes or other containers. Keep concurrent fetches in the same container. OpenCDA holds an "
+"advisory ``flock`` on this file while changing the sparse checkout, preventing two simulation "
+"processes from cloning or extending it concurrently."
+msgstr ""
+"При автоматической загрузке рядом с каталогом моделей в файловой системе процесса создаётся "
+"``.models.lock``. В стандартном контейнере это ``/home/opencda/cavise/.models.lock``. Через bind "
+"mount подключается только каталог ``models``, поэтому файл блокировки не становится автоматически"
+" общим для процессов хоста или других контейнеров. Выполняйте параллельные загрузки в одном "
+"контейнере. При изменении разреженного checkout OpenCDA удерживает рекомендательную блокировку "
+"``flock`` на этом файле, не позволяя двум процессам симуляции одновременно клонировать или "
+"расширять его."
+
+#: ../../source/models.rst:4
+msgid ""
+"CAVISE stores OpenCOOD checkpoints and AdvCP runtime assets in the separate `CAVISE/models "
+"<https://github.com/CAVISE/models>`_ repository. The repository is expected at the same level as "
+"``opencda`` and ``opencood``:"
+msgstr ""
+"CAVISE хранит чекпойнты OpenCOOD и ресурсы времени выполнения AdvCP в отдельном репозитории "
+"`CAVISE/models <https://github.com/CAVISE/models>`_. Репозиторий должен находиться на одном "
+"уровне с ``opencda`` и ``opencood``:"
+
+#: ../../source/models.rst:132
+msgid ""
+"Create a new directory directly under ``coperception/`` or ``advcp/`` in a complete models "
+"checkout, place the artifacts there, and run the following from that **models repository root** "
+"in its contributor Python environment:"
+msgstr ""
+"Создайте новый каталог непосредственно внутри ``coperception/`` или ``advcp/`` в полном checkout "
+"моделей, поместите туда артефакты и выполните следующую команду из **корня репозитория models** в"
+" его Python-среде для участников разработки:"
+
+#: ../../source/models.rst:89
+msgid "Disable network access after populating the required sparse checkout:"
+msgstr "Отключите доступ к сети после заполнения необходимого разреженного checkout:"
+
+#: ../../source/models.rst:83
+msgid "Explicit command-line values take precedence over their environment-variable counterparts."
+msgstr "Явно заданные значения командной строки имеют приоритет над соответствующими переменными среды."
+
+#: ../../source/models.rst:125
+msgid ""
+"Follow :doc:`/guides/advcp` for a matched scenario, model and attack configuration. The "
+"repository/ref and offline options above apply to both bundle types."
+msgstr ""
+"Сопоставимые сценарий, модель и конфигурация атаки описаны в :doc:`/guides/advcp`. Приведённые "
+"выше параметры репозитория, ref и автономного режима применяются к обоим типам пакетов."
+
+#: ../../source/models.rst:103
+msgid "For an unpacked custom model that is not registered as a bundle, bypass the models repository:"
+msgstr ""
+"Чтобы использовать распакованную пользовательскую модель, не зарегистрированную как пакет, "
+"обойдите репозиторий моделей:"
+
+#: ../../source/models.rst:41
+msgid ""
+"If cloning fails, the requested ID does not exist, or artifact validation fails, OpenCDA raises a"
+" runtime error and does not start the simulation."
+msgstr ""
+"Если клонирование завершается ошибкой, запрошенный ID не существует или проверка артефакта не "
+"пройдена, OpenCDA выдаёт ошибку времени выполнения и не запускает симуляцию."
+
+#: ../../source/models.rst:2
+msgid "Models and Runtime Assets"
+msgstr "Модели и ресурсы времени выполнения"
+
+#: ../../source/models.rst:87
+msgid "Offline and Custom Models"
+msgstr "Автономные и пользовательские модели"
+
+#: ../../source/models.rst:20
+msgid "On-Demand Downloads"
+msgstr "Загрузка по требованию"
+
+#: ../../source/models.rst:35
+msgid ""
+"OpenCDA first checks ``../models/coperception/<model-id>``. If the bundle is missing, it logs a "
+"warning and creates a partial sparse checkout of ``https://github.com/CAVISE/models.git`` at "
+"``main``. Only the requested bundle is downloaded. Requesting another model later extends the "
+"same sparse checkout instead of cloning the full repository."
+msgstr ""
+"Сначала OpenCDA проверяет ``../models/coperception/<model-id>``. Если пакет отсутствует, "
+"выводится предупреждение и создаётся частичный разреженный checkout ветки ``main`` из "
+"``https://github.com/CAVISE/models.git``. Загружается только запрошенный пакет. При последующем "
+"запросе другой модели тот же разреженный checkout расширяется, а полный репозиторий не "
+"клонируется."
+
+#: ../../source/models.rst:25
+msgid "Pass a logical bundle ID when cooperative perception is enabled:"
+msgstr "При включённом кооперативном восприятии передайте логический ID пакета:"
+
+#: ../../source/models.rst:60
+msgid "Repository and Checkout Overrides"
+msgstr "Переопределение репозитория и checkout"
+
+#: ../../source/models.rst:22
+msgid ""
+"Run examples in this page from the **OpenCDA container shell**, with CARLA running and "
+"``CARLA_HOST`` set as in :ref:`carla-client-shell`."
+msgstr ""
+"Запускайте примеры с этой страницы из **оболочки контейнера OpenCDA**, при запущенной CARLA и с "
+"``CARLA_HOST``, заданным как в :ref:`carla-client-shell`."
+
+#: ../../source/models.rst:45
+msgid "The ``.models.lock`` File"
+msgstr "Файл ``.models.lock``"
+
+#: ../../source/models.rst:100
+msgid ""
+"The command fails immediately if the selected bundle is not present. Set "
+"``CAVISE_MODELS_AUTO_FETCH=0`` for the same behavior by default."
+msgstr ""
+"Команда немедленно завершается ошибкой, если выбранный пакет отсутствует. Чтобы задать такое "
+"поведение по умолчанию, установите ``CAVISE_MODELS_AUTO_FETCH=0``."
+
+#: ../../source/models.rst:76
+msgid "The equivalent environment variables are:"
+msgstr "Эквивалентные переменные среды:"
+
+#: ../../source/models.rst:55
+msgid ""
+"The file is intentionally empty, may remain after OpenCDA exits, and is ignored by Git. It does "
+"not record model versions. It is not created when a requested bundle is already available locally"
+" and no fetch is needed."
+msgstr ""
+"Файл намеренно оставлен пустым, может сохраняться после завершения OpenCDA и игнорируется Git. В "
+"нём не записываются версии моделей. Он не создаётся, если запрошенный пакет уже доступен локально"
+" и загрузка не требуется."
+
+#: ../../source/models.rst:15
+msgid ""
+"The models repository does not use Git LFS. Each bundle contains a ``meta.yaml`` file with its "
+"ID, kind, source information, artifact sizes, and SHA-256 checksums. OpenCDA validates this "
+"metadata before using a bundle."
+msgstr ""
+"Репозиторий моделей не использует Git LFS. Каждый пакет содержит файл ``meta.yaml`` с ID, типом, "
+"сведениями об источнике, размерами артефактов и контрольными суммами SHA-256. OpenCDA проверяет "
+"эти метаданные перед использованием пакета."
+
+#: ../../source/models.rst:62
+msgid "Use command-line options to test a fork, branch, tag, or another checkout location:"
+msgstr ""
+"Используйте параметры командной строки, чтобы проверить fork, ветку, тег или другое расположение "
+"checkout:"
+
+#: ../../source/models.rst:148
+msgid "Validate the repository before opening a pull request:"
+msgstr "Перед созданием pull request проверьте репозиторий:"
+
+#: ../../source/models.rst:119
+msgid ""
+"``--advcp-assets-id`` selects an AdvCP runtime bundle. Its default is ``base-car``. OpenCDA "
+"resolves this bundle and the cooperative-perception checkpoint before starting an AdvCP "
+"simulation. The bundle supplies the car mesh and partition files. Optional shape-attack files "
+"need separate preparation when the selected configuration requests them."
+msgstr ""
+"Параметр ``--advcp-assets-id`` выбирает пакет времени выполнения AdvCP. Значение по умолчанию - "
+"``base-car``. OpenCDA разрешает этот пакет и чекпойнт кооперативного восприятия до запуска "
+"симуляции AdvCP. Пакет содержит сетку автомобиля и файлы разбиения. Если они требуются выбранной "
+"конфигурацией, дополнительные файлы атаки на форму необходимо подготовить отдельно."
+
+#: ../../source/models.rst:114
+msgid "``--model-id`` and ``--model-dir`` are mutually exclusive."
+msgstr "Параметры ``--model-id`` и ``--model-dir`` взаимоисключающие."
+
+#: ../../source/models.rst:81
+msgid "``CAVISE_MODELS_AUTO_FETCH``"
+msgstr "``CAVISE_MODELS_AUTO_FETCH``"
+
+#: ../../source/models.rst:80
+msgid "``CAVISE_MODELS_REF``"
+msgstr "``CAVISE_MODELS_REF``"
+
+#: ../../source/models.rst:79
+msgid "``CAVISE_MODELS_REPOSITORY``"
+msgstr "``CAVISE_MODELS_REPOSITORY``"
+
+#: ../../source/models.rst:78
+msgid "``CAVISE_MODELS_ROOT``"
+msgstr "``CAVISE_MODELS_ROOT``"
+

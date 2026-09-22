@@ -166,5 +166,10 @@ opencda
 !source/opencda/**
 !source/_static/images/opencda/
 !source/_static/images/opencda/**
+!source/locale/
+!source/locale/**
+source/locale/**/*.mo
 artery
 scenario-manager
+
+.DS_Store

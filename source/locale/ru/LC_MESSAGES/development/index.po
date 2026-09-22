@@ -1,0 +1,98 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/development/index.rst:43
+msgid ""
+"CI also runs additional checks such as ``pytest``, ``mypy``, ``deadcode``, and repository-wide "
+"``pre-commit``. Run the local hooks before opening a pull request to catch the most common "
+"failures early."
+msgstr ""
+"CI также выполняет дополнительные проверки, включая ``pytest``, ``mypy``, ``deadcode`` и ``pre-"
+"commit`` для всего репозитория. Перед созданием pull request запустите локальные хуки, чтобы "
+"заранее выявить наиболее распространённые ошибки."
+
+#: ../../source/development/index.rst:2
+msgid "Development Setup"
+msgstr "Настройка среды разработки"
+
+#: ../../source/development/index.rst:49
+msgid "Documentation"
+msgstr "Документация"
+
+#: ../../source/development/index.rst:19
+msgid "Run all hooks manually:"
+msgstr "Запустите все хуки вручную:"
+
+#: ../../source/development/index.rst:4
+msgid ""
+"Run development checks in the component repository you are changing. They are separate from the "
+"environment needed to run a simulation."
+msgstr ""
+"Запускайте проверки для разработки в репозитории изменяемого компонента. Они не связаны со "
+"средой, необходимой для запуска симуляции."
+
+#: ../../source/development/index.rst:51
+msgid ""
+"See the Documentation repository README for its isolated environment, strict build, link checker "
+"and local preview commands."
+msgstr ""
+"Описание изолированной среды, строгой сборки, проверки ссылок и локального предпросмотра "
+"приведено в README репозитория Documentation."
+
+#: ../../source/development/index.rst:7
+msgid ""
+"The OpenCDA repository uses ``pre-commit`` to keep formatting and basic checks consistent before "
+"code reaches CI. Run the following commands from the OpenCDA repository root to install and "
+"enable it once per clone. After that, the hooks run automatically before each commit:"
+msgstr ""
+"В репозитории OpenCDA используется ``pre-commit``, чтобы обеспечить единообразное форматирование "
+"и выполнение основных проверок до попадания кода в CI. Выполните следующие команды из корня "
+"репозитория OpenCDA, чтобы один раз установить и включить его для клона. После этого хуки будут "
+"запускаться автоматически перед каждым коммитом:"
+
+#: ../../source/development/index.rst:35
+msgid "The current hook set includes:"
+msgstr "Текущий набор хуков включает:"
+
+#: ../../source/development/index.rst:25
+msgid "Useful day-to-day commands:"
+msgstr "Полезные команды для повседневной работы:"
+
+#: ../../source/development/index.rst:39
+msgid "``hadolint`` for the ``Dockerfile``"
+msgstr "``hadolint`` для ``Dockerfile``"
+
+#: ../../source/development/index.rst:37
+msgid "``ruff-check`` with automatic fixes enabled"
+msgstr "``ruff-check`` с включёнными автоматическими исправлениями"
+
+#: ../../source/development/index.rst:38
+msgid "``ruff-format``"
+msgstr "``ruff-format``"
+
+#: ../../source/development/index.rst:40
+msgid ""
+"common safety and hygiene checks for YAML, JSON, TOML, merge conflicts, whitespace, symlinks, and"
+" requirements files"
+msgstr ""
+"общие проверки безопасности и качества для YAML, JSON и TOML, а также проверки конфликтов "
+"слияния, пробельных символов, символических ссылок и файлов зависимостей"
+

@@ -1,0 +1,333 @@
+# Russian translations for CAVISE.
+# Copyright (C) 2026 CAVISE Dev Team
+# This file is distributed under the same license as the CAVISE project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAVISE 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CAVISE/Documentation/issues\n"
+"POT-Creation-Date: 2026-09-17 14:00+0300\n"
+"PO-Revision-Date: 2026-09-17 14:00+0300\n"
+"Last-Translator: CAVISE Dev Team\n"
+"Language: ru\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/wiki/available-services.rst:190
+msgid "AIM-enabled RSU chain:"
+msgstr "Цепочка RSU с поддержкой AIM:"
+
+#: ../../source/wiki/available-services.rst:184
+msgid "AIM-enabled vehicle chain:"
+msgstr "Цепочка транспортного средства с поддержкой AIM:"
+
+#: ../../source/wiki/available-services.rst:7
+msgid "At the moment, the builtin catalog contains four services:"
+msgstr "Сейчас встроенный каталог содержит четыре сервиса:"
+
+#: ../../source/wiki/available-services.rst:2
+msgid "Available Services"
+msgstr "Доступные сервисы"
+
+#: ../../source/wiki/available-services.rst:176
+msgid "Common Service Chains"
+msgstr "Типовые цепочки сервисов"
+
+#: ../../source/wiki/available-services.rst:34 ../../source/wiki/available-services.rst:68
+#: ../../source/wiki/available-services.rst:105 ../../source/wiki/available-services.rst:147
+msgid "Config fields:"
+msgstr "Поля конфигурации:"
+
+#: ../../source/wiki/available-services.rst:53
+msgid "Consumes local movement commands and applies them to the vehicle controller."
+msgstr "Получает локальные команды движения и применяет их к контроллеру транспортного средства."
+
+#: ../../source/wiki/available-services.rst:178
+msgid "Default local vehicle chain:"
+msgstr "Локальная цепочка транспортного средства по умолчанию:"
+
+#: ../../source/wiki/available-services.rst:120
+msgid "Dependencies:"
+msgstr "Зависимости:"
+
+#: ../../source/wiki/available-services.rst:38 ../../source/wiki/available-services.rst:72
+#: ../../source/wiki/available-services.rst:110 ../../source/wiki/available-services.rst:156
+msgid "Example:"
+msgstr "Пример:"
+
+#: ../../source/wiki/available-services.rst:14
+msgid ""
+"For the service framework, shared lifecycle, and recommended implementation template, see :doc"
+":`behavior-services`."
+msgstr ""
+"Описание фреймворка сервисов, общего жизненного цикла и рекомендуемого шаблона реализации "
+"приведено в :doc:`behavior-services`."
+
+#: ../../source/wiki/available-services.rst:45 ../../source/wiki/available-services.rst:79
+#: ../../source/wiki/available-services.rst:170
+msgid "Notes:"
+msgstr "Примечания:"
+
+#: ../../source/wiki/available-services.rst:20
+msgid "Publishes the current vehicle state for sibling services on the same node."
+msgstr "Публикует текущее состояние транспортного средства для соседних сервисов на том же узле."
+
+#: ../../source/wiki/available-services.rst:87
+msgid ""
+"Runs on a vehicle, consumes AIM responses, and converts them into local motion commands plus the "
+"next AIM request."
+msgstr ""
+"Работает на транспортном средстве, получает ответы AIM и преобразует их в локальные команды "
+"движения и следующий запрос AIM."
+
+#: ../../source/wiki/available-services.rst:129
+msgid ""
+"Runs on an RSU, collects AIM requests from vehicles, performs trajectory prediction through "
+"``AIMModelManager``, and returns AIM responses."
+msgstr ""
+"Работает на RSU, собирает запросы AIM от транспортных средств, прогнозирует траектории с помощью "
+"``AIMModelManager`` и возвращает ответы AIM."
+
+#: ../../source/wiki/available-services.rst:196
+msgid ""
+"The exact execution order is determined by ``priority``, but the chains above reflect the "
+"intended functional flow."
+msgstr ""
+"Точный порядок выполнения определяется значением ``priority``, но приведённые выше цепочки "
+"отражают предполагаемую функциональную последовательность."
+
+#: ../../source/wiki/available-services.rst:4
+msgid ""
+"This page lists the builtin behavior services currently available in "
+"``opencda/core/application/behavior/services/``."
+msgstr ""
+"На этой странице перечислены встроенные сервисы поведения, доступные в "
+"``opencda/core/application/behavior/services/``."
+
+#: ../../source/wiki/available-services.rst:28 ../../source/wiki/available-services.rst:61
+#: ../../source/wiki/available-services.rst:97 ../../source/wiki/available-services.rst:140
+msgid "Typical role:"
+msgstr "Типовая роль:"
+
+#: ../../source/wiki/available-services.rst:11 ../../source/wiki/available-services.rst:85
+msgid "``aim_client``"
+msgstr "``aim_client``"
+
+#: ../../source/wiki/available-services.rst:48
+msgid "``aim_client`` depends on its outputs for local state context"
+msgstr "``aim_client`` зависит от его выходных данных, используемых как контекст локального состояния"
+
+#: ../../source/wiki/available-services.rst:82
+msgid "``aim_client`` sends command messages to this service"
+msgstr "``aim_client`` отправляет этому сервису сообщения команд"
+
+#: ../../source/wiki/available-services.rst:12 ../../source/wiki/available-services.rst:127
+msgid "``aim_server``"
+msgstr "``aim_server``"
+
+#: ../../source/wiki/available-services.rst:135
+msgid "``capabilities``: ``request.observe``, ``response.submit``, ``state.observe``"
+msgstr "``capabilities``: ``request.observe``, ``response.submit``, ``state.observe``"
+
+#: ../../source/wiki/available-services.rst:25
+msgid "``capabilities``: ``request.submit``"
+msgstr "``capabilities``: ``request.submit``"
+
+#: ../../source/wiki/available-services.rst:93
+msgid "``capabilities``: ``response.observe``, ``command.submit``, ``request.submit``"
+msgstr "``capabilities``: ``response.observe``, ``command.submit``, ``request.submit``"
+
+#: ../../source/wiki/available-services.rst:58
+msgid "``capabilities``: none"
+msgstr "``capabilities``: отсутствуют"
+
+#: ../../source/wiki/available-services.rst:151
+msgid "``control_center_location``: optional explicit center position"
+msgstr "``control_center_location``: необязательное явно заданное положение центра"
+
+#: ../../source/wiki/available-services.rst:150
+msgid "``control_radius``: optional integer radius for controlled vehicles"
+msgstr "``control_radius``: необязательный целочисленный радиус для управляемых транспортных средств"
+
+#: ../../source/wiki/available-services.rst:108
+msgid "``debug``: optional bool, enables debug trajectory visualization"
+msgstr "``debug``: необязательное логическое значение, включает отладочную визуализацию траекторий"
+
+#: ../../source/wiki/available-services.rst:152
+msgid "``debug``: optional bool, enables debug visualization"
+msgstr "``debug``: необязательное логическое значение, включает отладочную визуализацию"
+
+#: ../../source/wiki/available-services.rst:57
+msgid "``default priority``: ``100``"
+msgstr "``default priority``: ``100``"
+
+#: ../../source/wiki/available-services.rst:24
+msgid "``default priority``: ``1``"
+msgstr "``default priority``: ``1``"
+
+#: ../../source/wiki/available-services.rst:92 ../../source/wiki/available-services.rst:134
+msgid "``default priority``: ``20``"
+msgstr "``default priority``: ``20``"
+
+#: ../../source/wiki/available-services.rst:153
+msgid "``model`` and additional AIM backend parameters passed through to model initialization"
+msgstr "``model`` и дополнительные параметры серверной части AIM, передаваемые при инициализации модели"
+
+#: ../../source/wiki/available-services.rst:10 ../../source/wiki/available-services.rst:51
+msgid "``movement_controller``"
+msgstr "``movement_controller``"
+
+#: ../../source/wiki/available-services.rst:133
+msgid "``owner``: ``RSUManager``"
+msgstr "``owner``: ``RSUManager``"
+
+#: ../../source/wiki/available-services.rst:23 ../../source/wiki/available-services.rst:56
+#: ../../source/wiki/available-services.rst:91
+msgid "``owner``: ``VehicleManager``"
+msgstr "``owner``: ``VehicleManager``"
+
+#: ../../source/wiki/available-services.rst:36 ../../source/wiki/available-services.rst:70
+#: ../../source/wiki/available-services.rst:107 ../../source/wiki/available-services.rst:149
+msgid "``priority``: optional integer execution priority"
+msgstr "``priority``: необязательный целочисленный приоритет выполнения"
+
+#: ../../source/wiki/available-services.rst:9 ../../source/wiki/available-services.rst:18
+msgid "``self_informer``"
+msgstr "``self_informer``"
+
+#: ../../source/wiki/available-services.rst:90
+msgid "``service_type``: ``aim_client``"
+msgstr "``service_type``: ``aim_client``"
+
+#: ../../source/wiki/available-services.rst:132
+msgid "``service_type``: ``aim_server``"
+msgstr "``service_type``: ``aim_server``"
+
+#: ../../source/wiki/available-services.rst:55
+msgid "``service_type``: ``movement_controller``"
+msgstr "``service_type``: ``movement_controller``"
+
+#: ../../source/wiki/available-services.rst:22
+msgid "``service_type``: ``self_informer``"
+msgstr "``service_type``: ``self_informer``"
+
+#: ../../source/wiki/available-services.rst:95
+msgid "``state snapshot``: owner id, current active control trajectory"
+msgstr "``state snapshot``: ID владельца и текущая активная траектория управления"
+
+#: ../../source/wiki/available-services.rst:26
+msgid "``state snapshot``: owner id, current location, current speed"
+msgstr "``state snapshot``: ID владельца, текущее положение и текущая скорость"
+
+#: ../../source/wiki/available-services.rst:59
+msgid "``state snapshot``: owner id, current target position"
+msgstr "``state snapshot``: ID владельца и текущее целевое положение"
+
+#: ../../source/wiki/available-services.rst:137
+msgid "``state snapshot``: tracked vehicle ids, trajectory vehicle ids, and their counts"
+msgstr ""
+"``state snapshot``: ID отслеживаемых транспортных средств, ID транспортных средств с траекториями"
+" и их количество"
+
+#: ../../source/wiki/available-services.rst:31
+msgid "collect the owner's current pose and speed"
+msgstr "получить текущие позу и скорость владельца"
+
+#: ../../source/wiki/available-services.rst:101
+msgid "compute the next control trajectory"
+msgstr "вычислить следующую траекторию управления"
+
+#: ../../source/wiki/available-services.rst:32
+msgid "emit a local broadcast message consumed by other vehicle services"
+msgstr ""
+"отправить локальное широковещательное сообщение, получаемое другими сервисами транспортного "
+"средства"
+
+#: ../../source/wiki/available-services.rst:102
+msgid "emit local ``movement_controller`` commands"
+msgstr "отправить локальные команды ``movement_controller``"
+
+#: ../../source/wiki/available-services.rst:66
+msgid "emit no outbound messages"
+msgstr "не отправлять исходящие сообщения"
+
+#: ../../source/wiki/available-services.rst:144
+msgid "emit response messages back to vehicles"
+msgstr "отправить сообщения ответов транспортным средствам"
+
+#: ../../source/wiki/available-services.rst:103
+msgid "emit the next request for ``aim_server``"
+msgstr "отправить следующий запрос для ``aim_server``"
+
+#: ../../source/wiki/available-services.rst:122
+msgid "expects ``self_informer`` on the same vehicle"
+msgstr "требует ``self_informer`` на том же транспортном средстве"
+
+#: ../../source/wiki/available-services.rst:124
+msgid "expects at least one reachable ``aim_server`` service on an RSU"
+msgstr "требует хотя бы один доступный сервис ``aim_server`` на RSU"
+
+#: ../../source/wiki/available-services.rst:145
+msgid "expose runtime state for attacks, metrics, and debugging"
+msgstr "предоставить состояние времени выполнения для атак, метрик и отладки"
+
+#: ../../source/wiki/available-services.rst:172
+msgid "intended for RSU-side deployment"
+msgstr "предназначен для развёртывания на стороне RSU"
+
+#: ../../source/wiki/available-services.rst:65
+msgid "invoke ``owner.control(...)``"
+msgstr "вызвать ``owner.control(...)``"
+
+#: ../../source/wiki/available-services.rst:142
+msgid "observe incoming AIM request messages"
+msgstr "наблюдать входящие сообщения запросов AIM"
+
+#: ../../source/wiki/available-services.rst:99
+msgid "observe local self state from ``self_informer``"
+msgstr "наблюдать локальное собственное состояние от ``self_informer``"
+
+#: ../../source/wiki/available-services.rst:100
+msgid "observe remote responses from ``aim_server``"
+msgstr "наблюдать удалённые ответы от ``aim_server``"
+
+#: ../../source/wiki/available-services.rst:64
+msgid "receive local control commands"
+msgstr "получать локальные команды управления"
+
+#: ../../source/wiki/available-services.rst:30
+msgid "run early in the tick"
+msgstr "выполняться в начале такта"
+
+#: ../../source/wiki/available-services.rst:63
+msgid "run near the end of the vehicle service pipeline"
+msgstr "выполняться ближе к концу конвейера сервисов транспортного средства"
+
+#: ../../source/wiki/available-services.rst:143
+msgid "run the configured AIM model backend"
+msgstr "запустить настроенную серверную часть модели AIM"
+
+#: ../../source/wiki/available-services.rst:47
+msgid "this is usually the first vehicle-side service in the chain"
+msgstr "обычно это первый сервис на стороне транспортного средства в цепочке"
+
+#: ../../source/wiki/available-services.rst:81
+msgid "this is usually the terminal vehicle-side service"
+msgstr "обычно это конечный сервис на стороне транспортного средства"
+
+#: ../../source/wiki/available-services.rst:123
+msgid "typically expects ``movement_controller`` on the same vehicle"
+msgstr "обычно требует ``movement_controller`` на том же транспортном средстве"
+
+#: ../../source/wiki/available-services.rst:173
+msgid "usually paired with one or more vehicle-side ``aim_client`` services"
+msgstr ""
+"обычно используется совместно с одним или несколькими сервисами ``aim_client`` на транспортных "
+"средствах"
+
