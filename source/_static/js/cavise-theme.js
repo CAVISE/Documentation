@@ -107,14 +107,17 @@
       return;
     }
 
-    const desktopQuery = window.matchMedia("(min-width: 769px)");
+    // Keep this breakpoint aligned with the mobile rules in cavise-theme.css.
+    const desktopQuery = window.matchMedia("(min-width: 1025px)");
     const compactDesktopQuery = window.matchMedia("(max-width: 1280px)");
+    const sidebar = document.querySelector(".cavise-sidebar");
     let sidebarOverride = null;
 
     function syncSidebarState() {
       if (!desktopQuery.matches) {
         document.body.classList.remove("cavise-sidebar-collapsed");
         toggle.setAttribute("aria-expanded", "false");
+        sidebar.inert = true;
         return;
       }
 
@@ -127,6 +130,7 @@
 
       document.body.classList.toggle("cavise-sidebar-collapsed", collapsed);
       toggle.setAttribute("aria-expanded", String(!collapsed));
+      sidebar.inert = collapsed;
     }
 
     toggle.addEventListener("click", function () {
@@ -149,6 +153,94 @@
     compactDesktopQuery.addEventListener("change", resetSidebarState);
 
     syncSidebarState();
+  }
+
+  function initMobileNavigation() {
+    const toggle = document.querySelector("[data-cavise-mobile-toggle]");
+    const sidebar = document.querySelector(".wy-nav-side");
+    if (!toggle || !sidebar) {
+      return;
+    }
+
+    const mobileQuery = window.matchMedia("(max-width: 1024px)");
+    const background = document.querySelectorAll(".wy-nav-top, .wy-nav-content");
+    const closeButton = sidebar.querySelector("[data-cavise-mobile-close]");
+    let isOpen = false;
+    let scrollPosition = 0;
+    sidebar.id = "cavise-mobile-sidebar";
+    sidebar.setAttribute("aria-labelledby", "cavise-mobile-sidebar-title");
+
+    function setOpen(open) {
+      open = open && mobileQuery.matches;
+      if (open && !isOpen) {
+        scrollPosition = window.scrollY;
+        document.body.style.setProperty("--cavise-scroll-top", `-${scrollPosition}px`);
+      }
+
+      document.body.classList.toggle("cavise-mobile-menu-open", open);
+      background.forEach((element) => { element.inert = open; });
+      toggle.setAttribute("aria-expanded", String(open));
+
+      if (!open && isOpen) {
+        document.body.style.removeProperty("--cavise-scroll-top");
+        window.scrollTo(0, scrollPosition);
+        const target = mobileQuery.matches
+          ? toggle
+          : document.querySelector("[data-cavise-sidebar-toggle]");
+        if (target) {
+          target.focus({ preventScroll: true });
+        }
+      }
+
+      sidebar.inert = !open;
+      sidebar.setAttribute("aria-hidden", String(!open));
+      if (open) {
+        sidebar.setAttribute("role", "dialog");
+        sidebar.setAttribute("aria-modal", "true");
+        // Move focus after the drawer's visibility change has reached the browser.
+        window.setTimeout(() => closeButton.focus({ preventScroll: true }), 0);
+      } else {
+        sidebar.removeAttribute("role");
+        sidebar.removeAttribute("aria-modal");
+      }
+      isOpen = open;
+    }
+
+    toggle.addEventListener("click", () => setOpen(!isOpen));
+    document.querySelectorAll("[data-cavise-mobile-close]").forEach((button) => {
+      button.addEventListener("click", () => setOpen(false));
+    });
+    sidebar.addEventListener("click", (event) => {
+      // RTD's expand buttons sit inside links and must only expand the tree.
+      if (event.target.closest("a") && !event.target.closest("button")) {
+        setOpen(false);
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (!isOpen) {
+        return;
+      }
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+      } else if (event.key === "Tab") {
+        const focusable = Array.from(sidebar.querySelectorAll(
+          'a[href], button, input:not([type="hidden"]), [tabindex="0"]',
+        )).filter((element) => !element.disabled && element.getClientRects().length);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+    mobileQuery.addEventListener("change", () => setOpen(false));
+    window.addEventListener("pagehide", () => setOpen(false));
+    setOpen(false);
   }
 
   function formatCodeLanguage(language) {
@@ -269,6 +361,7 @@
     syncScrollState();
     window.addEventListener("scroll", syncScrollState, { passive: true });
     initSidebarToggle();
+    initMobileNavigation();
     initCodeBlocks();
     hydrateGitHubStats();
   }
