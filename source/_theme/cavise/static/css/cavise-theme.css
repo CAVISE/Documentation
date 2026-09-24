@@ -90,6 +90,10 @@ a {
   color: var(--cavise-cyan-400);
 }
 
+a:visited {
+  color: var(--cavise-cyan-400);
+}
+
 a:hover {
   color: var(--cavise-white);
 }
@@ -501,6 +505,7 @@ body.cavise-sidebar-collapsed .wy-nav-content-wrap {
 .rst-content footer {
   margin-top: 2.2rem;
   padding-top: 0.8rem;
+  color: var(--cavise-text-primary);
 }
 
 .rst-content footer hr {
@@ -736,7 +741,8 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
   box-shadow: 0 22px 42px -18px rgba(2, 8, 12, 0.85);
 }
 
-.cavise-language-dropdown__menu a {
+.cavise-language-dropdown__menu a,
+.cavise-language-dropdown__menu a:visited {
   box-sizing: border-box;
   width: 100%;
   padding: 0.65rem 0.55rem;
@@ -797,7 +803,8 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
   color: var(--cavise-text-secondary);
 }
 
-.cavise-topbar-github {
+.cavise-topbar-github,
+.cavise-topbar-github:visited {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1223,7 +1230,8 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
   margin-top: 1.4rem;
 }
 
-.cavise-home-link {
+.cavise-home-link,
+.cavise-home-link:visited {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1311,7 +1319,8 @@ body.cavise-sidebar-collapsed .cavise-site-header__brand-title {
     background: rgba(2, 8, 12, 0.65);
   }
 
-  .cavise-mobile-button {
+  .cavise-mobile-button,
+  .cavise-mobile-button:visited {
     display: inline-flex;
     flex: 0 0 44px;
     align-items: center;
