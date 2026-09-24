@@ -50,6 +50,7 @@ html_theme_options = {
     "logo_only": True,
     "collapse_navigation": False,
     "navigation_depth": 4,
+    "titles_only": True,
     "style_external_links": True,
     "style_nav_header_background": "#0c1224",
     "sticky_navigation": True,
