@@ -97,3 +97,26 @@ Use its warmup settings when interpreting short runs. Inspect the logged
 agent IDs and compare per-run metrics alongside the rendered output. Missing
 attackers, empty inputs, or a target outside the sensor range can make an
 experiment uninformative even when the simulator continues running.
+
+
+Cooperative Perception Metrics
+------------------------------
+
+OpenCDA uses OpenCOOD to calculate AP at BEV IoU thresholds 0.3, 0.5 and 0.7.
+AP is cumulative: TP, FP, scores and GT counts are collected across frames.
+The final AP is calculated from all collected data, not averaged over ticks.
+
+Final TP, FP, FN, precision and recall use a fixed confidence threshold
+(default 0.5). FN = GT - TP, precision = TP / (TP + FP), recall = TP / GT.
+AP uses all predictions regardless of this threshold. Undefined values
+are stored as ``null``.
+
+Final values are saved in ``coperception.final_metrics`` in ``report.json``
+and written to the OpenCDA logs.
+
+``mean_precision_at_iou`` and ``mean_recall_at_iou`` average coordinates
+of the accumulated PR curve, not fixed-threshold precision and recall.
+
+Other metrics include ``attack_success_rate`` for removal and spoofing,
+``attacker_benign_visibility_ratio`` for LiDAR point visibility, and
+``attacker_target_confidence`` for confidence on attack targets.
