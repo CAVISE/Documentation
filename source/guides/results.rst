@@ -97,3 +97,45 @@ Use its warmup settings when interpreting short runs. Inspect the logged
 agent IDs and compare per-run metrics alongside the rendered output. Missing
 attackers, empty inputs, or a target outside the sensor range can make an
 experiment uninformative even when the simulator continues running.
+
+
+Cooperative Perception Metrics
+------------------------------
+
+OpenCDA uses OpenCOOD to calculate AP at BEV IoU thresholds 0.3, 0.5 and 0.7.
+AP is cumulative: TP, FP, scores and GT counts are collected across frames.
+The final AP is calculated from all collected data, not averaged over ticks.
+Each metric excludes its first ``warmup_steps`` updates from accumulation.
+
+Final TP, FP, FN, precision and recall use a fixed confidence threshold
+(default 0.5). FN = GT - TP, precision = TP / (TP + FP), recall = TP / GT.
+Predictions with a score greater than or equal to this threshold are included.
+AP uses all predictions supplied to the evaluator, independently of this
+metric's confidence threshold. These predictions have already passed the
+model's postprocessing, including its own score filtering and non-maximum
+suppression (NMS). Predictions removed there cannot contribute to AP or the
+fixed-threshold metrics. Undefined final values are stored as ``null``.
+
+When cooperative perception and ``ap_at_iou`` are enabled, final values are
+saved in ``coperception.final_metrics`` in ``report.json`` and written to the
+OpenCDA logs. Configure the reporting threshold and warmup in the scenario YAML:
+
+.. code-block:: yaml
+
+   coperception:
+     metrics:
+       metric_configs:
+         ap_at_iou:
+           warmup_steps: 0
+           confidence_threshold: 0.5
+
+This reporting threshold does not change the model's postprocessing settings.
+
+``mean_precision_at_iou`` averages the interpolated precision envelope of the
+accumulated PR curve. ``mean_recall_at_iou`` averages its recall coordinates.
+Both exclude the artificial endpoints added for AP integration. These are
+auxiliary curve summaries, not precision and recall at a fixed threshold.
+
+Other metrics include ``attack_success_rate`` for removal and spoofing,
+``attacker_benign_visibility_ratio`` for LiDAR point visibility, and
+``attacker_target_confidence`` for confidence on attack targets.
