@@ -194,3 +194,6 @@ msgstr ""
 "Команда ``up`` создаёт контейнеры, ожидающие с помощью ``sleep infinity``. Далее явно запустите "
 "CARLA и сценарий в отдельных терминалах."
 
+
+msgid "Town06 requires the extended CARLA image. The commands below download and import the additional maps during the first build. To reuse an archive from another location, see :ref:`carla-images`."
+msgstr "Для Town06 требуется расширенный образ CARLA. При первой сборке приведённые ниже команды скачивают и импортируют дополнительные карты. Использование архива из другого каталога описано в :ref:`carla-images`."

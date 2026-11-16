@@ -16,10 +16,14 @@ Run in **Linux Bash or Ubuntu in WSL2**, from the CAVISE root:
    .. tab-item:: Linux
       :sync: linux
 
+      Town06 requires the extended CARLA image. The commands below download and import
+      the additional maps during the first build. To reuse an archive from another
+      location, see :ref:`carla-images`.
+
       .. code-block:: bash
 
-         ./run.sh build carla opencda-minimal
-         ./run.sh up carla opencda-minimal
+         ./run.sh build carla-extended opencda-minimal
+         ./run.sh up carla-extended opencda-minimal
 
    .. tab-item:: Windows
       :sync: windows
@@ -165,7 +169,7 @@ To stop the containers, run from the **CAVISE root on Linux/WSL**:
 
       .. code-block:: bash
 
-         ./run.sh stop carla opencda-minimal
+         ./run.sh stop carla-extended opencda-minimal
 
    .. tab-item:: Windows
       :sync: windows

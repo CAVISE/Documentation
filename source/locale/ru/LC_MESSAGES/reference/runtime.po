@@ -380,3 +380,6 @@ msgstr "``sumo``"
 msgid "``up``"
 msgstr "``up``"
 
+
+msgid "CARLA accepts ``carla`` (base maps) or ``carla-extended`` (additional maps, including Town06). Both select the same ``carla`` service and container. An invocation without service names selects the base CARLA image. For build commands, archive reuse and ``CARLA_VERSION``, see :ref:`carla-images`."
+msgstr "Для CARLA доступны варианты ``carla`` (базовые карты) и ``carla-extended`` (дополнительные карты, включая Town06). Оба выбирают один сервис и контейнер ``carla``. Вызов без имён сервисов выбирает базовый образ CARLA. Команды сборки, повторное использование архивов и ``CARLA_VERSION`` описаны в :ref:`carla-images`."
