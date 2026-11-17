@@ -121,84 +121,43 @@ for offline use and custom checkpoints.
 Build CARLA and Install Additional Maps
 ---------------------------------------
 
-These steps run in **Linux Bash, from the CAVISE root**. On Windows, use the Windows
-package and install its matching maps as described above.
+Run these commands in **Linux Bash, from the CAVISE root**. Requires Docker Compose
+2.17+, BuildKit, and host ``curl`` and ``tar``. On Windows, use the Windows package
+described above.
 
-The local Dockerfile downloads the official prebuilt Linux package for CARLA 0.9.16. No
-CARLA source checkout or Unreal Engine compilation is needed. Install Docker Compose
-2.17 or newer with BuildKit named context support, plus host ``curl`` and ``tar`` for
-additional maps.
-
-Choose ``carla`` for the base image (``carla:0.9.16-default``), which contains only maps from the main package:
+Build and start ``carla`` (``carla:0.9.16-default``) for maps from the main release
+package:
 
 .. code-block:: bash
 
    ./run.sh build carla
    ./run.sh up carla
 
-**Town06 is in the additional maps archive and is absent from the base package.** For
-the default ``v2xp_datadump_town06_carla`` scenario, build and start ``carla-extended``
-(``carla:0.9.16-extended``) together with OpenCDA:
+For additional maps, including Town06, use ``carla-extended``
+(``carla:0.9.16-extended``):
 
 .. code-block:: bash
 
    ./run.sh build carla-extended opencda-minimal
    ./run.sh up carla-extended opencda-minimal
 
-Both variants use the same Compose service and container name, ``carla``. Select one
-variant per command. After rebuilding or switching variants, run ``up`` to apply the
-image; ``start`` only starts an existing container. Start the CARLA server and run the
-Town06 scenario as shown in :doc:`/getting-started/first-simulation`.
+``build carla-extended`` automatically downloads additional maps to
+``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz`` and reuses the archive on later builds.
+Both variants use the same ``carla`` container. Use ``up`` after rebuilding or switching
+variants, then start the server manually as shown in
+:doc:`/getting-started/first-simulation`.
 
-Reuse a Downloaded Maps Archive
--------------------------------
-
-For ``build carla-extended``, ``run.sh`` downloads
-``https://downloads.carlasim.com/Linux/AdditionalMaps_${CARLA_VERSION}.tar.gz`` on the
-host. By default, the archive is stored at
-``$PATH_TO_CARLA/$CARLA_VERSION/AdditionalMaps_${CARLA_VERSION}.tar.gz``, for example
-``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz``. Later builds reuse that file. You can
-also place a downloaded archive there before building.
-
-To use an archive from another directory, set ``CARLA_MAPS_ARCHIVE`` when building. The
-filename can be arbitrary; paths with spaces are supported. Relative paths are resolved
-from the CAVISE root. The contents must be additional maps compatible with the selected
-CARLA release; renaming an archive does not change its version.
+To use your own matching maps archive instead of downloading it:
 
 .. code-block:: bash
 
-   CARLA_MAPS_ARCHIVE="/home/user/CARLA assets/my-maps.tar.gz" ./run.sh build carla-extended
+   CARLA_MAPS_ARCHIVE="/path/to/my-maps.tar.gz" ./run.sh build carla-extended
    ./run.sh up carla-extended
 
-The supplied archive is read directly without copying it into the checkout or
-downloading a replacement. A missing or invalid supplied archive stops the build.
-Downloads use a temporary ``.part`` file until validation succeeds. Full archive
-validation may take several minutes; ``run.sh`` prints a message before checking.
-
-The extended build mounts the archive temporarily and imports the maps with the packaged
-``ImportAssets.sh``. Extracted maps become part of the image; the archive stays on the
-host. No maps volume or archive path is required when starting the built container. Base
-builds do not download additional maps.
-
-Select a CARLA Release
-----------------------
-
-``CARLA_VERSION`` defaults to ``0.9.16`` and controls the main package URL, additional
-maps URL, default archive directory, image tag and Python client in the CARLA image.
-Export it before both building and starting:
-
-.. code-block:: bash
-
-   export CARLA_VERSION=0.9.16
-   ./run.sh build carla-extended
-   ./run.sh up carla-extended
-
-The main package is downloaded inside Docker from
-``https://downloads.carlasim.com/Linux/CARLA_${CARLA_VERSION}.tar.gz``. Use the same
-version and variant for ``build`` and ``up``. OpenCDA pins its own CARLA client
-separately; changing this variable does not update OpenCDA. This recipe targets 0.9.16.
-CARLA 0.10.0 uses UE5 and requires separate validation of runtime dependencies, launch
-commands, maps and clients.
+The archive path is needed only for building. To select a version, run ``export
+CARLA_VERSION=0.9.16`` before both ``build`` and ``up``. The default is ``0.9.16``;
+other versions require compatible maps and clients. This variable does not change
+OpenCDA's separately pinned CARLA client.
 
 Next: :doc:`/getting-started/first-simulation` builds only the images needed
 for a CARLA/OpenCDA scenario.

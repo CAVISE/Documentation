@@ -196,41 +196,20 @@ msgstr ""
 msgid "Build CARLA and Install Additional Maps"
 msgstr "Сборка CARLA и установка дополнительных карт"
 
-msgid "These steps run in **Linux Bash, from the CAVISE root**. On Windows, use the Windows package and install its matching maps as described above."
-msgstr "Эти команды выполняются в **Linux Bash из корня CAVISE**. В Windows используйте пакет для Windows и установите соответствующие ему карты, как описано выше."
+msgid "Run these commands in **Linux Bash, from the CAVISE root**. Requires Docker Compose 2.17+, BuildKit, and host ``curl`` and ``tar``. On Windows, use the Windows package described above."
+msgstr "Выполняйте команды в **Linux Bash из корня CAVISE**. Нужны Docker Compose 2.17+, BuildKit, а также ``curl`` и ``tar`` на хосте. В Windows используйте пакет для Windows, описанный выше."
 
-msgid "The local Dockerfile downloads the official prebuilt Linux package for CARLA 0.9.16. No CARLA source checkout or Unreal Engine compilation is needed. Install Docker Compose 2.17 or newer with BuildKit named context support, plus host ``curl`` and ``tar`` for additional maps."
-msgstr "Локальный Dockerfile скачивает официальный готовый Linux-пакет CARLA 0.9.16. Клонировать исходники CARLA и компилировать Unreal Engine не требуется. Нужны Docker Compose версии 2.17 или новее с поддержкой именованных контекстов BuildKit, а также ``curl`` и ``tar`` на хосте для дополнительных карт."
+msgid "Build and start ``carla`` (``carla:0.9.16-default``) for maps from the main release package:"
+msgstr "Соберите и запустите ``carla`` (``carla:0.9.16-default``) для карт из основного пакета:"
 
-msgid "Choose ``carla`` for the base image (``carla:0.9.16-default``), which contains only maps from the main package:"
-msgstr "Выберите ``carla`` для базового образа (``carla:0.9.16-default``), содержащего только карты из основного пакета:"
+msgid "For additional maps, including Town06, use ``carla-extended`` (``carla:0.9.16-extended``):"
+msgstr "Для дополнительных карт, включая Town06, используйте ``carla-extended`` (``carla:0.9.16-extended``):"
 
-msgid "**Town06 is in the additional maps archive and is absent from the base package.** For the default ``v2xp_datadump_town06_carla`` scenario, build and start ``carla-extended`` (``carla:0.9.16-extended``) together with OpenCDA:"
-msgstr "**Town06 находится в архиве дополнительных карт и отсутствует в базовом пакете.** Для стандартного сценария ``v2xp_datadump_town06_carla`` соберите и запустите ``carla-extended`` (``carla:0.9.16-extended``) вместе с OpenCDA:"
+msgid "``build carla-extended`` automatically downloads additional maps to ``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz`` and reuses the archive on later builds. Both variants use the same ``carla`` container. Use ``up`` after rebuilding or switching variants, then start the server manually as shown in :doc:`/getting-started/first-simulation`."
+msgstr "Команда ``build carla-extended`` автоматически скачивает дополнительные карты в ``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz`` и использует архив повторно при последующих сборках. Оба варианта используют один контейнер ``carla``. После пересборки или смены варианта выполните ``up``, затем вручную запустите сервер, как показано в :doc:`/getting-started/first-simulation`."
 
-msgid "Both variants use the same Compose service and container name, ``carla``. Select one variant per command. After rebuilding or switching variants, run ``up`` to apply the image; ``start`` only starts an existing container. Start the CARLA server and run the Town06 scenario as shown in :doc:`/getting-started/first-simulation`."
-msgstr "Оба варианта используют один сервис Compose и имя контейнера ``carla``. В одной команде выбирайте один вариант. После пересборки или смены варианта выполните ``up``, чтобы применить образ; ``start`` только запускает существующий контейнер. Запуск сервера CARLA и сценария Town06 описан в :doc:`/getting-started/first-simulation`."
+msgid "To use your own matching maps archive instead of downloading it:"
+msgstr "Чтобы использовать свой архив карт подходящей версии вместо скачивания:"
 
-msgid "Reuse a Downloaded Maps Archive"
-msgstr "Повторное использование скачанного архива карт"
-
-msgid "For ``build carla-extended``, ``run.sh`` downloads ``https://downloads.carlasim.com/Linux/AdditionalMaps_${CARLA_VERSION}.tar.gz`` on the host. By default, the archive is stored at ``$PATH_TO_CARLA/$CARLA_VERSION/AdditionalMaps_${CARLA_VERSION}.tar.gz``, for example ``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz``. Later builds reuse that file. You can also place a downloaded archive there before building."
-msgstr "При ``build carla-extended`` скрипт ``run.sh`` скачивает ``https://downloads.carlasim.com/Linux/AdditionalMaps_${CARLA_VERSION}.tar.gz`` на хост. По умолчанию архив сохраняется в ``$PATH_TO_CARLA/$CARLA_VERSION/AdditionalMaps_${CARLA_VERSION}.tar.gz``, например ``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz``. Последующие сборки используют этот файл повторно. Также можно заранее положить туда скачанный архив."
-
-msgid "To use an archive from another directory, set ``CARLA_MAPS_ARCHIVE`` when building. The filename can be arbitrary; paths with spaces are supported. Relative paths are resolved from the CAVISE root. The contents must be additional maps compatible with the selected CARLA release; renaming an archive does not change its version."
-msgstr "Чтобы использовать архив из другого каталога, задайте ``CARLA_MAPS_ARCHIVE`` при сборке. Имя файла может быть произвольным, пути с пробелами поддерживаются. Относительные пути отсчитываются от корня CAVISE. Внутри должны быть дополнительные карты, совместимые с выбранной версией CARLA; переименование архива не меняет его версию."
-
-msgid "The supplied archive is read directly without copying it into the checkout or downloading a replacement. A missing or invalid supplied archive stops the build. Downloads use a temporary ``.part`` file until validation succeeds. Full archive validation may take several minutes; ``run.sh`` prints a message before checking."
-msgstr "Указанный архив читается напрямую без копирования в репозиторий и без скачивания замены. Отсутствующий или некорректный пользовательский архив останавливает сборку. Загрузка идёт во временный файл ``.part`` до успешной проверки. Полная проверка архива может занять несколько минут; перед ней ``run.sh`` выводит сообщение."
-
-msgid "The extended build mounts the archive temporarily and imports the maps with the packaged ``ImportAssets.sh``. Extracted maps become part of the image; the archive stays on the host. No maps volume or archive path is required when starting the built container. Base builds do not download additional maps."
-msgstr "При сборке extended архив временно подключается, а карты импортируются комплектным скриптом ``ImportAssets.sh``. Распакованные карты входят в образ, архив остаётся на хосте. Для запуска готового контейнера не нужны ни том с картами, ни путь к архиву. Базовая сборка не скачивает дополнительные карты."
-
-msgid "Select a CARLA Release"
-msgstr "Выбор версии CARLA"
-
-msgid "``CARLA_VERSION`` defaults to ``0.9.16`` and controls the main package URL, additional maps URL, default archive directory, image tag and Python client in the CARLA image. Export it before both building and starting:"
-msgstr "По умолчанию ``CARLA_VERSION`` равна ``0.9.16``. Она определяет URL основного пакета и дополнительных карт, стандартный каталог архива, тег образа и версию Python-клиента внутри образа CARLA. Экспортируйте её перед сборкой и запуском:"
-
-msgid "The main package is downloaded inside Docker from ``https://downloads.carlasim.com/Linux/CARLA_${CARLA_VERSION}.tar.gz``. Use the same version and variant for ``build`` and ``up``. OpenCDA pins its own CARLA client separately; changing this variable does not update OpenCDA. This recipe targets 0.9.16. CARLA 0.10.0 uses UE5 and requires separate validation of runtime dependencies, launch commands, maps and clients."
-msgstr "Основной пакет скачивается внутри Docker с ``https://downloads.carlasim.com/Linux/CARLA_${CARLA_VERSION}.tar.gz``. Для ``build`` и ``up`` используйте одинаковые версию и вариант. OpenCDA закрепляет собственную версию клиента CARLA отдельно; эта переменная не обновляет OpenCDA. Инструкция рассчитана на 0.9.16. CARLA 0.10.0 использует UE5 и требует отдельной проверки зависимостей, команд запуска, карт и клиентов."
+msgid "The archive path is needed only for building. To select a version, run ``export CARLA_VERSION=0.9.16`` before both ``build`` and ``up``. The default is ``0.9.16``; other versions require compatible maps and clients. This variable does not change OpenCDA's separately pinned CARLA client."
+msgstr "Путь к архиву нужен только при сборке. Для выбора версии выполните ``export CARLA_VERSION=0.9.16`` перед ``build`` и ``up``. По умолчанию используется ``0.9.16``; для других версий нужны совместимые карты и клиенты. Эта переменная не меняет версию клиента CARLA, отдельно закреплённую в OpenCDA."
