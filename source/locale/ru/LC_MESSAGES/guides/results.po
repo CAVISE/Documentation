@@ -192,3 +192,15 @@ msgstr ""
 "Значения ``--verbose 1``, ``2`` и ``3`` выбирают соответственно журналирование предупреждений, "
 "информационных и отладочных сообщений."
 
+
+msgid "Replaying an Experiment"
+msgstr "Повтор эксперимента"
+
+msgid "Use an OpenCDA version with ``--replay-from`` support (introduced in `OpenCDA PR #207 <https://github.com/CAVISE/OpenCDA/pull/207>`_). Keep CARLA running. In the **OpenCDA container shell**, from the OpenCDA repository root, create a bounded run:"
+msgstr "Используйте версию OpenCDA с поддержкой ``--replay-from`` (добавлена в `OpenCDA PR #207 <https://github.com/CAVISE/OpenCDA/pull/207>`_). CARLA должна быть запущена. В **оболочке контейнера OpenCDA**, из корня репозитория OpenCDA, выполните ограниченный запуск:"
+
+msgid "The evaluation directory contains ``reproducibility/config.yaml`` (the resolved scenario configuration) and ``reproducibility/run_manifest.json`` (launch arguments, model and run status). In the same shell, replace ``RUN_DIRECTORY`` with that run's evaluation directory:"
+msgstr "В каталоге результатов находятся ``reproducibility/config.yaml`` (итоговая конфигурация сценария) и ``reproducibility/run_manifest.json`` (аргументы запуска, модель и статус). В той же оболочке замените ``RUN_DIRECTORY`` на каталог результатов этого запуска:"
+
+msgid "Use ``--replay-from`` alone: it restores saved parameters and writes results to a new directory. To change parameters, start a new run. Keep the same component versions, model weights and external assets; replay does not restore them or guarantee identical simulation results."
+msgstr "Используйте ``--replay-from`` без других параметров: он восстанавливает сохранённые параметры и записывает результаты в новый каталог. Для изменения параметров начните новый запуск. Сохраняйте те же версии компонентов, веса модели и внешние ресурсы: replay не восстанавливает их и не гарантирует идентичные результаты симуляции."

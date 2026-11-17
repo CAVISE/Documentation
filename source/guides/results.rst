@@ -25,6 +25,33 @@ Scenario names containing ``/`` create nested output paths. Use
 ``--verbose 1``, ``2``, and ``3`` select warning, informational and debug
 logging respectively.
 
+
+Replaying an Experiment
+-----------------------
+
+Use an OpenCDA version with ``--replay-from`` support (introduced in `OpenCDA PR #207
+<https://github.com/CAVISE/OpenCDA/pull/207>`_). Keep CARLA running. In the **OpenCDA
+container shell**, from the OpenCDA repository root, create a bounded run:
+
+.. code-block:: bash
+
+   python opencda.py -t v2xp_datadump_town06_carla \
+     --carla-host "$CARLA_HOST" --ticks 200
+
+The evaluation directory contains ``reproducibility/config.yaml`` (the resolved scenario
+configuration) and ``reproducibility/run_manifest.json`` (launch arguments, model and
+run status). In the same shell, replace ``RUN_DIRECTORY`` with that run's evaluation
+directory:
+
+.. code-block:: bash
+
+   python opencda.py --replay-from RUN_DIRECTORY
+
+Use ``--replay-from`` alone: it restores saved parameters and writes results to a new
+directory. To change parameters, start a new run. Keep the same component versions,
+model weights and external assets; replay does not restore them or guarantee identical
+simulation results.
+
 Profiling Slow Runs
 -------------------
 
