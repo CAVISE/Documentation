@@ -29,9 +29,8 @@ logging respectively.
 Replaying an Experiment
 -----------------------
 
-Use an OpenCDA version with ``--replay-from`` support (introduced in `OpenCDA PR #207
-<https://github.com/CAVISE/OpenCDA/pull/207>`_). Keep CARLA running. In the **OpenCDA
-container shell**, from the OpenCDA repository root, create a bounded run:
+Use an OpenCDA version with ``--replay-from`` support. Keep CARLA running.
+In the **OpenCDA container shell**, from the OpenCDA repository root, create a bounded run:
 
 .. code-block:: bash
 
