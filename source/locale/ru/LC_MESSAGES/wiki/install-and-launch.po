@@ -192,3 +192,24 @@ msgstr ""
 "каталог для bind mount. OpenCDA загружает запрошенные пакеты во время выполнения. Автономное "
 "использование и пользовательские чекпойнты описаны в :doc:`/models`."
 
+
+msgid "Build CARLA and Install Additional Maps"
+msgstr "Сборка CARLA и установка дополнительных карт"
+
+msgid "Run these commands in **Linux Bash, from the CAVISE root**. Requires Docker Compose 2.17+, BuildKit, and host ``curl`` and ``tar``. On Windows, use the Windows package described above."
+msgstr "Выполняйте команды в **Linux Bash из корня CAVISE**. Нужны Docker Compose 2.17+, BuildKit, а также ``curl`` и ``tar`` на хосте. В Windows используйте пакет для Windows, описанный выше."
+
+msgid "Build and start ``carla`` (``carla:0.9.16-default``) for maps from the main release package:"
+msgstr "Соберите и запустите ``carla`` (``carla:0.9.16-default``) для карт из основного пакета:"
+
+msgid "For additional maps, including Town06, use ``carla-extended`` (``carla:0.9.16-extended``):"
+msgstr "Для дополнительных карт, включая Town06, используйте ``carla-extended`` (``carla:0.9.16-extended``):"
+
+msgid "``build carla-extended`` automatically downloads additional maps to ``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz`` and reuses the archive on later builds. Both variants use the same ``carla`` container. Use ``up`` after rebuilding or switching variants, then start the server manually as shown in :doc:`/getting-started/first-simulation`."
+msgstr "Команда ``build carla-extended`` автоматически скачивает дополнительные карты в ``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz`` и использует архив повторно при последующих сборках. Оба варианта используют один контейнер ``carla``. После пересборки или смены варианта выполните ``up``, затем вручную запустите сервер, как показано в :doc:`/getting-started/first-simulation`."
+
+msgid "To use your own matching maps archive instead of downloading it:"
+msgstr "Чтобы использовать свой архив карт подходящей версии вместо скачивания:"
+
+msgid "The archive path is needed only for building. To select a version, run ``export CARLA_VERSION=0.9.16`` before both ``build`` and ``up``. The default is ``0.9.16``; other versions require compatible maps and clients. This variable does not change OpenCDA's separately pinned CARLA client."
+msgstr "Путь к архиву нужен только при сборке. Для выбора версии выполните ``export CARLA_VERSION=0.9.16`` перед ``build`` и ``up``. По умолчанию используется ``0.9.16``; для других версий нужны совместимые карты и клиенты. Эта переменная не меняет версию клиента CARLA, отдельно закреплённую в OpenCDA."

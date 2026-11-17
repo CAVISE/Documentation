@@ -73,6 +73,11 @@ Only one OpenCDA target can be selected per invocation. All targets use the
 same service and container name, ``opencda``. They are not simultaneous
 independent containers.
 
+CARLA accepts ``carla`` (base maps) or ``carla-extended`` (additional maps, including
+Town06). Both select the same ``carla`` service and container. An invocation without
+service names selects the base CARLA image. For build commands, archive reuse and
+``CARLA_VERSION``, see :ref:`carla-images`.
+
 .. _opencda-targets:
 
 OpenCDA Image Targets

@@ -104,6 +104,7 @@ The standard layout is:
    CAVISE/
    ├── paths.conf
    ├── run.sh
+   ├── carla/               # Dockerfile and downloaded additional maps
    ├── opencda/
    ├── opencood/
    ├── sumo/
@@ -114,6 +115,49 @@ The standard layout is:
 ``models`` is not cloned by setup. ``run.sh up`` prepares its bind-mount
 directory. OpenCDA fetches requested bundles at runtime. See :doc:`/models`
 for offline use and custom checkpoints.
+
+.. _carla-images:
+
+Build CARLA and Install Additional Maps
+---------------------------------------
+
+Run these commands in **Linux Bash, from the CAVISE root**. Requires Docker Compose
+2.17+, BuildKit, and host ``curl`` and ``tar``. On Windows, use the Windows package
+described above.
+
+Build and start ``carla`` (``carla:0.9.16-default``) for maps from the main release
+package:
+
+.. code-block:: bash
+
+   ./run.sh build carla
+   ./run.sh up carla
+
+For additional maps, including Town06, use ``carla-extended``
+(``carla:0.9.16-extended``):
+
+.. code-block:: bash
+
+   ./run.sh build carla-extended opencda-minimal
+   ./run.sh up carla-extended opencda-minimal
+
+``build carla-extended`` automatically downloads additional maps to
+``carla/0.9.16/AdditionalMaps_0.9.16.tar.gz`` and reuses the archive on later builds.
+Both variants use the same ``carla`` container. Use ``up`` after rebuilding or switching
+variants, then start the server manually as shown in
+:doc:`/getting-started/first-simulation`.
+
+To use your own matching maps archive instead of downloading it:
+
+.. code-block:: bash
+
+   CARLA_MAPS_ARCHIVE="/path/to/my-maps.tar.gz" ./run.sh build carla-extended
+   ./run.sh up carla-extended
+
+The archive path is needed only for building. To select a version, run ``export
+CARLA_VERSION=0.9.16`` before both ``build`` and ``up``. The default is ``0.9.16``;
+other versions require compatible maps and clients. This variable does not change
+OpenCDA's separately pinned CARLA client.
 
 Next: :doc:`/getting-started/first-simulation` builds only the images needed
 for a CARLA/OpenCDA scenario.
